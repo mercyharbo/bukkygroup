@@ -1,6 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
+import NextImage from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { HiChevronDown, HiMenu, HiX } from 'react-icons/hi'
@@ -28,13 +29,19 @@ export default function Header() {
   const [expandedItem, setExpandedItem] = useState<string | null>(null)
 
   return (
-    <header className='fixed top-6 left-0 z-50 w-full px-6'>
-      <nav className='mx-auto flex max-w-6xl items-center border justify-between rounded-full border-border bg-white/70 px-6 py-3 shadow-2xl backdrop-blur-xl dark:border-zinc-800/50 dark:bg-zinc-900/70'>
+    <header className='fixed top-0 left-0 z-50 w-full'>
+      <nav className='flex items-center border-b justify-between border-border bg-white/70 px-6 py-4 shadow-sm backdrop-blur-xl dark:border-zinc-800/50 dark:bg-zinc-900/70'>
         {/* Logo */}
         <Link href='/' className='flex items-center gap-2'>
-          <span className='text-xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50'>
-            bukky<span className='text-group-primary italic'>group</span>
-          </span>
+          <div className='relative h-12 w-48'>
+            <NextImage
+              src='/logo.png'
+              alt='Bukky Group Logo'
+              fill
+              className='object-contain'
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

@@ -32,7 +32,7 @@ const flagshipBrands = [
     description:
       'Exquisite culinary experiences and bespoke catering for every occasion. From intimate private meals to grand corporate events, we bring world-class flavor and elegance to your table.',
     link: '/catering',
-    image: '/gallery (11).jpg',
+    image: '/resturant.jpg',
     bgColor: 'bg-zinc-900',
     borderColor: 'border-brand-restaurant/50',
     accentColor: 'text-brand-restaurant',
@@ -42,7 +42,7 @@ const flagshipBrands = [
     description:
       'Dedicated to empowering teenagers and youth to unlock their true potential. Through strategic mentorship and visionary leadership training, we nurture the next generation of impact.',
     link: '/academy',
-    image: '/gallery (8).jpg',
+    image: '/foundation.heic',
     bgColor: 'bg-zinc-900',
     borderColor: 'border-brand-foundation/50',
     accentColor: 'text-brand-foundation',
@@ -52,7 +52,7 @@ const flagshipBrands = [
     description:
       'A collection of inspirational literature focused on resilience, beauty, and purpose. Featuring transformative works like "SLAVE BOSS" and "THE FLAGS" by visionary author Bukky Anny.',
     link: '/about',
-    image: '/gallery (4).jpg',
+    image: '/books.jpeg',
     bgColor: 'bg-zinc-900',
     borderColor: 'border-brand-books/50',
     accentColor: 'text-brand-books',
@@ -363,12 +363,15 @@ export default function Home() {
               <div className='h-1 w-12 rounded-full bg-group-primary/30' />
             </motion.div>
 
-            <div className='flex flex-wrap items-center justify-center gap-12 md:gap-20'>
+            <div className='grid grid-cols-2 items-center justify-center gap-x-8 gap-y-12 md:flex md:flex-wrap md:gap-20'>
               {[
-                { src: '/logo (1).png', alt: 'Partner 1' },
-                { src: '/logo (1).webp', alt: 'Partner 2' },
-                { src: '/logo (2).png', alt: 'Partner 3' },
-                { src: '/logo (3).png', alt: 'Partner 4' },
+                { src: '/logo (1).png', alt: 'ISO Logo' },
+                { src: '/logo (1).webp', alt: 'OSHA Logo' },
+                { src: '/logo (2).png', alt: 'BBB Accredited Business' },
+                {
+                  src: '/logo (3).png',
+                  alt: 'Consumer Goods Council of South Africa',
+                },
               ].map((logo, index) => (
                 <motion.div
                   key={index}
@@ -376,14 +379,14 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className='group relative flex h-16 w-32 items-center justify-center transition-all duration-500'
+                  className='group relative flex h-16 items-center justify-center transition-all duration-500 md:h-20 md:w-40'
                 >
                   <NextImage
                     src={logo.src}
                     alt={logo.alt}
                     width={160}
                     height={80}
-                    className='object-contain transition-transform duration-300 group-hover:scale-110'
+                    className='h-full w-full object-contain transition-transform duration-300 group-hover:scale-110'
                   />
                 </motion.div>
               ))}

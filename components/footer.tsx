@@ -1,6 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
+import NextImage from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
@@ -102,9 +103,15 @@ export default function Footer() {
 
           {/* Logo/Brand Name */}
           <Link href='/' className='flex items-center gap-2'>
-            <span className='text-3xl font-extrabold tracking-tight'>
-              bukky<span className='text-group-primary italic'>group</span>
-            </span>
+            <div className='relative h-20 w-80'>
+              <NextImage
+                src='/logo.png'
+                alt='Bukky Group Logo'
+                fill
+                className='object-contain'
+                priority
+              />
+            </div>
           </Link>
 
           {/* Navigation Links */}

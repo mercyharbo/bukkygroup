@@ -18,14 +18,14 @@ export default function LocationMap() {
               <span className='text-group-primary italic'>Location</span>
             </h2>
             <p className='mx-auto max-w-2xl text-zinc-600 dark:text-zinc-400'>
-              Experience the Bukky Group ecosystem in person. We are located in
-              the heart of Centurion, ready to welcome you.
+              Shop F08, Oriental City (China) Mall, 2 Sarel Baard Cres,
+              Rooihuiskraal, Centurion, 0157, South Africa
             </p>
           </div>
 
           <div className='relative h-[450px] w-full overflow-hidden rounded-4xl border border-zinc-200 bg-zinc-200 shadow-2xl dark:border-zinc-800 dark:bg-zinc-800'>
             <iframe
-              src='https://www.google.com/maps?q=Bukky%20Beauty%20World,-25.881146,28.164448&z=15&output=embed'
+              src='https://www.google.com/maps?q=-25.878144171075327,28.161786&z=17&output=embed'
               width='100%'
               height='100%'
               style={{ border: 0 }}
