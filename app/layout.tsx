@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google'
+import { Cormorant_Garamond, Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
 const geistSans = Geist({
@@ -12,8 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   variable: '--font-serif',
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
 })
 
@@ -24,7 +26,6 @@ export const metadata: Metadata = {
 
 import Footer from '@/components/footer'
 import Header from '@/components/header'
-import LocationMap from '@/components/location-map'
 
 export default function RootLayout({
   children,
@@ -34,12 +35,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} antialiased`}
       >
-        <div className='fixed top-0 left-0 z-60 h-1 w-full bg-primary' />
         <Header />
-        {children}
-        <LocationMap />
+        <main className='bg-gray-900'>{children}</main>
+        {/* <LocationMap /> */}
         <Footer />
       </body>
     </html>

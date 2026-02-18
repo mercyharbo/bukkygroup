@@ -1,9 +1,10 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import NextImage from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { HiArrowRight, HiSparkles } from 'react-icons/hi2'
 import {
   RiEyeLine,
@@ -121,177 +122,209 @@ const outcomes = [
   { label: 'Style Masteries', value: '50+' },
 ]
 
+const galleryImages = [
+  { id: 21, ext: 'jpg' },
+  { id: 12, ext: 'jpg' },
+  { id: 13, ext: 'jpg' },
+  { id: 14, ext: 'jpg' },
+  { id: 2, ext: 'webp' },
+]
+
 export default function SalonPage() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const mainImage = `/gallery (${galleryImages[currentIndex].id}).${galleryImages[currentIndex].ext}`
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % galleryImages.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
-    <main className='relative min-h-screen overflow-hidden bg-zinc-50 selection:bg-primary/20 selection:text-primary dark:bg-zinc-950'>
+    <main className='relative min-h-screen overflow-hidden selection:bg-primary/20 selection:text-primary'>
       {/* Background Glows */}
-      <div className='pointer-events-none absolute -top-24 -left-20 size-96 rounded-full bg-primary/20 blur-3xl' />
-      <div className='pointer-events-none absolute top-1/2 -right-20 size-96 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl' />
-
-      <section className='container relative mx-auto flex min-h-screen flex-col items-center justify-center gap-16 px-6 pt-40 pb-12 lg:pt-48 lg:pb-24'>
-        {/* Background Decorative Rings/Blobs */}
-        <div className='pointer-events-none absolute top-1/2 left-1/2 size-160 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/5 dark:border-primary/10' />
-        <div className='pointer-events-none absolute top-1/2 left-1/2 size-192 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary/5 dark:border-primary/5' />
-
-        {/* Content Section - Centered Stack */}
-        <div className='relative z-10 flex max-w-5xl flex-col items-center gap-10 text-center'>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className='inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm font-bold tracking-widest text-primary uppercase'
-          >
-            <RiMagicLine className='size-4 animate-pulse' />
-            Bukky Beauty World Centurion
-          </motion.div>
-
-          <div className='flex flex-col gap-8'>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
-              className='font-serif text-5xl font-medium leading-[1.1] text-zinc-900 md:text-7xl lg:text-6xl dark:text-white'
-            >
-              Where <span className='text-primary italic'>Beauty</span> <br />
-              Becomes An <span className='text-primary italic'>Experience</span>
-              .
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className='mx-auto max-w-3xl text-base leading-relaxed text-zinc-600 md:text-lg dark:text-zinc-400'
-            >
-              A luxury beauty destination in Centurion dedicated to making you
-              look and feel your best. We create experiences that celebrate your
-              unique beauty through flawless artistry and expert care.
-            </motion.p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className='flex flex-col items-center gap-6 sm:flex-row'
-          >
-            <Button
-              asChild
-              size='xl'
-              className='group h-16 rounded-full px-10 transition-all hover:scale-105 active:scale-95'
-            >
-              <Link href='/bookings'>
-                Book an appointment
-                <HiArrowRight className='size-6 transition-transform group-hover:translate-x-1' />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant='outline'
-              size='xl'
-              className='h-16 rounded-full px-10 transition-all active:scale-95'
-            >
-              <Link href='#services'>View services</Link>
-            </Button>
-          </motion.div>
+      <section className='relative min-h-[90vh] w-full overflow-hidden pt-32 pb-20 lg:pt-40'>
+        {/* Background Landscape Image */}
+        <div className='absolute inset-0 z-0'>
+          <NextImage
+            src='https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074&auto=format&fit=crop'
+            alt='Luxury Salon Background'
+            fill
+            className='object-cover'
+            priority
+          />
+          {/* Brand Purple Overlay */}
+          <div className='absolute inset-0 bg-brand-foundation/95 mix-blend-multiply' />
+          <div className='absolute inset-0 bg-linear-to-b from-brand-foundation/20 via-transparent to-brand-foundation/40' />
         </div>
 
-        {/* Visual Collage - Immersive Arrangement */}
-        <div className='relative mt-12 w-full max-w-6xl overflow-visible'>
-          <div className='relative grid grid-cols-12 gap-4 lg:gap-8'>
-            {/* Main Center Image */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className='col-span-8 col-start-3 lg:col-span-6 lg:col-start-4'
-            >
-              <div className='group relative aspect-square overflow-hidden rounded-[4rem] border-8 border-white/50 bg-zinc-100 shadow-2xl transition-all duration-700 hover:rounded-[6rem] dark:border-zinc-900/50 dark:bg-zinc-800'>
-                <NextImage
-                  src='/gallery (21).jpg'
-                  alt='Luxury Salon Experience'
-                  fill
-                  className='object-cover transition-transform duration-1000 group-hover:scale-110'
-                  priority
-                />
-              </div>
-            </motion.div>
+        <div className='container relative z-10 mx-auto px-6 h-full'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 h-full'>
+            {/* Left Content */}
+            <div className='relative flex flex-1 flex-col items-start gap-10 text-left order-2 lg:order-1'>
+              {/* Local contrast mask for readability */}
+              <div className='absolute -top-20 -left-20 size-160 rounded-full bg-black/20 blur-3xl pointer-events-none' />
 
-            {/* Left Floating Frame */}
-            <motion.div
-              initial={{ opacity: 0, x: -40, rotate: -5 }}
-              animate={{ opacity: 1, x: 0, rotate: -8 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className='absolute -left-4 top-1/4 z-20 hidden w-1/4 lg:block'
-            >
-              <div className='aspect-4/5 overflow-hidden rounded-[3rem] border-4 border-white/80 bg-zinc-200 shadow-xl backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-900'>
-                <NextImage
-                  src='/gallery (12).jpg'
-                  alt='Salon Detail'
-                  fill
-                  className='object-cover opacity-80'
-                />
-              </div>
-            </motion.div>
+              <div className='relative z-10 flex flex-col gap-8 max-w-3xl'>
+                <div className='flex flex-col gap-6'>
+                  <motion.h1
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className='font-serif text-5xl md:text-7xl lg:text-6xl font-medium tracking-tight text-white leading-[1.1] drop-shadow-2xl'
+                  >
+                    Beauty Isn&apos;t Just A Service, <br />
+                    It&apos;s An{' '}
+                    <span className='italic opacity-90'>Experience</span>.
+                  </motion.h1>
 
-            {/* Right Floating Frame */}
-            <motion.div
-              initial={{ opacity: 0, x: 40, rotate: 5 }}
-              animate={{ opacity: 1, x: 0, rotate: 8 }}
-              transition={{ duration: 1, delay: 0.7 }}
-              className='absolute -right-4 top-1/3 z-20 hidden w-1/4 lg:block'
-            >
-              <div className='aspect-4/5 overflow-hidden rounded-[3rem] border-4 border-white/80 bg-zinc-200 shadow-xl backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-900'>
-                <NextImage
-                  src='/gallery (2).webp'
-                  alt='Nail Artistry'
-                  fill
-                  className='object-cover opacity-80'
-                />
-              </div>
-            </motion.div>
-
-            {/* Floating Luxury Badges */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className='absolute bottom-10 left-10 z-30 hidden rounded-3xl border border-white/20 bg-white/70 p-6 shadow-2xl backdrop-blur-xl lg:block dark:border-zinc-800/50 dark:bg-zinc-900/70'
-            >
-              <div className='flex items-center gap-4'>
-                <div className='size-14 rounded-2xl bg-primary/10 p-3 text-primary'>
-                  <HiSparkles className='size-full' />
+                  <motion.p
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className='text-lg leading-relaxed text-white font-medium drop-shadow-md max-w-xl'
+                  >
+                    Bukky Beauty World is a luxury destination in Centurion
+                    dedicated to making you look and feel your best. From
+                    flawless hair and elegant nails to stunning makeup, we
+                    create experiences that leave you confident, radiant, and
+                    ready to shine.
+                  </motion.p>
                 </div>
-                <div>
-                  <div className='text-xl font-bold text-zinc-900 dark:text-white'>
-                    10,000+
+
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <Button
+                    asChild
+                    size='lg'
+                    className='h-14 rounded-full bg-white px-10 text-lg font-semibold text-brand-foundation hover:bg-white/90 transition-all active:scale-95'
+                  >
+                    <Link href='/bookings'>Book appointment</Link>
+                  </Button>
+                </motion.div>
+              </div>
+
+              {/* Bottom Cards Widget */}
+              <div className='flex flex-wrap items-center gap-4 mt-8'>
+                {/* Style Gallery Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className='group relative flex aspect-[1.3/1] w-56 flex-col items-center justify-center overflow-hidden rounded-3xl bg-white shadow-2xl'
+                >
+                  <NextImage
+                    src='/gallery (12).jpg'
+                    alt='Salon Style'
+                    fill
+                    className='object-cover transition-transform duration-500 group-hover:scale-110'
+                  />
+                  {/* Hover Overlay */}
+                  <div className='absolute inset-0 flex items-center justify-center bg-brand-foundation/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100'>
+                    <span className='rounded-lg bg-white/20 px-4 py-2 text-lg font-bold text-white backdrop-blur-md border border-white/20'>
+                      Braiding Artistry
+                    </span>
                   </div>
-                  <div className='text-sm text-zinc-500'>Satisfied Clients</div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: 'easeInOut',
-                delay: 1,
-              }}
-              className='absolute top-20 right-10 z-30 hidden rounded-3xl border border-white/20 bg-white/70 p-6 shadow-2xl backdrop-blur-xl lg:block dark:border-zinc-800/50 dark:bg-zinc-900/70'
-            >
-              <div className='flex items-center gap-4'>
-                <div className='size-14 rounded-2xl bg-primary/10 p-3 text-primary'>
-                  <RiStarFill className='size-full' />
-                </div>
-                <div>
-                  <div className='text-xl font-bold text-zinc-900 dark:text-white'>
-                    5-Star
+                  {/* Permanent Icon */}
+                  <div className='absolute bottom-5 right-5 z-10'>
+                    <div className='flex size-10 items-center justify-center rounded-full bg-white text-brand-foundation shadow-lg transition-transform group-hover:scale-110'>
+                      <HiArrowRight className='size-5' />
+                    </div>
                   </div>
-                  <div className='text-sm text-zinc-500'>Quality Assurance</div>
-                </div>
+                </motion.div>
+
+                {/* Couture Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className='group relative flex aspect-[1.3/1] w-56 flex-col items-center justify-center overflow-hidden rounded-3xl bg-white/10 shadow-2xl backdrop-blur-md border border-white/20'
+                >
+                  <NextImage
+                    src='/gallery (13).jpg'
+                    alt='Nail Couture'
+                    fill
+                    className='object-cover transition-transform duration-500 group-hover:scale-110'
+                  />
+                  {/* Hover Overlay */}
+                  <div className='absolute inset-0 flex items-center justify-center bg-brand-foundation/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100'>
+                    <span className='rounded-lg bg-white/20 px-4 py-2 text-lg font-bold text-white backdrop-blur-md border border-white/20'>
+                      Bridal Glam
+                    </span>
+                  </div>
+                  {/* Permanent Icon */}
+                  <div className='absolute bottom-5 right-5 z-10'>
+                    <div className='flex size-10 items-center justify-center rounded-full bg-white text-brand-foundation shadow-lg transition-transform group-hover:scale-110'>
+                      <HiArrowRight className='size-5' />
+                    </div>
+                  </div>
+                </motion.div>
               </div>
-            </motion.div>
+            </div>
+
+            {/* Right Image */}
+            <div className='relative flex flex-1 items-center justify-center order-1 lg:order-2 w-full lg:w-auto min-h-[500px] lg:min-h-0'>
+              <div className='relative aspect-4/5 w-full max-w-[500px] overflow-hidden rounded-4xl lg:rounded-[4rem]'>
+                <AnimatePresence mode='wait'>
+                  <motion.div
+                    key={mainImage}
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    className='relative h-full w-full'
+                  >
+                    <NextImage
+                      src={mainImage}
+                      alt='Luxury Hair Style'
+                      fill
+                      className='object-cover'
+                      priority
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Gallery Image Selector */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className='absolute -bottom-6 -right-4 lg:right-0 z-20 flex flex-col items-end gap-3'
+              >
+                <div className='flex items-center gap-2 rounded-full border border-white/20 bg-white/10 p-2.5 backdrop-blur-xl'>
+                  <div className='flex -space-x-4'>
+                    {galleryImages.map((img, index) => {
+                      const isActive = currentIndex === index
+                      return (
+                        <motion.button
+                          key={img.id}
+                          whileHover={{ scale: 1.1, zIndex: 10, y: -5 }}
+                          whileTap={{ scale: 0.9 }}
+                          onClick={() => setCurrentIndex(index)}
+                          className={`group relative size-14 md:size-16 overflow-hidden rounded-full transition-all duration-300 ${
+                            isActive
+                              ? 'ring-4 ring-brand-foundation ring-offset-2 ring-offset-white/10 z-10'
+                              : 'border-0 hover:z-10'
+                          } bg-gray-200`}
+                        >
+                          <NextImage
+                            src={`/gallery (${img.id}).${img.ext}`}
+                            alt='Salon Preview'
+                            fill
+                            className='object-cover'
+                          />
+                        </motion.button>
+                      )
+                    })}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -299,7 +332,7 @@ export default function SalonPage() {
       {/* Signature Services Section with Solid Highlight */}
       <section
         id='services'
-        className='relative overflow-hidden bg-zinc-50 py-24 dark:bg-zinc-950'
+        className='relative overflow-hidden bg-gray-900/50 py-24'
       >
         <div className='container relative mx-auto px-6'>
           <div className='flex flex-col gap-16'>
@@ -318,7 +351,7 @@ export default function SalonPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className='font-serif text-4xl font-medium text-zinc-900 md:text-6xl dark:text-white'
+                className='font-serif text-4xl font-medium text-white md:text-6xl'
               >
                 Signature <span className='text-primary italic'>Services</span>
               </motion.h2>
@@ -334,24 +367,24 @@ export default function SalonPage() {
                   transition={{ delay: index * 0.1 }}
                   className='h-full'
                 >
-                  <Card className='group h-full border-zinc-200 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 dark:border-zinc-800 dark:bg-zinc-900/40'>
+                  <Card className='group h-full border-white/10 bg-gray-900/40 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5'>
                     <CardHeader>
                       <div className='flex size-16 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white'>
                         <service.icon className='size-8' />
                       </div>
-                      <CardTitle className='mt-5 text-2xl font-bold text-zinc-900 dark:text-white'>
+                      <CardTitle className='mt-5 text-2xl font-bold text-white'>
                         {service.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className='flex flex-col gap-8'>
-                      <p className='text-lg text-zinc-600 dark:text-zinc-400'>
+                      <p className='text-lg text-gray-300'>
                         {service.description}
                       </p>
                       <div className='flex flex-col gap-3'>
                         {service.details.map((detail) => (
                           <div
                             key={detail}
-                            className='flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400'
+                            className='flex items-center gap-2 text-sm text-gray-400'
                           >
                             <div className='size-1 rounded-full bg-primary' />
                             {detail}
@@ -411,7 +444,7 @@ export default function SalonPage() {
                 <Button
                   asChild
                   size='xl'
-                  className='h-16 rounded-full bg-white text-xl font-bold text-primary hover:bg-zinc-100'
+                  className='h-16 rounded-full bg-white text-xl font-bold text-primary hover:bg-gray-100'
                 >
                   <Link href='/bookings'>Book an appointment</Link>
                 </Button>
@@ -493,7 +526,7 @@ export default function SalonPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className='font-serif text-4xl font-medium text-zinc-900 md:text-6xl dark:text-white'
+                className='font-serif text-4xl font-medium text-white md:text-6xl'
               >
                 The Art of{' '}
                 <span className='text-primary italic'>Transformation</span>
@@ -509,7 +542,7 @@ export default function SalonPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className='group relative aspect-square overflow-hidden rounded-3xl bg-zinc-100 md:rounded-[2.5rem] dark:bg-zinc-800'
+                className='group relative aspect-square overflow-hidden rounded-3xl bg-gray-800 md:rounded-[2.5rem]'
               >
                 <NextImage
                   src={item.src}
@@ -530,7 +563,7 @@ export default function SalonPage() {
       </section>
 
       {/* Stories of Radiance (Keep for social proof) */}
-      <section className='bg-zinc-50 py-24 dark:bg-zinc-900/10'>
+      <section className='bg-gray-950/20 py-24'>
         <div className='container mx-auto px-6'>
           <div className='flex flex-col gap-16'>
             <div className='flex flex-col items-center gap-4 text-center'>
@@ -564,7 +597,7 @@ export default function SalonPage() {
                   transition={{ delay: index * 0.1 }}
                   className='h-full'
                 >
-                  <Card className='flex h-full flex-col gap-6 border-zinc-200 bg-white shadow-xl transition-all hover:border-primary/30 dark:border-zinc-800 dark:bg-zinc-900/50'>
+                  <Card className='flex h-full flex-col gap-6 border-white/10 bg-gray-900/40 shadow-xl transition-all hover:border-primary/30'>
                     <CardHeader>
                       <div className='flex gap-1 text-primary'>
                         {[...Array(testimonial.stars)].map((_, i) => (
@@ -573,14 +606,14 @@ export default function SalonPage() {
                       </div>
                     </CardHeader>
                     <CardContent className='flex flex-1 flex-col justify-between gap-6'>
-                      <p className='text-lg leading-relaxed text-zinc-600 italic dark:text-zinc-400'>
+                      <p className='text-lg leading-relaxed text-gray-300 italic'>
                         &quot;{testimonial.quote}&quot;
                       </p>
                       <div className='flex flex-col'>
-                        <span className='text-xl font-bold text-zinc-900 dark:text-white'>
+                        <span className='text-xl font-bold text-white'>
                           {testimonial.name}
                         </span>
-                        <span className='text-sm text-zinc-500'>
+                        <span className='text-sm text-gray-400'>
                           {testimonial.role}
                         </span>
                       </div>
@@ -590,7 +623,7 @@ export default function SalonPage() {
               ))}
             </div>
 
-            <div className='mt-16 grid grid-cols-1 gap-8 border-t border-zinc-200 pt-16 md:grid-cols-3 dark:border-zinc-800'>
+            <div className='mt-16 grid grid-cols-1 gap-8 border-t border-white/10 pt-16 md:grid-cols-3'>
               {outcomes.map((outcome, index) => (
                 <motion.div
                   key={outcome.label}
@@ -603,7 +636,7 @@ export default function SalonPage() {
                   <span className='text-5xl font-bold text-primary'>
                     {outcome.value}
                   </span>
-                  <span className='text-xs font-semibold tracking-widest text-zinc-500 uppercase'>
+                  <span className='text-xs font-semibold tracking-widest text-gray-400 uppercase'>
                     {outcome.label}
                   </span>
                 </motion.div>
@@ -619,7 +652,7 @@ export default function SalonPage() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className='relative overflow-hidden rounded-[3rem] bg-zinc-900 px-6 py-20 text-center shadow-2xl lg:py-32 dark:bg-zinc-900/50'
+          className='relative overflow-hidden rounded-[3rem] bg-gray-950/40 px-6 py-20 text-center shadow-2xl lg:py-32'
         >
           <div className='pointer-events-none absolute -top-24 -right-24 size-96 rounded-full bg-primary/20 blur-3xl' />
           <div className='pointer-events-none absolute -bottom-24 -left-24 size-96 rounded-full bg-primary/10 blur-3xl' />
@@ -641,7 +674,7 @@ export default function SalonPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className='mx-auto max-w-2xl text-lg text-zinc-400 md:text-xl'
+                className='mx-auto max-w-2xl text-lg text-gray-400 md:text-xl'
               >
                 Join over 10,000 clients who have discovered their most radiant
                 selves. Book your bespoke session today.

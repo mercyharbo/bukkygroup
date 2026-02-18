@@ -42,18 +42,17 @@ export default function Footer() {
   }
 
   return (
-    <footer className='bg-zinc-950 py-16 text-white'>
+    <footer className='border-t border-white/5 bg-gray-900 py-16 text-white'>
       <div className='container mx-auto px-6'>
         <div className='flex flex-col items-center gap-12'>
           {/* Newsletter Section */}
-          <div className='w-full max-w-lg rounded-3xl border border-zinc-800 bg-zinc-900/50 p-8 md:p-10'>
+          <div className='w-full max-w-lg rounded-3xl border border-white/10 bg-gray-800/30 p-8 md:p-10 shadow-2xl'>
             <div className='flex flex-col items-center gap-6 text-center'>
               <div className='flex flex-col gap-2'>
-                <h3 className='text-2xl font-bold text-white'>
-                  Stay{' '}
-                  <span className='text-group-primary italic'>Informed</span>
+                <h3 className='text-2xl font-bold bg-linear-to-r from-brand-gold to-white bg-clip-text text-transparent'>
+                  Stay Informed
                 </h3>
-                <p className='text-zinc-400'>
+                <p className='text-gray-300/80'>
                   Subscribe to get the latest news and exclusive offers from
                   Bukky Group.
                 </p>
@@ -70,19 +69,19 @@ export default function Footer() {
                     className='flex w-full flex-col gap-3 sm:flex-row'
                   >
                     <div className='relative flex-1'>
-                      <HiMail className='absolute top-1/2 left-4 size-5 -translate-y-1/2 text-zinc-500' />
+                      <HiMail className='absolute top-1/2 left-4 size-5 -translate-y-1/2 text-gray-400' />
                       <Input
                         type='email'
                         placeholder='Enter your email address'
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className='h-12 rounded-xl border-zinc-700 bg-zinc-800 pl-11 text-white focus-visible:ring-group-primary focus-visible:ring-offset-0'
+                        className='h-12 rounded-xl border-white/10 bg-gray-700/50 pl-11 text-white focus-visible:ring-brand-gold focus-visible:ring-offset-0'
                       />
                     </div>
                     <Button
                       type='submit'
-                      className='bg-group-primary hover:bg-group-primary/90 h-12 rounded-xl px-8 font-bold shadow-lg shadow-group-primary/20 transition-all hover:scale-105 active:scale-95'
+                      className='bg-brand-gold hover:bg-brand-gold/90 h-12 rounded-xl px-8 font-bold text-gray-900 shadow-lg shadow-brand-gold/20 transition-all hover:scale-105 active:scale-95'
                     >
                       Subscribe
                     </Button>
@@ -92,7 +91,7 @@ export default function Footer() {
                     key='success'
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className='rounded-xl border border-group-primary/20 bg-group-primary/10 px-6 py-4 text-sm font-semibold text-group-primary'
+                    className='rounded-xl border border-brand-gold/20 bg-brand-gold/10 px-6 py-4 text-sm font-semibold text-brand-gold'
                   >
                     Thank you! You&apos;ve successfully subscribed. ✨
                   </motion.div>
@@ -103,7 +102,7 @@ export default function Footer() {
 
           {/* Logo/Brand Name */}
           <Link href='/' className='flex items-center gap-2'>
-            <div className='relative h-20 w-80'>
+            <div className='relative h-16 w-64 transition-transform hover:scale-105'>
               <NextImage
                 src='/logo.png'
                 alt='Bukky Group Logo'
@@ -115,35 +114,35 @@ export default function Footer() {
           </Link>
 
           {/* Navigation Links */}
-          <nav className='flex flex-wrap justify-center gap-x-8 gap-y-4'>
+          <nav className='flex flex-wrap justify-center gap-x-8 gap-y-4 font-semibold'>
             {footerNavigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className='text-sm font-medium text-zinc-400 transition-colors hover:text-white'
+                className='text-sm text-gray-300 transition-all hover:text-brand-gold hover:scale-105'
               >
                 {item.name}
               </Link>
             ))}
           </nav>
 
-          <div className='flex flex-col items-center gap-4'>
+          <div className='flex flex-col items-center gap-6'>
             {/* Social Icons */}
             <div className='flex items-center gap-6'>
               {socialLinks.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className='flex size-10 items-center justify-center rounded-full border border-zinc-800 transition-all hover:border-group-primary hover:bg-group-primary/10 hover:text-group-primary'
+                  className='group flex size-12 items-center justify-center rounded-xl border border-white/10 bg-gray-800/50 transition-all hover:border-brand-gold hover:bg-brand-gold/10 hover:text-brand-gold'
                   aria-label={item.name}
                 >
-                  <item.icon className='size-4' />
+                  <item.icon className='size-5 transition-transform group-hover:scale-110' />
                 </Link>
               ))}
             </div>
 
             {/* Copyright */}
-            <div className='text-xs text-zinc-600'>
+            <div className='text-xs font-semibold text-gray-500 uppercase tracking-widest'>
               © {new Date().getFullYear()} Bukky Group. All rights reserved.
             </div>
           </div>
