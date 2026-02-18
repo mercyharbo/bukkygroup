@@ -25,6 +25,7 @@ const navigation = [
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [expandedItem, setExpandedItem] = useState<string | null>(null)
 
   return (
     <header className='fixed top-6 left-0 z-50 w-full px-6'>
@@ -105,14 +106,16 @@ export default function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className='fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white p-10 shadow-2xl dark:bg-zinc-950'
+            exit={{ opacity: 0, x: -50 }}
+            className='fixed inset-y-0 left-0 z-50 w-full max-w-sm bg-white p-10 shadow-2xl dark:bg-zinc-950'
           >
             <div className='flex flex-col gap-8'>
               <div className='flex items-center justify-between'>
-                <span className='text-2xl font-bold dark:text-white'>Menu</span>
+                <span className='font-serif text-2xl font-medium dark:text-white'>
+                  Navigation
+                </span>
                 <button onClick={() => setIsMobileMenuOpen(false)}>
                   <HiX className='size-6 dark:text-white' />
                 </button>
@@ -121,17 +124,50 @@ export default function Header() {
               <div className='flex flex-col gap-6'>
                 {navigation.map((item) => (
                   <div key={item.name} className='flex flex-col gap-4'>
-                    <Link
-                      href={item.href}
-                      onClick={() =>
-                        !item.children && setIsMobileMenuOpen(false)
-                      }
-                      className='text-2xl font-bold text-zinc-900 dark:text-zinc-50'
-                    >
-                      {item.name}
-                    </Link>
-                    {item.children && (
-                      <div className='ml-4 flex flex-col gap-4 border-l-2 border-primary/20 pl-6'>
+                    <div className='flex items-center justify-between'>
+                      <Link
+                        href={item.href === '#' ? '' : item.href}
+                        onClick={(e) => {
+                          if (item.children) {
+                            e.preventDefault()
+                            setExpandedItem(
+                              expandedItem === item.name ? null : item.name,
+                            )
+                          } else {
+                            setIsMobileMenuOpen(false)
+                          }
+                        }}
+                        className={`text-xl font-medium transition-colors ${
+                          expandedItem === item.name
+                            ? 'text-primary'
+                            : 'text-zinc-900 dark:text-zinc-50'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                      {item.children && (
+                        <button
+                          onClick={() =>
+                            setExpandedItem(
+                              expandedItem === item.name ? null : item.name,
+                            )
+                          }
+                          className='p-2'
+                        >
+                          <HiChevronDown
+                            className={`size-5 transition-transform duration-300 dark:text-white ${
+                              expandedItem === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                      )}
+                    </div>
+                    {item.children && expandedItem === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        className='ml-4 flex flex-col gap-4 border-l-2 border-primary/20 pl-6'
+                      >
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
@@ -142,7 +178,7 @@ export default function Header() {
                             {child.name}
                           </Link>
                         ))}
-                      </div>
+                      </motion.div>
                     )}
                   </div>
                 ))}

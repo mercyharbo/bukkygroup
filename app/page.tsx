@@ -1,4 +1,12 @@
 'use client'
+import { Button } from '@/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 import { motion } from 'framer-motion'
 import NextImage from 'next/image'
 import Link from 'next/link'
@@ -16,6 +24,7 @@ import {
   RiWaterFlashLine,
 } from 'react-icons/ri'
 import { Marquee } from '../components/marquee'
+import { cn } from '@/lib/utils'
 
 const services = [
   {
@@ -100,25 +109,33 @@ const outcomes = [
 
 const brands = [
   {
-    name: 'Bukky Fashion',
-    description: 'Bespoke couture and contemporary style collections.',
+    name: '3SFACEGLAM',
+    description: 'Bespoke beauty, artistry, and contemporary glam collections.',
     link: '/fashion',
+    bgColor: 'bg-purple-50/50 dark:bg-purple-950/10',
+    borderColor: 'border-purple-200/50 dark:border-purple-800/20',
   },
   {
-    name: 'Bukky Catering',
+    name: '3SRESTURANT',
     description: 'Exquisite culinary experiences for every occasion.',
     link: '/catering',
+    bgColor: 'bg-orange-50/50 dark:bg-orange-950/10',
+    borderColor: 'border-orange-200/50 dark:border-orange-800/20',
   },
   {
-    name: 'Bukky Academy',
+    name: 'GET BUSY FOUNDATION',
     description:
-      'Empowering the next generation of beauty and fashion experts.',
+      'Empowering the next generation through vision and excellence.',
     link: '/academy',
+    bgColor: 'bg-blue-50/50 dark:bg-blue-950/10',
+    borderColor: 'border-blue-200/50 dark:border-blue-800/20',
   },
   {
-    name: 'Bukky Author',
+    name: '3SBOOKS',
     description: 'Inspirational literature on beauty, vision, and growth.',
     link: '/about',
+    bgColor: 'bg-amber-50/50 dark:bg-amber-950/10',
+    borderColor: 'border-amber-200/50 dark:border-amber-800/20',
   },
 ]
 
@@ -140,9 +157,9 @@ export default function Home() {
       <div className='pointer-events-none absolute -top-24 -left-20 size-96 rounded-full bg-primary/20 blur-3xl' />
       <div className='pointer-events-none absolute top-1/2 -right-20 size-96 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl' />
 
-      <section className='container relative mx-auto flex min-h-screen flex-col items-center justify-center gap-16 px-6 pt-32 pb-20 lg:flex-row lg:pt-20'>
+      <section className='container relative mx-auto flex min-h-screen flex-col items-center justify-center gap-12 px-6 pt-40 pb-12 lg:flex-row lg:pt-48 lg:pb-20'>
         {/* Left Content */}
-        <div className='relative z-10 flex flex-1 flex-col gap-6 text-center lg:text-left'>
+        <div className='relative z-10 flex w-full flex-col gap-6 text-center lg:flex-1 lg:text-left'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -190,24 +207,29 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className='flex flex-col items-center gap-4 sm:flex-row lg:justify-start'
           >
-            <Link
-              href='/bookings'
-              className='group flex h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-lg font-bold text-white transition-all hover:scale-105 hover:bg-primary/90 active:scale-95'
+            <Button
+              asChild
+              size='xl'
+              className='group h-14 rounded-full px-8 text-lg font-bold transition-all hover:scale-105 active:scale-95'
             >
-              Book an Appointment
-              <HiArrowRight className='size-5 transition-transform group-hover:translate-x-1' />
-            </Link>
-            <Link
-              href='/salon'
-              className='flex h-14 items-center justify-center rounded-full border border-zinc-200 bg-white px-8 text-lg font-bold text-zinc-900 transition-all hover:bg-zinc-50 active:scale-95 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-white dark:hover:bg-zinc-800'
+              <Link href='/bookings'>
+                Book an Appointment
+                <HiArrowRight className='size-5 transition-transform group-hover:translate-x-1' />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant='outline'
+              size='xl'
+              className='h-14 rounded-full px-8 text-lg font-bold transition-all active:scale-95'
             >
-              Explore Services
-            </Link>
+              <Link href='/salon'>Explore Services</Link>
+            </Button>
           </motion.div>
         </div>
 
         {/* Right Content - Visual Composition */}
-        <div className='relative flex-1 lg:mt-0'>
+        <div className='relative w-full lg:mt-0 lg:flex-1'>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -269,7 +291,7 @@ export default function Home() {
       </section>
 
       {/* Signature Services Section */}
-      <section className='container mx-auto px-6 py-24'>
+      <section className='container mx-auto px-6 py-12 md:py-24'>
         <div className='flex flex-col gap-12'>
           <div className='flex flex-col gap-4 text-center lg:text-left'>
             <motion.div
@@ -300,31 +322,33 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className='group relative overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 dark:border-zinc-800 dark:bg-zinc-900/50'
+                className='h-full'
               >
-                <div className='flex h-full flex-col gap-6'>
-                  <div className='flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white'>
-                    <service.icon className='size-7' />
-                  </div>
-                  <div className='flex flex-col gap-3'>
-                    <h3 className='text-2xl font-bold text-zinc-900 dark:text-white'>
+                <Card className='group h-full border-zinc-200 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 dark:border-zinc-800 dark:bg-zinc-900/50'>
+                  <CardHeader>
+                    <div className='flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white'>
+                      <service.icon className='size-7' />
+                    </div>
+                    <CardTitle className='mt-4 text-2xl font-bold text-zinc-900 dark:text-white'>
                       {service.title}
-                    </h3>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className='flex flex-col gap-6'>
                     <p className='text-zinc-600 dark:text-zinc-400'>
                       {service.description}
                     </p>
-                  </div>
-                  <div className='flex flex-wrap gap-2'>
-                    {service.details.map((detail) => (
-                      <span
-                        key={detail}
-                        className='rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400'
-                      >
-                        {detail}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                    <div className='flex flex-wrap gap-2'>
+                      {service.details.map((detail) => (
+                        <span
+                          key={detail}
+                          className='rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400'
+                        >
+                          {detail}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
@@ -332,10 +356,10 @@ export default function Home() {
       </section>
 
       {/* Visionary Section */}
-      <section className='container mx-auto px-6 py-24'>
+      <section className='container mx-auto px-6 py-12 md:py-24'>
         <div className='flex flex-col items-center gap-16 lg:flex-row-reverse'>
           {/* Portrait Image */}
-          <div className='relative flex-1'>
+          <div className='relative w-full lg:flex-1'>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -359,7 +383,7 @@ export default function Home() {
           </div>
 
           {/* Visionary Content */}
-          <div className='flex flex-1 flex-col gap-8 text-center lg:text-left'>
+          <div className='flex w-full flex-col gap-8 text-center lg:flex-1 lg:text-left'>
             <div className='flex flex-col gap-4'>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -409,20 +433,24 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className='flex flex-col items-center gap-4 sm:flex-row lg:justify-start'
             >
-              <Link
-                href='/about'
-                className='group flex h-14 items-center justify-center gap-2 rounded-full border border-zinc-200 bg-white px-8 text-lg font-bold text-zinc-900 transition-all hover:bg-zinc-50 active:scale-95 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-white dark:hover:bg-zinc-800'
+              <Button
+                asChild
+                variant='outline'
+                size='xl'
+                className='group h-14 rounded-full px-8 text-lg font-bold transition-all active:scale-95'
               >
-                Read Full Story
-                <HiArrowRight className='size-5 transition-transform group-hover:translate-x-1' />
-              </Link>
+                <Link href='/about'>
+                  Read Full Story
+                  <HiArrowRight className='size-5 transition-transform group-hover:translate-x-1' />
+                </Link>
+              </Button>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Couture Portfolio Section */}
-      <section className='container mx-auto px-6 py-24'>
+      <section className='container mx-auto px-6 py-12 md:py-24'>
         <div className='flex flex-col gap-12'>
           <div className='flex flex-col items-center justify-between gap-6 md:flex-row'>
             <div className='flex flex-col gap-4 text-center md:text-left'>
@@ -494,7 +522,7 @@ export default function Home() {
       </section>
 
       {/* Client Experiences (Testimonials) Section */}
-      <section className='container mx-auto px-6 py-24'>
+      <section className='container mx-auto px-6 py-12 md:py-24'>
         <div className='flex flex-col gap-16'>
           <div className='flex flex-col items-center gap-4 text-center'>
             <motion.div
@@ -525,29 +553,33 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className='relative flex flex-col gap-6 rounded-3xl border border-zinc-200 bg-white/50 p-8 shadow-xl backdrop-blur-sm transition-all hover:border-primary/30 dark:border-zinc-800 dark:bg-zinc-900/50'
+                className='h-full'
               >
-                <div className='flex flex-col gap-4'>
-                  <div className='flex gap-1 text-primary'>
-                    {[...Array(testimonial.stars)].map((_, i) => (
-                      <RiStarFill key={i} className='size-4' />
-                    ))}
-                  </div>
-                  <div className='relative'>
-                    <RiDoubleQuotesL className='absolute -top-2 -left-2 size-8 text-primary/10' />
-                    <p className='relative z-10 text-lg leading-relaxed text-zinc-600 italic dark:text-zinc-400'>
-                      &quot;{testimonial.quote}&quot;
-                    </p>
-                  </div>
-                </div>
-                <div className='flex flex-col'>
-                  <span className='text-xl font-bold text-zinc-900 dark:text-white'>
-                    {testimonial.name}
-                  </span>
-                  <span className='text-sm text-zinc-500'>
-                    {testimonial.role}
-                  </span>
-                </div>
+                <Card className='flex h-full flex-col gap-6 border-zinc-200 bg-white/50 shadow-xl backdrop-blur-sm transition-all hover:border-primary/30 dark:border-zinc-800 dark:bg-zinc-900/50'>
+                  <CardHeader>
+                    <div className='flex gap-1 text-primary'>
+                      {[...Array(testimonial.stars)].map((_, i) => (
+                        <RiStarFill key={i} className='size-4' />
+                      ))}
+                    </div>
+                  </CardHeader>
+                  <CardContent className='flex flex-1 flex-col justify-between gap-6'>
+                    <div className='relative'>
+                      <RiDoubleQuotesL className='absolute -top-2 -left-2 size-8 text-primary/10' />
+                      <p className='relative z-10 text-lg leading-relaxed text-zinc-600 italic dark:text-zinc-400'>
+                        &quot;{testimonial.quote}&quot;
+                      </p>
+                    </div>
+                    <div className='flex flex-col'>
+                      <span className='text-xl font-bold text-zinc-900 dark:text-white'>
+                        {testimonial.name}
+                      </span>
+                      <span className='text-sm text-zinc-500'>
+                        {testimonial.role}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
@@ -573,8 +605,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* The Ecosystem (Family of Brands) Section */}
-      <section className='container mx-auto px-6 py-24'>
+      <section className='container mx-auto px-6 py-12 md:py-24'>
         <div className='flex flex-col gap-16'>
           <div className='flex flex-col items-center gap-4 text-center'>
             <motion.div
@@ -614,22 +647,33 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className='group relative flex flex-col gap-6 rounded-3xl border border-zinc-200 bg-white p-8 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 dark:border-zinc-800 dark:bg-zinc-900/50'
+                className='h-full'
               >
-                <div className='flex flex-col gap-3'>
-                  <h3 className='text-2xl font-bold text-zinc-900 dark:text-white'>
-                    {brand.name}
-                  </h3>
-                  <p className='text-sm leading-relaxed text-zinc-600 dark:text-zinc-400'>
-                    {brand.description}
-                  </p>
-                </div>
-                <Link
-                  href={brand.link}
-                  className='text-sm font-bold text-primary transition-colors hover:text-primary/80'
+                <Card
+                  className={cn(
+                    'group relative flex h-full flex-col gap-6 overflow-hidden border-2 transition-all hover:shadow-2xl hover:shadow-primary/5',
+                    brand.bgColor,
+                    brand.borderColor,
+                  )}
                 >
-                  Discover Brand →
-                </Link>
+                  <CardHeader className='flex-1'>
+                    <CardTitle className='text-2xl font-bold text-zinc-900 dark:text-white'>
+                      {brand.name}
+                    </CardTitle>
+                    <CardDescription className='text-sm leading-relaxed text-zinc-600 dark:text-zinc-400'>
+                      {brand.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className='pb-8'>
+                    <Button
+                      asChild
+                      variant='ghost'
+                      className='-ml-4 text-primary hover:bg-primary/10 hover:text-primary'
+                    >
+                      <Link href={brand.link}>Discover Brand →</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
@@ -637,7 +681,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className='container mx-auto px-6 py-24'>
+      <section className='container mx-auto px-6 py-12 md:py-24'>
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -687,19 +731,22 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className='flex flex-col items-center gap-4 sm:flex-row'
             >
-              <Link
-                href='/bookings'
-                className='group flex h-16 items-center justify-center gap-2 rounded-full bg-primary px-10 text-xl font-bold text-white transition-all hover:scale-105 hover:bg-primary/90 active:scale-95'
+              <Button
+                asChild
+                className='group h-14 rounded-full px-6 text-lg font-bold transition-all hover:scale-105 active:scale-95 md:h-16 md:px-10 md:text-xl'
               >
-                Secure Your Appointment
-                <HiArrowRight className='size-5 transition-transform group-hover:translate-x-1' />
-              </Link>
-              <Link
-                href='/salon'
-                className='flex h-16 items-center justify-center rounded-full border border-white/10 bg-white/5 px-10 text-xl font-bold text-white transition-all hover:bg-white/10 active:scale-95 backdrop-blur-md'
+                <Link href='/bookings'>
+                  Secure Your Appointment
+                  <HiArrowRight className='size-5 transition-transform group-hover:translate-x-1' />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant='outline'
+                className='h-14 rounded-full border-white/10 bg-white/5 px-6 text-lg font-bold text-white transition-all hover:bg-white/10 active:scale-95 backdrop-blur-md md:h-16 md:px-10 md:text-xl'
               >
-                View Service Menu
-              </Link>
+                <Link href='/salon'>View Service Menu</Link>
+              </Button>
             </motion.div>
           </div>
         </motion.div>
