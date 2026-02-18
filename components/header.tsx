@@ -7,11 +7,11 @@ import { HiChevronDown, HiMenu, HiX } from 'react-icons/hi'
 
 const navigation = [
   { name: 'Home', href: '/' },
+  { name: 'Salon', href: '/salon' },
   {
     name: 'Services',
     href: '#',
     children: [
-      { name: 'Salon', href: '/salon' },
       { name: 'Fashion', href: '/fashion' },
       { name: 'Catering', href: '/catering' },
       { name: 'Academy', href: '/academy' },
@@ -33,7 +33,7 @@ export default function Header() {
         {/* Logo */}
         <Link href='/' className='flex items-center gap-2'>
           <span className='text-xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50'>
-            bukky<span className='text-primary italic'>group</span>
+            bukky<span className='text-group-primary italic'>group</span>
           </span>
         </Link>
 
@@ -48,7 +48,7 @@ export default function Header() {
             >
               <Link
                 href={item.href}
-                className='flex items-center gap-1.5 text-sm font-semibold text-zinc-600 transition-colors hover:text-primary dark:text-zinc-400 dark:hover:text-primary'
+                className='flex items-center gap-1.5 text-sm font-semibold text-zinc-600 transition-colors hover:text-group-primary dark:text-zinc-400 dark:hover:text-group-primary'
               >
                 {item.name}
                 {item.children && <HiChevronDown className='size-4' />}
@@ -68,7 +68,7 @@ export default function Header() {
                       <Link
                         key={child.name}
                         href={child.href}
-                        className='block rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-primary dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-primary'
+                        className='block rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-group-primary dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-group-primary'
                       >
                         {child.name}
                       </Link>
@@ -84,7 +84,7 @@ export default function Header() {
         <div className='flex items-center gap-4'>
           <Link
             href='/bookings'
-            className='hidden h-10 items-center rounded-full bg-primary px-6 text-sm font-bold text-white transition-all hover:scale-105 hover:bg-primary/90 active:scale-95 sm:flex'
+            className='hidden h-10 items-center rounded-full bg-group-primary px-6 text-sm font-bold text-white transition-all hover:scale-105 hover:bg-group-primary/90 active:scale-95 sm:flex'
           >
             Book Now
           </Link>
@@ -139,7 +139,7 @@ export default function Header() {
                         }}
                         className={`text-xl font-medium transition-colors ${
                           expandedItem === item.name
-                            ? 'text-primary'
+                            ? 'text-group-primary'
                             : 'text-zinc-900 dark:text-zinc-50'
                         }`}
                       >
@@ -166,14 +166,14 @@ export default function Header() {
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
-                        className='ml-4 flex flex-col gap-4 border-l-2 border-primary/20 pl-6'
+                        className='ml-4 flex flex-col gap-4 border-l-2 border-group-primary/20 pl-6'
                       >
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className='text-lg font-medium text-zinc-500 transition-colors hover:text-primary dark:text-zinc-400'
+                            className='text-lg font-medium text-zinc-500 transition-colors hover:text-group-primary dark:text-zinc-400'
                           >
                             {child.name}
                           </Link>
@@ -187,7 +187,7 @@ export default function Header() {
               <Link
                 href='/bookings'
                 onClick={() => setIsMobileMenuOpen(false)}
-                className='flex h-14 items-center justify-center rounded-2xl bg-primary text-xl font-bold text-white'
+                className='flex h-14 items-center justify-center rounded-2xl bg-group-primary text-xl font-bold text-white'
               >
                 Book Now
               </Link>

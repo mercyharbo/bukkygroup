@@ -3,6 +3,8 @@
 import { motion, useAnimation } from 'framer-motion'
 import React, { useEffect } from 'react'
 
+import { cn } from '@/lib/utils'
+
 interface MarqueeItem {
   text: string
   link?: string
@@ -37,7 +39,10 @@ export const Marquee: React.FC<MarqueeProps> = ({
 
   return (
     <div
-      className={`relative flex overflow-hidden bg-primary py-4 select-none ${className}`}
+      className={cn(
+        'relative flex overflow-hidden bg-primary py-4 select-none',
+        className,
+      )}
       onMouseEnter={() => controls.stop()}
       onMouseLeave={() =>
         controls.start({

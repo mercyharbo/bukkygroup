@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 
 import Footer from '@/components/footer'
 import Header from '@/components/header'
+import LocationMap from '@/components/location-map'
 
 export default function RootLayout({
   children,
@@ -38,6 +39,7 @@ export default function RootLayout({
         <div className='fixed top-0 left-0 z-60 h-1 w-full bg-primary' />
         <Header />
         {children}
+        <LocationMap />
         <Footer />
       </body>
     </html>

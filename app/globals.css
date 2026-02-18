@@ -45,6 +45,11 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --font-serif: var(--font-serif);
+
+  --color-brand-foundation: #4f189e;
+  --color-brand-restaurant: #e8b532;
+  --color-brand-books: #059669;
+  --color-group-primary: #4f46e5;
 }
 
 :root {
