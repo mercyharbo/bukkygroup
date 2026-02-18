@@ -230,11 +230,11 @@ export default function Home() {
                   and empowerment.
                 </p>
                 <p>
-                  As an author of influential works like <i>"Slave Boss"</i> and{' '}
-                  <i>"THE FLAGS"</i>, she inspires resilience and purpose. Her
-                  commitment to youth development through the Get Busy
-                  Foundation has empowered countless teenagers to unlock their
-                  potential.
+                  As an author of influential works like{' '}
+                  <i>&quot;Slave Boss&quot;</i> and <i>&quot;THE FLAGS&quot;</i>
+                  , she inspires resilience and purpose. Her commitment to youth
+                  development through the Get Busy Foundation has empowered
+                  countless teenagers to unlock their potential.
                 </p>
                 <p>
                   A Vice President at Toastmasters International, Bukky fosters
@@ -404,9 +404,9 @@ export default function Home() {
           >
             <RiDoubleQuotesL className='mx-auto mb-8 size-16 text-group-primary/20' />
             <p className='mx-auto max-w-4xl font-serif text-2xl leading-relaxed text-white md:text-4xl'>
-              "Our mission transcends aesthetics; we are here to nurture
+              &quot;Our mission transcends aesthetics; we are here to nurture
               confidence and inspire a legacy of excellence in everything we
-              do."
+              do.&quot;
             </p>
             <div className='mt-8 text-xl font-bold text-group-primary italic'>
               — Bukky Anny
