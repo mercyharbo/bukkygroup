@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bukky Group
+
+Bukky Group is a dynamic lifestyle enterprise in Centurion, South Africa that brings together excellence in beauty, fashion, food, and training. With four powerful brands under one umbrella: **Bukky Beauty World**, **Lumina Vogue**, **Naijayum**, and **Bukky Academy**, we are dedicated to empowering individuals to look good, feel great, and grow confidently. From trendsetting style to flavorful cuisine and skill-building education, Bukky Group is where passion meets purpose.
 
 ## Getting Started
 
