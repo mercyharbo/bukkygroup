@@ -24,9 +24,9 @@ export default function Header() {
       <nav className='mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-gray-900/50 px-8 py-3 shadow-2xl backdrop-blur-xl'>
         {/* Logo */}
         <Link href='/' className='flex items-center gap-2'>
-          <div className='relative h-10 w-40 transition-transform hover:scale-105'>
+          <div className='relative size-16 transition-transform hover:scale-105'>
             <NextImage
-              src='/logo.png'
+              src='/bukkyflower2.png'
               alt='Bukky Group Logo'
               fill
               className='object-contain'

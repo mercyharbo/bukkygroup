@@ -42,7 +42,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className='border-t border-white/5 bg-gray-900 py-16 text-white'>
+    <footer className='border-t border-white/5 bg-brand-deep py-16 text-white'>
       <div className='container mx-auto px-6'>
         <div className='flex flex-col items-center gap-12'>
           {/* Newsletter Section */}
@@ -102,9 +102,9 @@ export default function Footer() {
 
           {/* Logo/Brand Name */}
           <Link href='/' className='flex items-center gap-2'>
-            <div className='relative h-16 w-64 transition-transform hover:scale-105'>
+            <div className='relative size-30 transition-transform hover:scale-105'>
               <NextImage
-                src='/logo.png'
+                src='/bukkyflower2.png'
                 alt='Bukky Group Logo'
                 fill
                 className='object-contain'

@@ -45,13 +45,14 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --font-serif: var(--font-serif);
+  --font-cinzel: var(--font-cinzel);
 
   --color-brand-foundation: #4f189e;
   --color-brand-restaurant: #e8b532;
   --color-brand-fashion: #eb6101;
   --color-brand-books: #059669;
   --color-group-primary: #c5a028; /* Luxurious Gold */
-  --color-brand-gold: #ffd700;
+  --color-brand-gold: #9c450f;
   --color-brand-silver: #e5e4e2;
   --color-brand-charcoal: #121212;
 
@@ -63,6 +64,11 @@
   --radius-card-giant: 4rem;
 
   --color-soft-sand: #fcf8f5;
+  --color-brand-cream: #fcf8f5;
+  --color-brand-deep: #0e1a1f;
+  --color-brand-teal: #14b8a6;
+  --color-brand-teal-light: #2dd4bf;
+  --color-brand-slate: #0f172a;
   --color-deep-base: #222222;
 
   --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.04);
