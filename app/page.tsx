@@ -93,10 +93,7 @@ export default function Home() {
       </section>
 
       {/* Bio Section */}
-      <section
-        className='relative overflow-hidden py-14 md:py-32'
-        id='about'
-      >
+      <section className='relative overflow-hidden py-14 md:py-32' id='about'>
         <div className='pointer-events-none absolute -right-24 top-0 size-128 rounded-full bg-brand-gold/5 blur-3xl' />
         <div className='pointer-events-none absolute -left-24 bottom-0 size-128 rounded-full bg-brand-silver/5 blur-3xl' />
 
@@ -224,7 +221,7 @@ export default function Home() {
                     className='relative h-full'
                   >
                     <Link href={brand.link} className='group block h-full'>
-                      <Card className='relative flex h-full flex-col items-center text-center gap-2 overflow-hidden rounded-[2.5rem] border-zinc-100 bg-white p-0 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/5'>
+                      <Card className='relative flex h-full flex-col items-center text-center gap-2 overflow-hidden rounded-card-large border-zinc-100 bg-white p-0 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/5'>
                         <CardHeader className='p-10 pb-0 flex flex-col items-center gap-8'>
                           {/* Logo Area */}
                           <div className='flex size-32 items-center justify-center overflow-hidden rounded-full bg-zinc-50 p-1 shadow-inner ring-8 ring-zinc-50/50 transition-transform duration-500 group-hover:scale-105'>

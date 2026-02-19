@@ -44,7 +44,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${cinzel.variable} antialiased`}
       >
         <Header />
-        <main className='bg-[#000]'>{children}</main>
+        <main className='bg-black'>{children}</main>
         {/* <LocationMap /> */}
         <Footer />
       </body>
