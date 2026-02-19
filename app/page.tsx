@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { motion } from 'framer-motion'
 import NextImage from 'next/image'
 import Link from 'next/link'
-import { FaRocket, FaShieldAlt, FaStar, FaUsers } from 'react-icons/fa'
 import { RiQuillPenLine } from 'react-icons/ri'
 
 const flagshipBrands = [
@@ -86,7 +85,7 @@ export default function Home() {
   return (
     <main className='relative min-h-screen overflow-hidden selection:bg-brand-gold/30 selection:text-brand-gold flex flex-col gap-12'>
       {/* Hero Section */}
-      <section className='container relative mx-auto px-8 lg:px-10 flex min-h-screen items-center justify-center pt-32 pb-12 lg:pb-20'>
+      <section className='container relative mx-auto flex min-h-screen items-center justify-center pt-55 pb-12 lg:pb-20'>
         {/* Hero Visual - Logo Orbit */}
         <div className='relative flex w-full items-center justify-center'>
           <LogoOrbit brands={flagshipBrands} />
@@ -95,7 +94,7 @@ export default function Home() {
 
       {/* Bio Section */}
       <section
-        className='relative overflow-hidden bg-brand-deep py-14 md:py-32'
+        className='relative overflow-hidden py-14 md:py-32'
         id='about'
       >
         <div className='pointer-events-none absolute -right-24 top-0 size-128 rounded-full bg-brand-gold/5 blur-3xl' />
@@ -195,10 +194,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className='relative overflow-hidden bg-brand-slate py-14 md:py-32'
-        id='brands'
-      >
+      <section className='relative overflow-hidden py-14 md:py-32' id='brands'>
         <div className='container relative mx-auto px-6'>
           <div className='flex flex-col gap-16'>
             <div className='flex flex-col items-center gap-4 text-center'>
@@ -279,62 +275,52 @@ export default function Home() {
               </motion.h2>
             </div>
 
-            <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4'>
-              {[
-                {
-                  title: 'Unmatched Excellence',
-                  desc: 'We set the standard in luxury fashion, beauty, and hospitality through rigorous attention to detail.',
-                  icon: FaStar,
-                },
-                {
-                  title: 'Holistic Impact',
-                  desc: 'Beyond business, we nurture potential through the Get Busy Foundation—empowering the next generation.',
-                  icon: FaUsers,
-                },
-                {
-                  title: 'Creative Innovation',
-                  desc: 'We blend traditional craftsmanship with modern vision to create brands that inspire and lead.',
-                  icon: FaRocket,
-                },
-                {
-                  title: 'Rooted in Integrity',
-                  desc: 'Every venture is built on a foundation of resilience, authenticity, and a commitment to touching lives.',
-                  icon: FaShieldAlt,
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className='h-full'
-                >
-                  <Card className='relative flex h-full flex-col items-center text-center gap-4 overflow-hidden rounded-[2.5rem] border-zinc-100 bg-white p-0 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/5 group'>
-                    <CardHeader className='p-10 pb-0 flex flex-col items-center gap-8'>
-                      {/* Icon Area */}
-                      <div className='flex size-32 items-center justify-center overflow-hidden rounded-full bg-zinc-50 p-1 ring ring-zinc-100 transition-transform duration-500 group-hover:scale-105'>
-                        <div className='flex size-full items-center justify-center rounded-full bg-white text-black transition-transform group-hover:scale-110'>
-                          <item.icon className='size-12' />
-                        </div>
-                      </div>
-                    </CardHeader>
-
-                    <CardContent className='p-10 pt-0'>
-                      {/* Item Info */}
-                      <div className='flex flex-col gap-2'>
-                        <h3 className='bg-linear-to-r from-brand-accent-gold to-brand-accent-gold bg-clip-text text-xl font-black tracking-tight italic text-transparent uppercase'>
-                          {item.title}
-                        </h3>
-                        <p className='text-base text-black font-semibold leading-relaxed'>
-                          {item.desc}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className='mx-auto max-w-4xl'
+            >
+              <div className='flex flex-col gap-8 text-center text-lg leading-relaxed text-zinc-300 md:text-xl'>
+                <p>
+                  At Bukky Group, we are defined by{' '}
+                  <span className='font-bold text-white'>
+                    Unmatched Excellence
+                  </span>
+                  . We set the standard in luxury fashion, beauty, and
+                  hospitality through rigorous attention to detail, ensuring
+                  that every experience we provide is nothing short of
+                  exceptional.
+                </p>
+                <p>
+                  Our{' '}
+                  <span className='font-bold text-white'>Holistic Impact</span>{' '}
+                  goes beyond business. We are dedicated to nurturing potential
+                  through the Get Busy Foundation—empowering the next generation
+                  with the tools, mentorship, and opportunities they need to
+                  thrive.
+                </p>
+                <p>
+                  Through{' '}
+                  <span className='font-bold text-white'>
+                    Creative Innovation
+                  </span>
+                  , we blend traditional craftsmanship with a modern vision.
+                  This allows us to build brands that don’t just follow trends,
+                  but inspire and lead their industries into the future.
+                </p>
+                <p>
+                  Everything we do is{' '}
+                  <span className='font-bold text-white'>
+                    Rooted in Integrity
+                  </span>
+                  . Every venture is built on a foundation of resilience,
+                  authenticity, and a heartfelt commitment to touching lives and
+                  leaving a lasting legacy of excellence.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

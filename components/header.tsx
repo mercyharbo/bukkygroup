@@ -23,16 +23,22 @@ export default function Header() {
     <header className='fixed top-6 left-0 z-50 w-full px-6 transition-all duration-300'>
       <nav className='mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-gray-900/50 px-8 py-3 shadow-2xl backdrop-blur-xl'>
         {/* Logo */}
-        <Link href='/' className='flex items-center gap-2'>
-          <div className='relative size-16 transition-transform hover:scale-105'>
+        <Link
+          href='/'
+          className='flex items-center gap-3 transition-opacity hover:opacity-90'
+        >
+          <div className='relative size-14'>
             <NextImage
               src='/bukkyflower2.png'
-              alt='Bukky Group Logo'
+              alt='Bukky Group'
               fill
               className='object-contain'
               priority
             />
           </div>
+          <span className='font-cinzel text-sm font-black uppercase tracking-widest text-white sm:text-xl'>
+            Bukky <br /> Group
+          </span>
         </Link>
         <div className='flex items-center gap-8'>
           {/* Desktop Navigation */}

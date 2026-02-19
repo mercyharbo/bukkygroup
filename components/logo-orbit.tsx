@@ -20,15 +20,19 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
   // We'll limit to 8 brands for the orbit as per the design reference
   const orbitBrands = brands.slice(0, 8)
   const [radius, setRadius] = useState(380)
+  const [containerSize, setContainerSize] = useState(850)
 
   useEffect(() => {
     const updateRadius = () => {
       if (window.innerWidth < 640) {
-        setRadius(175)
+        setRadius(150)
+        setContainerSize(Math.min(window.innerWidth - 32, 350))
       } else if (window.innerWidth < 1024) {
         setRadius(280)
+        setContainerSize(650)
       } else {
         setRadius(380)
+        setContainerSize(850)
       }
     }
 
@@ -38,9 +42,15 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
   }, [])
 
   return (
-    <div className='relative size-[400px] sm:size-[650px] lg:size-[850px] flex items-center justify-center'>
-      {/* Connecting Chain / Orbit Path Backdrop */}
-      <div className='absolute inset-0 rounded-full border-2 sm:border-4 border-dashed border-zinc-500/20 scale-95' />
+    <div
+      className='relative flex items-center justify-center'
+      style={{ width: containerSize, height: containerSize }}
+    >
+      {/* Connecting Chain / Orbit Path Backdrop — explicitly squared to stay circular */}
+      <div
+        className='absolute rounded-full border-2 sm:border-4 border-dashed border-zinc-500/20 scale-95'
+        style={{ width: containerSize, height: containerSize }}
+      />
 
       {/* Central Hub Logo */}
       <motion.div
@@ -122,7 +132,7 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
           height: radius * 2,
         }}
       >
-        <svg viewBox='0 0 100 100' className='size-full opacity-40'>
+        <svg viewBox='0 0 100 100' className='size-full opacity-50'>
           <circle
             cx='50'
             cy='50'
@@ -131,7 +141,7 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
             stroke='currentColor'
             strokeWidth='0.3'
             strokeDasharray='1 6'
-            className='text-brand-teal'
+            className='text-white'
           />
         </svg>
       </motion.div>
