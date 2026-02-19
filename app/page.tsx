@@ -4,24 +4,16 @@ import { motion } from 'framer-motion'
 import NextImage from 'next/image'
 import Link from 'next/link'
 import {
-  FaBookOpen,
   FaFacebookF,
-  FaGem,
-  FaGraduationCap,
-  FaHeart,
   FaInstagram,
-  FaPalette,
   FaRocket,
   FaShieldAlt,
   FaSpotify,
   FaStar,
   FaTelegramPlane,
-  FaTshirt,
   FaUsers,
-  FaUtensils,
   FaWhatsapp,
 } from 'react-icons/fa'
-import { HiOutlineSparkles } from 'react-icons/hi2'
 import { RiQuillPenLine } from 'react-icons/ri'
 
 const flagshipBrands = [
@@ -32,7 +24,7 @@ const flagshipBrands = [
       'Empowering confidence through hair, makeup, nails & total glam experiences.',
     link: '/salon',
     cardColor: '#A32CC4',
-    icon: 'Sparkles',
+    logo: '/bukkybeauty.jpeg',
   },
   {
     name: '3S The Label',
@@ -41,7 +33,7 @@ const flagshipBrands = [
       'Bold, bossy, classy designs redefining elegance and identity.',
     link: '/fashion',
     cardColor: '#FF8C00',
-    icon: 'Tshirt',
+    logo: '/label.jpeg',
   },
   {
     name: '3S Glam',
@@ -50,7 +42,7 @@ const flagshipBrands = [
       'Professional glam artistry with precision, confidence and glow.',
     link: '/glam',
     cardColor: '#C5A028',
-    icon: 'Palette',
+    logo: '/faceglam.jpeg',
   },
   {
     name: '3S College',
@@ -59,7 +51,7 @@ const flagshipBrands = [
       'Training future leaders in beauty, fashion, business, and entrepreneurship.',
     link: '/college',
     cardColor: '#004d00',
-    icon: 'GraduationCap',
+    logo: '/college.jpeg',
   },
   {
     name: '3S Restaurant',
@@ -68,7 +60,7 @@ const flagshipBrands = [
       'Premium dining experience blending culture, luxury and flavor.',
     link: '/restaurant',
     cardColor: '#C5A028',
-    icon: 'Utensils',
+    logo: '/resturant.jpeg',
   },
   {
     name: '3S Books',
@@ -77,7 +69,7 @@ const flagshipBrands = [
       'Inspiring global minds through powerful stories and transformational books.',
     link: '/books',
     cardColor: '#004d00',
-    icon: 'BookOpen',
+    logo: '/college.jpeg', // Assuming using college logo for now as fallback if books logo is missing
   },
   {
     name: 'JULY 18 COSMETICS',
@@ -86,7 +78,7 @@ const flagshipBrands = [
       'High-quality beauty products designed for royalty confidence.',
     link: '/cosmetics',
     cardColor: '#AF69EF',
-    icon: 'Gem',
+    logo: '/faceglam.jpeg', // Fallback
   },
   {
     name: 'Get Busy Foundation Africa',
@@ -95,7 +87,7 @@ const flagshipBrands = [
       'Empowering teens and women through mentorship, education and safe spaces.',
     link: '/foundation',
     cardColor: '#C5A028',
-    icon: 'Heart',
+    logo: '/getbusy.jpeg',
   },
 ]
 
@@ -405,17 +397,6 @@ export default function Home() {
 
             <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4'>
               {flagshipBrands.map((brand, index) => {
-                const Icon = {
-                  Sparkles: HiOutlineSparkles,
-                  Tshirt: FaTshirt,
-                  Palette: FaPalette,
-                  GraduationCap: FaGraduationCap,
-                  Utensils: FaUtensils,
-                  BookOpen: FaBookOpen,
-                  Gem: FaGem,
-                  Heart: FaHeart,
-                }[brand.icon] as any
-
                 return (
                   <motion.div
                     key={brand.name}
@@ -427,7 +408,7 @@ export default function Home() {
                   >
                     <Link href={brand.link} className='group block h-full'>
                       <div
-                        className='relative flex h-full flex-col overflow-hidden border border-white/10 p-6 transition-all duration-500 hover:-translate-y-2 hover:border-brand-gold/40 hover:shadow-2xl hover:shadow-brand-gold/10'
+                        className='relative flex h-full flex-col overflow-hidden border border-white/10 p-6 transition-all duration-500 rounded-md hover:-translate-y-2 hover:border-brand-gold/40 hover:shadow-2xl hover:shadow-brand-gold/10'
                         style={{
                           background: `linear-gradient(to bottom, ${brand.cardColor}33, ${brand.cardColor}11, transparent)`,
                         }}
@@ -443,16 +424,14 @@ export default function Home() {
 
                         <div className='relative z-10 flex h-full flex-col items-center text-center'>
                           {/* Logo Area */}
-                          <div
-                            className='mb-6 flex size-16 items-center justify-center rounded-2xl transition-transform duration-500 group-hover:scale-110 bg-white/5'
-                            style={{
-                              color:
-                                brand.cardColor === '#C5A028'
-                                  ? 'var(--color-brand-gold)'
-                                  : brand.cardColor,
-                            }}
-                          >
-                            <Icon className='size-8' />
+                          <div className='mb-6 flex size-20 items-center justify-center overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-110 bg-white shadow-lg'>
+                            <NextImage
+                              src={brand.logo}
+                              alt={`${brand.name} Logo`}
+                              width={500}
+                              height={500}
+                              className='h-full w-full object-cover'
+                            />
                           </div>
 
                           {/* Brand Info */}

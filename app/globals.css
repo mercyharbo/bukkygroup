@@ -48,6 +48,7 @@
 
   --color-brand-foundation: #4f189e;
   --color-brand-restaurant: #e8b532;
+  --color-brand-fashion: #eb6101;
   --color-brand-books: #059669;
   --color-group-primary: #c5a028; /* Luxurious Gold */
   --color-brand-gold: #ffd700;
@@ -58,6 +59,14 @@
   --color-brand-accent-silver: #c0c0c0;
 
   --radius-card-large: 2.5rem;
+  --radius-card-xl: 3rem;
+  --radius-card-giant: 4rem;
+
+  --color-soft-sand: #fcf8f5;
+  --color-deep-base: #222222;
+
+  --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.04);
+  --shadow-premium-hover: 0 40px 80px rgba(0, 0, 0, 0.08);
 }
 
 :root {
