@@ -49,15 +49,15 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative text-sm font-semibold transition-all hover:text-brand-gold ${
-                    isActive ? 'text-brand-gold' : 'text-gray-200'
+                  className={`relative text-sm font-semibold transition-all hover:text-primary ${
+                    isActive ? 'text-primary' : 'text-gray-200'
                   }`}
                 >
                   {item.name}
                   {isActive && (
                     <motion.div
                       layoutId='active-nav'
-                      className='absolute -bottom-1.5 left-0 h-[2px] w-full rounded-full bg-linear-to-r from-brand-gold to-white'
+                      className='absolute -bottom-1.5 left-0 h-[2px] w-full rounded-full bg-linear-to-r from-primary to-white'
                       transition={{
                         type: 'spring',
                         stiffness: 380,
@@ -122,7 +122,7 @@ export default function Header() {
                         href={item.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`text-xl font-medium transition-all hover:translate-x-2 ${
-                          isActive ? 'text-brand-gold' : 'text-gray-300'
+                          isActive ? 'text-primary' : 'text-gray-300'
                         }`}
                       >
                         {item.name}
