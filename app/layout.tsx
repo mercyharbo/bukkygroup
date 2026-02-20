@@ -1,5 +1,6 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
+import { Toaster } from '@/components/ui/sonner'
 import type { Metadata } from 'next'
 import { Cinzel, Cormorant_Garamond, Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
@@ -101,9 +102,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${cinzel.variable} antialiased`}
       >
         <Header />
-        <main className='bg-black'>{children}</main>
+        <main className='bg-black px-5 lg:px-10'>{children}</main>
         {/* <LocationMap /> */}
         <Footer />
+        <Toaster position='top-center' />
       </body>
     </html>
   )
