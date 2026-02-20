@@ -48,7 +48,7 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
     >
       {/* Connecting Chain / Orbit Path Backdrop — explicitly squared to stay circular */}
       <div
-        className='absolute rounded-full border-2 sm:border-4 border-dashed border-zinc-500/20 scale-95'
+        className='absolute rounded-full border-2 sm:border-4 border-dashed border-gray-600 scale-93'
         style={{ width: containerSize, height: containerSize }}
       />
 
@@ -68,7 +68,7 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
             className='w-12 sm:w-24 lg:w-55 object-contain'
           />
           <div className='text-center space-y-1 sm:space-y-2 font-cinzel'>
-            <span className='block text-lg sm:text-3xl lg:text-6xl uppercase font-extrabold tracking-[0.2em] text-white leading-tight'>
+            <span className='block text-lg sm:text-3xl lg:text-6xl uppercase font-extrabold tracking-extra text-white leading-tight'>
               Bukky Group
             </span>
             <span className='block text-[8px] sm:text-sm lg:text-base uppercase tracking-[0.4em] text-white/80 font-medium'>
@@ -110,8 +110,13 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
                 className='flex flex-col items-center gap-2'
               >
                 {/* Brand Name Text */}
-                <div className='flex items-center justify-center transition-all group-hover:scale-110 text-center max-w-[100px] sm:max-w-[200px] lg:max-w-[250px]'>
-                  <span className='font-cinzel text-[10px] sm:text-lg lg:text-2xl font-black uppercase tracking-[0.2em] text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]'>
+                <div className='relative flex items-center justify-center transition-all group-hover:scale-110 text-center max-w-[100px] sm:max-w-[200px] lg:max-w-[250px]'>
+                  {/* Default White State */}
+                  <span className='font-cinzel text-[10px] sm:text-lg lg:text-2xl font-black uppercase tracking-extra text-white transition-opacity duration-500 group-hover:opacity-0 drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]'>
+                    {brand.name}
+                  </span>
+                  {/* Shiny Gold Hover State */}
+                  <span className='absolute inset-0 flex items-center justify-center font-cinzel text-[10px] sm:text-lg lg:text-2xl font-black uppercase tracking-extra text-shine-gold opacity-0 transition-opacity duration-500 group-hover:opacity-100 drop-shadow-[0_4px_8px_rgba(0,0,0,0.4)]'>
                     {brand.name}
                   </span>
                 </div>
@@ -132,7 +137,7 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
           height: radius * 2,
         }}
       >
-        <svg viewBox='0 0 100 100' className='size-full opacity-50'>
+        <svg viewBox='0 0 100 100' className='size-full opacity-80'>
           <circle
             cx='50'
             cy='50'

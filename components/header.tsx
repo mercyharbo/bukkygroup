@@ -10,8 +10,8 @@ import { HiMenu, HiX } from 'react-icons/hi'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Companies', href: '/#brands' },
-  { name: 'Foundation', href: '/academy' },
+  { name: 'Companies', href: '/companies' },
+  { name: 'Foundation', href: '/foundation' },
   { name: 'Contact', href: '/contact' },
 ]
 

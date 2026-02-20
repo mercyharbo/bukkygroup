@@ -102,7 +102,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${cinzel.variable} antialiased`}
       >
         <Header />
-        <main className='bg-black px-5 lg:px-10'>{children}</main>
+        <main className='bg-black'>{children}</main>
         {/* <LocationMap /> */}
         <Footer />
         <Toaster position='top-center' />
