@@ -68,12 +68,12 @@ export const CollegePrograms = () => {
     <section id='programs' className='w-full py-24 md:py-32 bg-zinc-50'>
       <div className='container mx-auto px-5 lg:px-10 space-y-20'>
         <div className='flex flex-col items-center text-center space-y-4 max-w-3xl mx-auto'>
-          <h2 className='text-xs font-semibold uppercase tracking-[0.3em] text-primary'>
+          <h2 className='text-xs font-semibold uppercase tracking-[0.3em] text-gray-500'>
             Curriculum
           </h2>
-          <h3 className='font-serif text-4xl md:text-5xl font-bold text-black'>
+          <h3 className='text-4xl md:text-5xl font-bold text-black'>
             What We Offer <br />
-            <span className='italic text-primary'>at 3S College.</span>
+            <span className='italic text-black'>at 3S College.</span>
           </h3>
           <p className='text-zinc-500 text-lg leading-relaxed'>
             Our institution is designed for aspiring creatives who want to turn
@@ -92,16 +92,14 @@ export const CollegePrograms = () => {
               transition={{ delay: idx * 0.1 }}
               className='bg-white p-8 space-y-6 group hover:shadow-2xl transition-all duration-500 border border-gray-300 rounded-xl flex flex-col items-center text-center'
             >
-              <div className='size-16 rounded-full bg-gray-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-500'>
+              <div className='size-16 rounded-full bg-gray-200 flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition-colors duration-500'>
                 <program.icon className='size-8' />
               </div>
               <div className='space-y-3'>
                 <h4 className='text-lg font-semibold text-black leading-tight'>
                   {program.title}
                 </h4>
-                <p className='text-sm text-gray-600'>
-                  {program.description}
-                </p>
+                <p className='text-sm text-gray-600'>{program.description}</p>
               </div>
             </motion.div>
           ))}

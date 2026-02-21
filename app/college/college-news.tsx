@@ -31,21 +31,21 @@ const news = [
 
 export const NewsSection = () => {
   return (
-    <section className='w-full py-24 md:py-32 bg-white'>
+    <section className='w-full py-24 md:py-32 '>
       <div className='container mx-auto px-5 lg:px-10 space-y-16'>
         <div className='flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-zinc-100 pb-12'>
           <div className='space-y-4'>
-            <h2 className='font-serif text-4xl md:text-5xl font-bold text-black'>
+            <h2 className='font-serif text-4xl md:text-5xl font-bold text-white'>
               Latest News
             </h2>
-            <p className='text-zinc-500 font-normal max-w-lg'>
+            <p className='text-gray-300 font-normal max-w-lg'>
               Stay informed about everything happening at 3S College, from
               groundbreaking initiatives to student achievements.
             </p>
           </div>
           <Button
             variant='outline'
-            className='rounded-none px-10 bg-transparent border-black text-black hover:bg-black hover:text-white transition-all w-fit'
+            className='rounded-none px-10 bg-transparent border-white text-white hover:bg-white hover:text-black transition-all w-fit'
             asChild
           >
             <Link href='#news'>View More News</Link>
@@ -62,7 +62,7 @@ export const NewsSection = () => {
               transition={{ delay: idx * 0.1 }}
               className='flex flex-col gap-6 group cursor-pointer'
             >
-              <div className='aspect-video relative overflow-hidden bg-zinc-100'>
+              <div className='aspect-video relative overflow-hidden bg-gray-100'>
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -72,11 +72,11 @@ export const NewsSection = () => {
               </div>
               <div className='space-y-4'>
                 <div className='flex items-center gap-3 text-xs uppercase tracking-widest font-bold'>
-                  <span className='text-primary'>{item.category}</span>
-                  <span className='size-1 rounded-full bg-zinc-300' />
-                  <span className='text-gray-400'>{item.date}</span>
+                  <span className='text-gray-300'>{item.category}</span>
+                  <span className='size-1 rounded-full bg-gray-300' />
+                  <span className='text-gray-300'>{item.date}</span>
                 </div>
-                <h3 className='text-lg md:text-xl font-semibold text-black leading-tight group-hover:text-primary transition-colors'>
+                <h3 className='text-sm md:text-base font-semibold text-white leading-tight group-hover:text-primary transition-colors'>
                   {item.title}
                 </h3>
               </div>

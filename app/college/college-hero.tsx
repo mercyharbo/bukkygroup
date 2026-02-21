@@ -36,10 +36,10 @@ export const CollegeHero = () => {
           <Card className='bg-white rounded-none border-none shadow-xl overflow-hidden'>
             <CardContent className='p-6 md:p-8 lg:p-10 text-center space-y-6 md:space-y-8'>
               <div className='space-y-3'>
-                <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-[#1a4a3e] tracking-tight'>
+                <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-black tracking-tight'>
                   Welcome to 3S College
                 </h1>
-                <p className='max-w-xl mx-auto text-zinc-600 text-sm md:text-base font-normal leading-relaxed text-pretty'>
+                <p className='max-w-xl mx-auto text-gray-600 text-sm md:text-base font-normal leading-relaxed text-pretty'>
                   3S College is a premier Beauty and Fashion College founded
                   under Bukky Group, created to raise a new generation of
                   confident, skilled, and creative professionals in the beauty
@@ -50,19 +50,19 @@ export const CollegeHero = () => {
               <div className='flex flex-wrap items-center justify-center gap-4 md:gap-8'>
                 <Link
                   href='#programs'
-                  className='text-xs font-semibold uppercase tracking-widest text-[#1a4a3e] hover:text-primary transition-colors flex items-center gap-2'
+                  className='text-xs font-semibold uppercase tracking-widest text-black hover:text-black transition-colors flex items-center gap-2'
                 >
                   Browse Majors <span>→</span>
                 </Link>
                 <Link
                   href='#visit'
-                  className='text-xs font-semibold uppercase tracking-widest text-[#1a4a3e] hover:text-primary transition-colors flex items-center gap-2'
+                  className='text-xs font-semibold uppercase tracking-widest text-black hover:text-black transition-colors flex items-center gap-2'
                 >
                   Visit Campus <span>→</span>
                 </Link>
                 <Link
                   href='/contact'
-                  className='text-xs font-semibold uppercase tracking-widest text-[#1a4a3e] hover:text-primary transition-colors flex items-center gap-2'
+                  className='text-xs font-semibold uppercase tracking-widest text-black hover:text-black transition-colors flex items-center gap-2'
                 >
                   Request Info <span>→</span>
                 </Link>
@@ -73,10 +73,10 @@ export const CollegeHero = () => {
                   href='https://www.instagram.com/3scollege/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center gap-3 text-[#1a4a3e] hover:text-primary transition-colors group'
+                  className='flex items-center gap-3 text-black hover:text-black transition-colors group'
                 >
                   <RiInstagramFill className='size-6 translate-y-[-1px]' />
-                  <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-primary transition-all'>
+                  <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-black transition-all'>
                     @3scollege
                   </span>
                 </Link>

@@ -23,15 +23,12 @@ const stats = [
 
 export const CollegeStats = () => {
   return (
-    <section className='relative w-full py-24 md:py-32 bg-brand-deep overflow-hidden flex flex-col items-center justify-center'>
-      {/* Background with Dark Green/Teal accent like the reference */}
-      <div className='absolute inset-0 z-0 bg-linear-to-br from-[#0a1f1a] to-[#0a0a0a]' />
-
+    <section className='relative w-full py-24 md:py-32 overflow-hidden flex flex-col items-center justify-center'>
       <div className='container relative z-10 mx-auto px-5 lg:px-10'>
         <div className='flex flex-col lg:flex-row items-center gap-16'>
           <div className='w-full lg:w-1/2 space-y-12'>
             <div className='space-y-4'>
-              <h4 className='text-xs font-bold uppercase tracking-[0.3em] text-primary'>
+              <h4 className='text-xs font-bold uppercase tracking-[0.3em] text-gray-300'>
                 Real Impact
               </h4>
               <h2 className='font-serif text-4xl md:text-6xl font-bold text-white'>
@@ -49,14 +46,14 @@ export const CollegeStats = () => {
                   transition={{ delay: idx * 0.1 }}
                   className='space-y-3'
                 >
-                  <div className='text-4xl md:text-6xl font-bold text-primary'>
+                  <div className='text-4xl md:text-6xl font-bold text-white'>
                     {stat.value}
                   </div>
                   <div className='space-y-1'>
                     <p className='text-xl font-semibold text-white'>
                       {stat.label}
                     </p>
-                    <p className='text-zinc-400 font-normal leading-relaxed'>
+                    <p className='text-gray-300 font-normal leading-relaxed'>
                       {stat.description}
                     </p>
                   </div>
@@ -78,7 +75,7 @@ export const CollegeStats = () => {
               className='object-cover rounded-none grayscale transition-all duration-700 hover:grayscale-0'
             />
             {/* Visual connector like the green line in reference */}
-            <div className='absolute bottom-10 -left-10 w-32 h-2 bg-primary' />
+            <div className='absolute bottom-10 -left-10 w-32 h-2 bg-white' />
           </motion.div>
         </div>
       </div>

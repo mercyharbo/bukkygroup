@@ -5,15 +5,15 @@ import Image from 'next/image'
 
 export const CampusSection = () => {
   return (
-    <section className='w-full py-24 md:py-32 bg-zinc-50'>
+    <section className='w-full py-24 md:py-32 bg-gray-50'>
       <div className='container mx-auto px-5 lg:px-10'>
         <div className='flex flex-col lg:flex-row items-end justify-between gap-12 mb-16'>
           <div className='max-w-2xl space-y-4'>
             <h2 className='font-serif text-4xl md:text-6xl font-bold text-black leading-tight'>
               The World is <br />
-              <span className='italic text-primary'>Your Classroom.</span>
+              <span className='italic'>Your Classroom.</span>
             </h2>
-            <p className='text-zinc-600 text-lg font-normal leading-relaxed'>
+            <p className='text-gray-600 text-lg font-normal leading-relaxed'>
               Located at the heart of the creative district, 3S College offers
               an environment that inspires collaboration and forward-thinking.
               From studio sessions to on-site industry visits, your journey is
@@ -21,12 +21,12 @@ export const CampusSection = () => {
             </p>
           </div>
           <div className='flex items-center gap-8'>
-            <div className='hidden md:block h-px w-32 bg-zinc-200' />
+            <div className='hidden md:block h-px w-32 bg-gray-200' />
             <div className='flex flex-col gap-2'>
-              <span className='text-sm uppercase tracking-widest text-primary font-bold'>
+              <span className='text-sm uppercase tracking-widest text-black font-bold'>
                 Join the Community
               </span>
-              <span className='text-zinc-400 font-normal'>
+              <span className='text-gray-500 font-normal'>
                 5,000+ Alumni Worldwide
               </span>
             </div>

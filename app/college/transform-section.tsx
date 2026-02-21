@@ -24,7 +24,7 @@ export const TransformSection = () => {
             {/* Play Button Overlay Placeholder style from reference */}
             <div className='absolute inset-0 flex items-center justify-center'>
               <div className='size-20 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center cursor-pointer hover:bg-white/50 transition-all'>
-                <div className='border-t-10 border-t-transparent border-l-18 border-l-primary border-b-10 border-b-transparent ml-2' />
+                <div className='border-t-10 border-t-transparent border-l-18 border-l-black border-b-10 border-b-transparent ml-2' />
               </div>
             </div>
           </motion.div>
@@ -34,7 +34,7 @@ export const TransformSection = () => {
             <div className='space-y-6'>
               <h2 className='font-serif text-4xl md:text-5xl font-bold text-black leading-tight'>
                 Transforming Lives, <br />
-                <span className='italic text-primary'>Every Day.</span>
+                <span className='italic text-black'>Every Day.</span>
               </h2>
               <p className='text-zinc-600 text-lg font-normal leading-relaxed'>
                 Our integrated vocational pathways ensure that students gain
@@ -50,10 +50,10 @@ export const TransformSection = () => {
                   key={idx}
                   className='flex items-center justify-between py-5 border-b border-zinc-100 group cursor-pointer'
                 >
-                  <span className='text-xl font-semibold text-black group-hover:text-primary transition-colors'>
+                  <span className='text-xl font-semibold text-black group-hover:text-black transition-colors'>
                     {item}
                   </span>
-                  <span className='text-primary transition-transform group-hover:translate-x-2'>
+                  <span className='text-black transition-transform group-hover:translate-x-2'>
                     →
                   </span>
                 </div>
