@@ -57,12 +57,12 @@ export const BookingSection = () => {
                     Contact Number
                   </span>
                   <Link
-                    href='https://wa.me/27603314739'
+                    href='https://wa.me/27710354040'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='block text-black font-bold text-lg hover:text-yellow-500 transition-colors'
                   >
-                    +27 60 331 4739
+                    +27 71 035 4040
                   </Link>
                 </div>
               </div>

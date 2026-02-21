@@ -40,8 +40,7 @@ export const ProgramsSection = () => {
         <div className='max-w-3xl space-y-4'>
           <h2 className='text-4xl lg:text-5xl font-bold text-black leading-tight'>
             Building Sustainable <br />
-            <span className='text-foundation-primary'>Solutions</span> for Every
-            Challenge
+            Solutions for Every Challenge
           </h2>
           <p className='text-lg text-gray-700 max-w-xl'>
             We don&apos;t just provide temporary aid; we invest in systems that
@@ -57,14 +56,14 @@ export const ProgramsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
             >
-              <Card className='group bg-white py-0'>
+              <Card className='group bg-white py-0 transition-transform duration-700 hover:border-black'>
                 <CardContent className='p-0'>
                   <div className='relative h-64 overflow-hidden'>
                     <Image
                       src={program.image}
                       alt={program.title}
                       fill
-                      className='object-cover rounded-t-xl transition-transform duration-700 group-hover:scale-110'
+                      className='object-cover rounded-t-xl '
                     />
                     <div className='absolute inset-0 bg-linear-to-t from-black/60 to-transparent' />
                     <div className='absolute bottom-4 left-6'>

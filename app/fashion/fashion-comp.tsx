@@ -558,7 +558,7 @@ export default function FashionComp() {
                   className='h-16 px-10 rounded-full border-white/10 hover:bg-white/5 hover:text-white text-white transition-all text-sm tracking-extra uppercase font-medium flex items-center gap-3'
                 >
                   <Link
-                    href='https://wa.me/27603314739'
+                    href='https://wa.me/27710354040'
                     target='_blank'
                     rel='noopener noreferrer'
                   >

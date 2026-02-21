@@ -42,17 +42,15 @@ export default function Footer() {
   }
 
   return (
-    <footer className='border-t border-white/5 bg-brand-deep py-16 text-white'>
-      <div className='container mx-auto px-6'>
-        <div className='flex flex-col items-center gap-12'>
+    <footer className='border-t border-gray-100 bg-white py-16 text-black'>
+      <div className='container mx-auto px-5 lg:px-10'>
+        <div className='flex flex-col items-center gap-8'>
           {/* Newsletter Section */}
-          <div className='w-full max-w-lg rounded-3xl border border-white/10 bg-gray-800/30 p-8 md:p-10 shadow-2xl'>
+          <div className='w-full max-w-lg rounded-3xl border border-gray-100 bg-black p-8 md:p-10 shadow-2xl'>
             <div className='flex flex-col items-center gap-6 text-center'>
               <div className='flex flex-col gap-2'>
-                <h3 className='text-2xl font-bold bg-linear-to-r from-primary to-white bg-clip-text text-transparent'>
-                  Stay Informed
-                </h3>
-                <p className='text-gray-300/80'>
+                <h3 className='text-2xl font-bold text-white'>Stay Informed</h3>
+                <p className='text-zinc-400'>
                   Subscribe to get the latest news and exclusive offers from
                   Bukky Group.
                 </p>
@@ -76,12 +74,12 @@ export default function Footer() {
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className='h-12 rounded-xl border-white/10 bg-gray-700/50 pl-11 text-white focus-visible:ring-primary focus-visible:ring-offset-0'
+                        className='h-12 rounded-xl border-white/10 bg-white/10 pl-11 text-white focus-visible:ring-white focus-visible:ring-offset-0 placeholder:text-zinc-500'
                       />
                     </div>
                     <Button
                       type='submit'
-                      className='bg-primary hover:bg-primary/90 h-12 rounded-xl px-8 font-bold text-gray-900 shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95'
+                      className='bg-white hover:bg-white/90 h-12 rounded-xl px-8 font-bold text-black shadow-lg transition-all hover:scale-105 active:scale-95'
                     >
                       Subscribe
                     </Button>
@@ -104,7 +102,7 @@ export default function Footer() {
           <Link href='/' className='flex items-center gap-2'>
             <div className='relative size-30 transition-transform hover:scale-105'>
               <NextImage
-                src='/logo5.png'
+                src='/logo6.png'
                 alt='Bukky Group Logo'
                 fill
                 className='object-contain'
@@ -119,7 +117,7 @@ export default function Footer() {
               <Link
                 key={item.name}
                 href={item.href}
-                className='text-sm text-gray-300 transition-all hover:text-primary hover:scale-105'
+                className='text-sm text-gray-600 transition-all hover:text-black'
               >
                 {item.name}
               </Link>
@@ -133,7 +131,7 @@ export default function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className='group flex size-12 items-center justify-center rounded-xl border border-white/10 bg-gray-800/50 transition-all hover:border-primary hover:bg-primary/10 hover:text-primary'
+                  className='group flex size-12 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 transition-all hover:border-black hover:bg-muted/10 hover:text-black'
                   aria-label={item.name}
                 >
                   <item.icon className='size-5 transition-transform group-hover:scale-110' />
@@ -147,12 +145,12 @@ export default function Footer() {
                 © {new Date().getFullYear()} Bukky Group. All rights reserved.
               </div>
               <Link
-                href='https://wa.me/27603314739'
+                href='https://wa.me/27710354040'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-xs font-medium text-primary hover:underline'
+                className='text-xs font-medium text-black hover:underline'
               >
-                WhatsApp: +27 60 331 4739
+                WhatsApp & Call: +27 71 035 4040
               </Link>
             </div>
           </div>

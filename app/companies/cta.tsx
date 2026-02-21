@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const CompaniesCTA = () => {
   return (
-    <section className='w-full py-24 md:py-32 bg-brand-deep overflow-hidden relative'>
+    <section className='w-full py-24 md:py-32 bg-black overflow-hidden relative'>
       {/* Decorative Blur */}
       <div className='absolute -top-24 -left-24 size-96 rounded-full bg-primary/10 blur-[120px]' />
 
@@ -20,11 +20,11 @@ export const CompaniesCTA = () => {
           <div className='space-y-6'>
             <h2 className='font-serif text-4xl md:text-6xl font-medium text-white tracking-tight leading-tight'>
               Partner with the <br />
-              <span className='italic text-brand-accent-gold'>
+              <span className='italic'>
                 Legacy of Excellence.
               </span>
             </h2>
-            <p className='text-zinc-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto'>
+            <p className='text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto'>
               We are always looking for visionary partners and innovative minds
               to join our growing ecosystem. Let&apos;s build the future
               together.
@@ -34,7 +34,7 @@ export const CompaniesCTA = () => {
           <div className='flex flex-wrap items-center justify-center gap-6'>
             <Button
               size='xl'
-              className='rounded-full bg-primary text-black px-10 hover:scale-105 transition-transform'
+              className='rounded-full bg-white text-black px-10 hover:bg-white/90 hover:scale-105 transition-transform'
               asChild
             >
               <Link href='/contact'>Initiate Partnership</Link>

@@ -44,7 +44,7 @@ export const MissionGrid = () => {
           <h2 className='text-4xl lg:text-5xl font-bold text-black tracking-tight'>
             Compassion-Driven Support
           </h2>
-          <div className='w-20 h-1 bg-foundation-primary rounded-full' />
+          <div className='w-20 h-1 bg-black rounded-full' />
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -55,14 +55,14 @@ export const MissionGrid = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
             >
-              <Card className='p-8 rounded-card-foundation bg-foundation-light/30 border h-full hover:border-foundation-primary/20 hover:shadow-premium transition-all group'>
+              <Card className='p-8 rounded-card-foundation bg-muted border h-full hover:border-black/20 hover:shadow-premium transition-all group'>
                 <CardContent className='p-0 flex flex-col gap-6'>
                   <div className='flex flex-col gap-6'>
-                    <div className='size-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-foundation-primary transition-transform group-hover:scale-110 group-hover:rotate-3'>
+                    <div className='size-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-black transition-transform group-hover:scale-110 group-hover:rotate-3'>
                       {item.icon}
                     </div>
                     <div className='space-y-4'>
-                      <h3 className='text-xl font-semibold group-hover:text-foundation-dark transition-colors text-black'>
+                      <h3 className='text-xl font-semibold transition-colors text-black'>
                         {item.title}
                       </h3>
                       <p className='text-black leading-relaxed'>

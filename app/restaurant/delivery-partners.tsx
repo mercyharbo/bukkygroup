@@ -54,7 +54,7 @@ export const DeliveryPartners = () => {
             <div className='hidden xl:block h-12 w-px bg-zinc-200' />
 
             <motion.a
-              href='https://wa.me/27603314739'
+              href='https://wa.me/27710354040'
               target='_blank'
               rel='noopener noreferrer'
               whileHover={{ scale: 1.05 }}
@@ -65,7 +65,7 @@ export const DeliveryPartners = () => {
                 <span className='text-xs font-medium text-gray-300'>
                   Direct Order on WhatsApp
                 </span>
-                <span className='font-bold text-lg'>+27 60 331 4739</span>
+                <span className='font-bold text-lg'>+27 71 035 4040</span>
               </div>
               <div className='absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity' />
             </motion.a>

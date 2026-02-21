@@ -1,5 +1,6 @@
 'use client'
 import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
 import { AnimatePresence, motion } from 'framer-motion'
 import NextImage from 'next/image'
 import Link from 'next/link'
@@ -77,16 +78,16 @@ const outcomes = [
 ]
 
 const galleryImages = [
-  { id: 21, ext: 'jpg' },
-  { id: 12, ext: 'jpg' },
-  { id: 13, ext: 'jpg' },
-  { id: 14, ext: 'jpg' },
-  { id: 2, ext: 'webp' },
+  { src: '/gallery (21).jpg' },
+  { src: '/bbw/salon-1.jpeg' },
+  { src: '/bbw/salon-2.jpeg' },
+  { src: '/bbw/salon-3.jpeg' },
+  { src: '/bbw/salon-4.jpeg' },
 ]
 
 export default function SalonPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const mainImage = `/gallery (${galleryImages[currentIndex].id}).${galleryImages[currentIndex].ext}`
+  const mainImage = galleryImages[currentIndex].src
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -96,9 +97,9 @@ export default function SalonPage() {
   }, [])
 
   return (
-    <main className='relative min-h-screen overflow-hidden selection:bg-brand-foundation/20 selection:text-brand-foundation'>
+    <main className='relative min-h-screen overflow-hidden'>
       {/* Background Glows */}
-      <section className='relative min-h-[90vh] w-full overflow-hidden pt-32 pb-20 lg:pt-40'>
+      <section className='relative min-h-[90vh] w-full pt-32 pb-20 lg:pt-40'>
         {/* Background Landscape Image */}
         <div className='absolute inset-0 z-0'>
           <NextImage
@@ -109,11 +110,11 @@ export default function SalonPage() {
             priority
           />
           {/* Brand Purple Overlay */}
-          <div className='absolute inset-0 bg-brand-foundation/95 mix-blend-multiply' />
-          <div className='absolute inset-0 bg-linear-to-b from-brand-foundation/20 via-transparent to-brand-foundation/40' />
+          <div className='absolute inset-0 bg-black/70 mix-blend-multiply' />
+          <div className='absolute inset-0 bg-linear-to-b from-white/20 via-transparent to-black/40' />
         </div>
 
-        <div className='container relative z-10 mx-auto px-6 h-full'>
+        <div className='container relative z-10 mx-auto px-5 lg:px-10 h-full'>
           <div className='flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 h-full'>
             {/* Left Content */}
             <div className='relative flex flex-1 flex-col items-start gap-10 text-left order-2 lg:order-1'>
@@ -126,10 +127,9 @@ export default function SalonPage() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className='font-serif text-5xl md:text-7xl lg:text-6xl font-medium tracking-tight text-white leading-[1.1] drop-shadow-2xl'
+                    className='font-serif text-5xl md:text-7xl lg:text-5xl 2xl:text-5xl 3xl:text-6xl font-medium tracking-tight text-white leading-[1.1] drop-shadow-2xl'
                   >
-                    Beauty Isn&apos;t Just A Service, <br />
-                    It&apos;s An{' '}
+                    Beauty Isn&apos;t Just A Service, It&apos;s An{' '}
                     <span className='italic opacity-90'>Experience</span>.
                   </motion.h1>
 
@@ -137,7 +137,7 @@ export default function SalonPage() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className='text-lg leading-relaxed text-white font-medium drop-shadow-md max-w-xl'
+                    className='text-base leading-relaxed text-white drop-shadow-md max-w-xl'
                   >
                     Bukky Beauty World is a luxury, elegant unisex salon under
                     Bukky Group, created to deliver beauty, confidence, and
@@ -170,7 +170,7 @@ export default function SalonPage() {
                     className='h-14 rounded-full border-white/20 bg-white/5 px-8 text-lg font-semibold text-white hover:bg-white/10 hover:border-white/30 hover:text-white backdrop-blur-sm transition-all active:scale-95'
                   >
                     <Link
-                      href='https://wa.me/27603314739'
+                      href='https://wa.me/27710354040'
                       target='_blank'
                       rel='noopener noreferrer'
                       className='flex items-center gap-2'
@@ -193,7 +193,7 @@ export default function SalonPage() {
                   className='group relative flex aspect-[1.3/1] w-56 flex-col items-center justify-center overflow-hidden rounded-3xl bg-white shadow-2xl'
                 >
                   <NextImage
-                    src='/gallery (12).jpg'
+                    src='/bbw/gallery (1).jpg'
                     alt='Salon Style'
                     fill
                     className='object-cover transition-transform duration-500 group-hover:scale-110'
@@ -220,7 +220,7 @@ export default function SalonPage() {
                   className='group relative flex aspect-[1.3/1] w-56 flex-col items-center justify-center overflow-hidden rounded-3xl bg-white/10 shadow-2xl backdrop-blur-md border border-white/20'
                 >
                   <NextImage
-                    src='/gallery (13).jpg'
+                    src='/bbw/gallery (23).jpg'
                     alt='Nail Couture'
                     fill
                     className='object-cover transition-transform duration-500 group-hover:scale-110'
@@ -276,7 +276,7 @@ export default function SalonPage() {
                       const isActive = currentIndex === index
                       return (
                         <motion.button
-                          key={img.id}
+                          key={img.src}
                           whileHover={{ scale: 1.1, zIndex: 10, y: -5 }}
                           whileTap={{ scale: 0.9 }}
                           onClick={() => setCurrentIndex(index)}
@@ -287,7 +287,7 @@ export default function SalonPage() {
                           } bg-gray-200`}
                         >
                           <NextImage
-                            src={`/gallery (${img.id}).${img.ext}`}
+                            src={img.src}
                             alt='Salon Preview'
                             fill
                             className='object-cover'
@@ -304,8 +304,8 @@ export default function SalonPage() {
       </section>
 
       {/* Who We Are & Mission/Vision Section */}
-      <section className='relative overflow-hidden py-24 lg:py-32'>
-        <div className='container relative mx-auto px-6'>
+      <section className='relative overflow-hidden py-10 lg:py-20'>
+        <div className='container relative mx-auto px-5 lg:px-10'>
           <div className='grid grid-cols-1 gap-20 lg:grid-cols-2 lg:items-center'>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -384,9 +384,9 @@ export default function SalonPage() {
       {/* Signature Services Section - Redesigned to match attachment */}
       <section
         id='services'
-        className='relative overflow-hidden py-24 lg:py-32'
+        className='relative overflow-hidden py-10 lg:py-22'
       >
-        <div className='container relative mx-auto px-6'>
+        <div className='container relative mx-auto px-5 lg:px-10 '>
           <div className='flex flex-col lg:flex-row items-center gap-16 lg:gap-24'>
             {/* Left Content */}
             <div className='flex flex-col gap-6 max-w-sm lg:shrink-0'>
@@ -459,9 +459,9 @@ export default function SalonPage() {
       {/* Booking Section - Precise Match to Attachment */}
       <section
         id='booking'
-        className='relative overflow-hidden bg-brand-foundation py-24 lg:py-32'
+        className='relative overflow-hidden bg-white py-24 lg:py-32'
       >
-        <div className='container relative mx-auto px-6'>
+        <div className='container relative mx-auto px-5 lg:px-10'>
           <div className='grid grid-cols-1 gap-16 lg:grid-cols-3 lg:items-start'>
             {/* Left Column: Info & Image */}
             <div className='flex flex-col gap-10'>
@@ -470,7 +470,7 @@ export default function SalonPage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className='font-serif text-5xl font-bold tracking-tight text-white md:text-6xl'
+                  className='font-serif text-5xl font-bold tracking-tight text-black md:text-6xl'
                 >
                   Booking
                 </motion.h2>
@@ -479,7 +479,7 @@ export default function SalonPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className='text-base leading-relaxed text-white/90'
+                  className='text-base leading-relaxed text-black/90'
                 >
                   Ready for a transformative experience? Book your appointment
                   now at Bukky Beauty World and let us craft a style that
@@ -492,7 +492,7 @@ export default function SalonPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className='relative aspect-4/3 overflow-hidden rounded-card-large bg-white/10'
+                className='relative aspect-4/3 overflow-hidden rounded-card-large bg-black/10'
               >
                 <NextImage
                   src='/gallery (21).jpg'
@@ -504,11 +504,11 @@ export default function SalonPage() {
             </div>
 
             {/* Middle Column: Calendar & Hours */}
-            <div className='flex flex-col gap-0 overflow-hidden rounded-card-large bg-white/5 border border-white/10 shadow-sm'>
+            <div className='flex flex-col gap-0 overflow-hidden rounded-card-large bg-black/5 border border-black/10 shadow-sm'>
               {/* Calendar Widget */}
               <div className='p-8'>
-                <div className='mb-6 overflow-hidden rounded-2xl bg-white/5 py-4 text-center border border-white/10'>
-                  <span className='text-lg font-bold text-white'>
+                <div className='mb-6 overflow-hidden rounded-2xl bg-black/5 py-4 text-center border border-black/10'>
+                  <span className='text-lg font-bold text-black'>
                     {new Date().toLocaleString('en-US', {
                       month: 'long',
                       year: 'numeric',
@@ -521,7 +521,7 @@ export default function SalonPage() {
                     (day) => (
                       <span
                         key={day}
-                        className='text-xs font-bold text-zinc-400'
+                        className='text-xs font-bold text-gray-600'
                       >
                         {day}
                       </span>
@@ -554,8 +554,8 @@ export default function SalonPage() {
                           <span
                             className={`inline-flex size-10 items-center justify-center rounded-xl text-sm font-medium transition-colors ${
                               isToday
-                                ? 'bg-brand-foundation text-white font-bold shadow-lg shadow-brand-foundation/30'
-                                : 'text-white hover:bg-white/10'
+                                ? 'bg-white text-black font-bold shadow-lg'
+                                : 'text-black hover:bg-black/10'
                             }`}
                           >
                             {date}
@@ -570,37 +570,37 @@ export default function SalonPage() {
 
               {/* Working Hours */}
               <div className='flex flex-col gap-8 p-10 pt-4'>
-                <h3 className='font-serif text-3xl font-medium text-white'>
+                <h3 className='font-serif text-3xl font-medium text-black'>
                   Working Hours
                 </h3>
                 <div className='flex flex-col gap-6'>
-                  <div className='flex items-center justify-between border-b border-white/10 pb-4'>
-                    <span className='text-zinc-400 font-medium'>
+                  <div className='flex items-center justify-between border-b border-black/10 pb-4'>
+                    <span className='text-gray-600 font-medium'>
                       Working Days
                     </span>
-                    <span className='font-bold text-white'>9AM - 9PM</span>
+                    <span className='font-bold text-black'>9AM - 9PM</span>
                   </div>
-                  <div className='flex items-center justify-between border-b border-white/10 pb-4'>
-                    <span className='text-zinc-400 font-medium'>Saturday</span>
-                    <span className='font-bold text-white'>10AM - 8PM</span>
+                  <div className='flex items-center justify-between border-b border-black/10 pb-4'>
+                    <span className='text-gray-600 font-medium'>Saturday</span>
+                    <span className='font-bold text-black'>10AM - 8PM</span>
                   </div>
-                  <div className='flex items-center justify-between border-b border-white/10 pb-4'>
-                    <span className='text-zinc-400 font-medium'>Sunday</span>
-                    <span className='font-bold text-white'>Closed</span>
+                  <div className='flex items-center justify-between border-b border-black/10 pb-4'>
+                    <span className='text-gray-600 font-medium'>Sunday</span>
+                    <span className='font-bold text-black'>Closed</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Form */}
-            <div className='flex flex-col gap-10 rounded-card-large bg-white/5 p-10 text-white shadow-2xl lg:min-h-[600px] border border-white/10'>
-              <h3 className='font-serif text-3xl font-medium text-white'>
+            <div className='flex flex-col gap-10 rounded-card-large bg-black/5 p-10 text-black shadow-2xl lg:min-h-[600px] border border-black/10'>
+              <h3 className='font-serif text-3xl font-medium text-black'>
                 We will call you
               </h3>
 
               <form className='flex flex-col gap-8'>
                 <div className='flex flex-col gap-2'>
-                  <label className='text-sm text-zinc-400 font-medium uppercase tracking-wider'>
+                  <label className='text-sm text-gray-600 font-medium tracking-wider'>
                     First Name
                   </label>
                   <input
@@ -609,7 +609,7 @@ export default function SalonPage() {
                   />
                 </div>
                 <div className='flex flex-col gap-2'>
-                  <label className='text-sm text-zinc-400 font-medium uppercase tracking-wider'>
+                  <label className='text-sm text-gray-600 font-medium  tracking-wider'>
                     Last Name
                   </label>
                   <input
@@ -618,7 +618,7 @@ export default function SalonPage() {
                   />
                 </div>
                 <div className='flex flex-col gap-2'>
-                  <label className='text-sm text-zinc-400 font-medium uppercase tracking-wider'>
+                  <label className='text-sm text-gray-600 font-medium  tracking-wider'>
                     Phone
                   </label>
                   <input
@@ -627,7 +627,7 @@ export default function SalonPage() {
                   />
                 </div>
                 <div className='flex flex-col gap-2'>
-                  <label className='text-sm text-zinc-400 font-medium uppercase tracking-wider'>
+                  <label className='text-sm text-gray-600 font-medium tracking-wider'>
                     Email
                   </label>
                   <input
@@ -639,7 +639,7 @@ export default function SalonPage() {
                 <div className='mt-4'>
                   <Button
                     size='lg'
-                    className='w-full rounded-full bg-brand-foundation px-10 py-7 text-lg font-bold text-white hover:bg-brand-foundation/90 active:scale-95 transition-all shadow-xl shadow-brand-foundation/20'
+                    className='w-full rounded-full bg-black px-10 py-7 text-lg text-white active:scale-95 transition-all shadow-xl'
                   >
                     Confirm Appointment
                   </Button>
@@ -651,11 +651,11 @@ export default function SalonPage() {
       </section>
 
       {/* Stories of Radiance (Keep for social proof) */}
-      <section className='py-24 lg:py-32'>
-        <div className='container mx-auto px-6'>
-          <div className='flex flex-col gap-20'>
+      <section className='py-24 lg:py-20'>
+        <div className='container mx-auto px-5 lg:px-10'>
+          <div className='flex flex-col gap-14'>
             {/* Header */}
-            <div className='flex flex-col items-center gap-6 text-center'>
+            <div className='flex flex-col items-center gap-5 text-center'>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -676,7 +676,7 @@ export default function SalonPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className='group relative flex h-full flex-col gap-8 rounded-card-large bg-white/5 border border-white/10 p-10 shadow-premium transition-all hover:-translate-y-2 hover:shadow-premium-hover'
+                  className='group relative flex h-full flex-col gap-8 rounded-card-large bg-white/5 border border-gray-600 p-5'
                 >
                   <div className='flex flex-col gap-6'>
                     <div className='flex gap-1 text-primary'>
@@ -709,13 +709,17 @@ export default function SalonPage() {
               ))}
             </div>
 
+            <div className='w-1/2 mx-auto'>
+              <Separator className='bg-gray-800 ' />
+            </div>
+
             {/* Why Choose Us & Experience Section */}
-            <div className='mt-24 grid grid-cols-1 gap-12 lg:grid-cols-2'>
+            <div className='grid grid-cols-1 gap-10 lg:grid-cols-2'>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className='flex flex-col gap-8 rounded-card-large bg-white/5 border border-white/10 p-10 mt-10'
+                className='flex flex-col gap-8 rounded-card-large bg-white/5 border border-gray-600 p-10'
               >
                 <h3 className='font-serif text-3xl font-medium text-white'>
                   The Bukky Beauty Experience
@@ -737,7 +741,7 @@ export default function SalonPage() {
                     </li>
                   ))}
                 </ul>
-                <p className='text-sm italic text-zinc-400'>
+                <p className='text-sm italic text-gray-600'>
                   Our space is designed to be comfortable, classy, and welcoming
                   to all races, all ages, and all beauty styles.
                 </p>
@@ -748,7 +752,7 @@ export default function SalonPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className='flex flex-col gap-8 rounded-card-large bg-brand-foundation/5 border border-brand-foundation/20 p-10 mt-10'
+                className='flex flex-col gap-8 rounded-card-large bg-brand-foundation/5 border border-gray-600 p-10'
               >
                 <h3 className='font-serif text-3xl font-medium text-white'>
                   Why Clients Choose Us
@@ -778,7 +782,7 @@ export default function SalonPage() {
             </div>
 
             {/* Outcomes/Stats - Integrated Layout */}
-            <div className='mt-16 pt-16 border-t border-white/10'>
+            <div className='pt-16 border-t border-white/10'>
               <div className='grid grid-cols-1 gap-12 md:grid-cols-3'>
                 {outcomes.map((outcome, index) => (
                   <motion.div
@@ -789,10 +793,10 @@ export default function SalonPage() {
                     transition={{ delay: index * 0.1 }}
                     className='flex flex-col items-center gap-1 text-center'
                   >
-                    <span className='text-4xl font-bold tracking-tight text-brand-foundation md:text-5xl'>
+                    <span className='text-4xl font-bold tracking-tight text-white md:text-5xl'>
                       {outcome.value}
                     </span>
-                    <span className='text-[10px] font-bold tracking-[0.2em] text-zinc-500 uppercase'>
+                    <span className='text-xs font-bold tracking-[0.2em] text-gray-300 uppercase'>
                       {outcome.label}
                     </span>
                   </motion.div>
@@ -804,17 +808,17 @@ export default function SalonPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className='py-24 lg:py-32'>
-        <div className='container mx-auto px-6'>
+      <section className='py-14 lg:py-24'>
+        <div className='container mx-auto px-5 lg:px-10'>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className='relative overflow-hidden rounded-card-giant bg-brand-foundation px-6 py-20 text-center shadow-2xl lg:py-32'
+            className='relative overflow-hidden rounded-card-giant bg-white px-6 py-20 text-center shadow-2xl lg:py-32'
           >
             {/* Subtle Atmospheric Glows */}
-            <div className='pointer-events-none absolute -top-24 -right-24 size-96 rounded-full bg-white/10 blur-[100px]' />
-            <div className='pointer-events-none absolute -bottom-24 -left-24 size-96 rounded-full bg-white/5 blur-[100px]' />
+            <div className='pointer-events-none absolute -top-24 -right-24 size-96 rounded-full bg-black/10 blur-[100px]' />
+            <div className='pointer-events-none absolute -bottom-24 -left-24 size-96 rounded-full bg-black/5 blur-[100px]' />
 
             <div className='relative z-10 flex flex-col items-center gap-12'>
               <div className='flex flex-col gap-4'>
@@ -823,7 +827,7 @@ export default function SalonPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className='font-serif text-5xl font-medium leading-tight text-white md:text-7xl'
+                  className='font-serif text-5xl font-medium leading-tight text-black md:text-7xl'
                 >
                   Ready for Your <br />
                   <span className='italic'>Transformation?</span>
@@ -833,7 +837,7 @@ export default function SalonPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className='mx-auto max-w-xl text-base text-white/80 md:text-lg'
+                  className='mx-auto max-w-xl text-base text-gray-600 md:text-lg'
                 >
                   Join over 10,000 clients who have discovered their most
                   radiant selves. Book your bespoke session today.
@@ -849,7 +853,7 @@ export default function SalonPage() {
                 <Button
                   asChild
                   size='lg'
-                  className='h-16 rounded-full bg-white px-12 text-lg text-brand-foundation hover:bg-white/90 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/10'
+                  className='h-16 rounded-full bg-black px-12 text-lg text-white hover:scale-105 active:scale-95 transition-all'
                 >
                   <Link href='/bookings'>Book an appointment</Link>
                 </Button>

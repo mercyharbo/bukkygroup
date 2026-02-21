@@ -125,21 +125,15 @@ export const BusinessGrid = () => {
 
                     {/* Content */}
                     <div className='flex-1 p-4 space-y-3'>
-                      <div className='space-y-2'>
-                        <div className='flex items-center gap-3'>
-                          <span
-                            className='size-2 rounded-full'
-                            style={{ backgroundColor: biz.accent }}
-                          />
-                          <span className='text-xs font-medium text-gray-600'>
-                            {biz.tagline}
-                          </span>
-                        </div>
-                        <h3 className='text-xl font-semibold text-black group-hover:text-primary transition-colors'>
+                      <div className='flex flex-col gap-2'>
+                        <span className='text-xs font-medium border w-fit rounded-full px-4 bg-muted py-0.5 text-gray-600'>
+                          {biz.tagline}
+                        </span>
+                        <h3 className='text-base font-semibold uppercase text-black transition-colors'>
                           {biz.name}
                         </h3>
                       </div>
-                      <p className='text-gray-600 text-base leading-relaxed font-normal line-clamp-3'>
+                      <p className='text-gray-600 text-sm leading-relaxed font-normal line-clamp-3'>
                         {biz.description}
                       </p>
                     </div>

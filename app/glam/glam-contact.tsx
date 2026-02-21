@@ -43,7 +43,7 @@ export const GlamContact = () => {
             className='h-16 px-12 rounded-full border-gray-800 hover:text-white text-white hover:bg-gray-900 transition-all font-medium text-base group'
           >
             <Link
-              href='https://wa.me/27603314739'
+              href='https://wa.me/27710354040'
               target='_blank'
               rel='noopener noreferrer'
               className='flex items-center gap-3'

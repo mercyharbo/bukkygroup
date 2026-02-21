@@ -14,7 +14,7 @@ export default function LocationMap() {
         >
           <div className='flex flex-col gap-3 text-center'>
             <h2 className='font-cinzel text-3xl font-bold text-black dark:text-white md:text-4xl uppercase'>
-              Visit Our <span className='text-primary italic'>Location</span>
+              Visit Our <span className='text-black italic'>Location</span>
             </h2>
             <p className='mx-auto max-w-2xl text-gray-600 dark:text-gray-200 text-sm md:text-base'>
               Shop F08, Oriental City (China) Mall, 2 Sarel Baard Cres,

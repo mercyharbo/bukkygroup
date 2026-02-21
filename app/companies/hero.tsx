@@ -30,16 +30,16 @@ export const CompaniesHero = () => {
           transition={{ duration: 0.8 }}
           className='flex flex-col items-center gap-8'
         >
-          <div className='inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-black/40 backdrop-blur-md shadow-2xl'>
-            <span className='size-1.5 rounded-full bg-primary animate-pulse' />
-            <span className='text-[10px] font-bold uppercase tracking-[0.3em] text-primary'>
+          <div className='inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-muted/30 bg-black/40 backdrop-blur-md shadow-2xl'>
+            <span className='size-1.5 rounded-full bg-white animate-pulse' />
+            <span className='text-[10px] font-bold uppercase tracking-[0.3em] text-gray-300'>
               Strategic Excellence
             </span>
           </div>
 
           <h1 className='font-serif text-5xl md:text-7xl lg:text-9xl font-medium tracking-tight text-white leading-[1.1]'>
             Defining the <br />
-            <span className='italic font-light text-brand-accent-gold'>
+            <span className='italic font-light'>
               Future of Luxury
             </span>
           </h1>

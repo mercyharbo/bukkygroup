@@ -75,7 +75,7 @@ export default function ContactComp() {
                 <h2 className='text-xl lg:text-2xl font-bold text-black uppercase tracking-tight'>
                   Get In Touch
                 </h2>
-                <div className='h-1 w-12 bg-primary' />
+                <div className='h-1 w-12 bg-black' />
               </div>
 
               <form className='flex flex-col gap-6' onSubmit={handleSubmit}>
@@ -138,7 +138,7 @@ export default function ContactComp() {
 
                 <Button
                   disabled={loading}
-                  className='h-14 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-extra text-sm rounded-none w-full md:w-max px-12 transition-all active:scale-95 disabled:opacity-70'
+                  className='h-14 bg-black hover:bg-black/90 text-white font-bold uppercase tracking-extra text-sm rounded-none w-full md:w-max px-12 transition-all active:scale-95 disabled:opacity-70'
                 >
                   {loading ? 'Sending...' : 'Send Message'}
                 </Button>
@@ -153,27 +153,27 @@ export default function ContactComp() {
                   <h2 className='text-xl lg:text-2xl font-bold text-black uppercase tracking-tight'>
                     Contact Information
                   </h2>
-                  <div className='h-1 w-12 bg-primary' />
+                  <div className='h-1 w-12 bg-black' />
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                   <div className='flex gap-4 items-start'>
                     <div className='size-12 rounded-full bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100'>
-                      <HiPhone className='size-5 text-primary' />
+                      <HiPhone className='size-5 text-black' />
                     </div>
                     <div className='flex flex-col gap-1'>
                       <span className='text-sm font-bold uppercase text-gray-900'>
                         Phone
                       </span>
                       <p className='text-gray-600 text-sm lg:text-base'>
-                        +27 60 331 4739
+                        0710354040
                       </p>
                     </div>
                   </div>
 
                   <div className='flex gap-4 items-start'>
                     <div className='size-12 rounded-full bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100'>
-                      <HiLocationMarker className='size-5 text-primary' />
+                      <HiLocationMarker className='size-5 text-black' />
                     </div>
                     <div className='flex flex-col gap-1'>
                       <span className='text-sm font-bold uppercase text-gray-900'>
@@ -188,7 +188,7 @@ export default function ContactComp() {
 
                   <div className='flex gap-4 items-start'>
                     <div className='size-12 rounded-full bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100'>
-                      <HiMail className='size-5 text-primary' />
+                      <HiMail className='size-5 text-black' />
                     </div>
                     <div className='flex flex-col gap-1'>
                       <span className='text-sm font-bold uppercase text-gray-900'>
@@ -208,7 +208,7 @@ export default function ContactComp() {
                   <h2 className='text-xl lg:text-2xl font-bold text-black uppercase tracking-tight'>
                     Business Hours
                   </h2>
-                  <div className='h-1 w-12 bg-primary' />
+                  <div className='h-1 w-12 bg-black' />
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
