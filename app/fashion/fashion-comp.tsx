@@ -12,6 +12,7 @@ import {
   HiArrowUpRight,
   HiChevronDown,
 } from 'react-icons/hi2'
+import { RiInstagramFill } from 'react-icons/ri'
 
 const collections = [
   {
@@ -156,6 +157,23 @@ export default function FashionComp() {
           >
             Elegance defined in every stitch
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+          >
+            <Link
+              href='https://www.instagram.com/bukkybeautyworld/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center gap-2 text-[10px] font-bold tracking-widest text-zinc-400 hover:text-primary transition-colors group'
+            >
+              <RiInstagramFill className='size-4' />
+              <span className='border-b border-transparent group-hover:border-primary transition-all uppercase'>
+                @bukkybeautyworld
+              </span>
+            </Link>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -169,7 +187,7 @@ export default function FashionComp() {
         {/* Carousel Controls & Info */}
         <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
           <div className='flex flex-col gap-2'>
-            <h2 className='text-sm sm:text-base font-bold tracking-[0.2em] uppercase text-white'>
+            <h2 className='text-sm sm:text-base font-bold tracking-extra uppercase text-white'>
               Featured Collections
             </h2>
             <p className='text-[10px] font-bold tracking-widest uppercase text-zinc-400'>
@@ -235,7 +253,7 @@ export default function FashionComp() {
                     )}
                   </div>
                   <div className='flex flex-col gap-4'>
-                    <h2 className='text-sm sm:text-base font-bold tracking-[0.2em] uppercase text-white'>
+                    <h2 className='text-sm sm:text-base font-bold tracking-extra uppercase text-white'>
                       {item.title}
                     </h2>
                     <p className='text-[10px] leading-relaxed font-bold tracking-widest uppercase text-zinc-400 max-w-[200px]'>
@@ -527,7 +545,7 @@ export default function FashionComp() {
               <div className='relative z-10 flex flex-col sm:flex-row items-center gap-6'>
                 <Button
                   asChild
-                  className='h-16 px-10 rounded-full bg-primary text-white hover:bg-primary/90 transition-all text-sm tracking-[0.2em] uppercase font-medium group'
+                  className='h-16 px-10 rounded-full bg-primary text-white hover:bg-primary/90 transition-all text-sm tracking-extra uppercase font-medium group'
                 >
                   <Link href='/bookings'>
                     Book Appointment
@@ -537,7 +555,7 @@ export default function FashionComp() {
                 <Button
                   asChild
                   variant='outline'
-                  className='h-16 px-10 rounded-full border-white/10 hover:bg-white/5 hover:text-white text-white transition-all text-sm tracking-[0.2em] uppercase font-medium flex items-center gap-3'
+                  className='h-16 px-10 rounded-full border-white/10 hover:bg-white/5 hover:text-white text-white transition-all text-sm tracking-extra uppercase font-medium flex items-center gap-3'
                 >
                   <Link
                     href='https://wa.me/27603314739'
@@ -548,6 +566,20 @@ export default function FashionComp() {
                     WhatsApp Us
                   </Link>
                 </Button>
+              </div>
+
+              <div className='pt-8 border-t border-white/5 w-full max-w-xs'>
+                <Link
+                  href='https://www.instagram.com/bukkybeautyworld/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='flex items-center justify-center gap-3 text-zinc-400 hover:text-primary transition-colors group'
+                >
+                  <RiInstagramFill className='size-6' />
+                  <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-primary transition-all'>
+                    @bukkybeautyworld
+                  </span>
+                </Link>
               </div>
             </div>
           </section>

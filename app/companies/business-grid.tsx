@@ -107,7 +107,7 @@ export const BusinessGrid = () => {
               transition={{ delay: idx * 0.1, duration: 0.6 }}
             >
               <Link href={biz.link} className='group block relative h-full'>
-                <Card className='relative h-full overflow-hidden rounded-xl py-0 border-none bg-zinc-50 group-hover:shadow-2xl transition-all duration-700'>
+                <Card className='relative h-full overflow-hidden rounded-xl py-0  bg-zinc-50 transition-all duration-700'>
                   <div className='flex flex-col h-full'>
                     {/* Image Header */}
                     <div className='relative aspect-video w-full overflow-hidden'>

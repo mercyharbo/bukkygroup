@@ -9,6 +9,7 @@ import {
   HiOutlineCheckBadge,
   HiOutlineUserPlus,
 } from 'react-icons/hi2'
+import { RiInstagramFill } from 'react-icons/ri'
 
 /**
  * DonationWays Component
@@ -116,6 +117,20 @@ export const DonationWays = () => {
                     {tag}
                   </span>
                 ))}
+              </div>
+
+              <div className='pt-6'>
+                <Link
+                  href='https://www.instagram.com/getbusyfoundation/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='flex items-center gap-3 text-black/80 hover:text-black transition-colors group w-fit'
+                >
+                  <RiInstagramFill className='size-6' />
+                  <span className='text-sm uppercase tracking-widest font-bold border-b border-transparent group-hover:border-black transition-all'>
+                    Follow @getbusyfoundationafrica
+                  </span>
+                </Link>
               </div>
             </div>
             <div className='flex flex-col sm:flex-row gap-4 w-full lg:w-auto'>
