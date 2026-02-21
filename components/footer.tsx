@@ -104,7 +104,7 @@ export default function Footer() {
           <Link href='/' className='flex items-center gap-2'>
             <div className='relative size-30 transition-transform hover:scale-105'>
               <NextImage
-                src='/bukkyflower2.png'
+                src='/logo5.png'
                 alt='Bukky Group Logo'
                 fill
                 className='object-contain'

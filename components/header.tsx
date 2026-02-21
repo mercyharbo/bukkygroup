@@ -29,7 +29,7 @@ export default function Header() {
         >
           <div className='relative size-14'>
             <NextImage
-              src='/bukkyflower2.png'
+              src='/logo5.png'
               alt='Bukky Group'
               fill
               className='object-contain'

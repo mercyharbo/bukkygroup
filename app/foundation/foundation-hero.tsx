@@ -67,7 +67,7 @@ export const FoundationHero = () => {
             className='relative aspect-square lg:aspect-4/3 rounded-card-foundation overflow-hidden group shadow-2xl'
           >
             <Image
-              src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop'
+              src='/getbusy/getbusy.jpeg'
               alt='Foundation support'
               fill
               className='object-cover transition-transform duration-700 group-hover:scale-110'

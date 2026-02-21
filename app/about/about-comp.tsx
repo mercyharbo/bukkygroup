@@ -15,7 +15,7 @@ const brandPillars = [
     id: '02',
     title: 'Bukky beauty world',
     description: 'Exceptional salon and glam studio experiences.',
-    image: '/bukkybeauty23.jpeg',
+    image: '/bbw/bukky-beauty-world.jpeg',
   },
   {
     id: '03',
@@ -27,7 +27,7 @@ const brandPillars = [
     id: '04',
     title: 'Get Busy Foundation',
     description: 'Philanthropic impact and community support.',
-    image: '/foundationn (1).jpg',
+    image: '/getbusy/getbusy.jpeg',
   },
 ]
 
@@ -66,7 +66,7 @@ export default function AboutComp() {
               src='/fashionn (6).heic'
               alt='Bukky Anny'
               fill
-              className='object-cover opacity-90'
+              className='object-cover object-top opacity-90'
               priority
             />
             <div className='absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent' />

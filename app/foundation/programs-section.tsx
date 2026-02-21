@@ -15,24 +15,21 @@ export const ProgramsSection = () => {
       title: 'Teen Mentorship',
       description:
         'Every teen deserves mentorship. We believe every dream deserves a chance and the guidance to thrive.',
-      image:
-        'https://images.unsplash.com/photo-1529070538074-1dae01fb33c6?q=80&w=2070&auto=format&fit=crop',
+      image: '/getbusy/foundationn%20(1).jpg',
       color: 'bg-foundation-primary',
     },
     {
       title: 'Women Support',
       description:
         'Empowering women to lead, heal, and find their purpose through dedicated support programs.',
-      image:
-        'https://images.unsplash.com/photo-1489426443929-29cdd3d4d421?q=80&w=2070&auto=format&fit=crop',
+      image: '/getbusy/foundationn%20(2).jpg',
       color: 'bg-foundation-accent',
     },
     {
       title: 'Safe-Space Initiatives',
       description:
         'Creating environments where individuals can navigate life challenges without feeling alone.',
-      image:
-        'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=2070&auto=format&fit=crop',
+      image: '/getbusy/foundationn%20(3).jpg',
       color: 'bg-foundation-dark',
     },
   ]

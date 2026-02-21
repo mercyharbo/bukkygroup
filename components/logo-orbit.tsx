@@ -19,8 +19,8 @@ interface LogoOrbitProps {
 export function LogoOrbit({ brands }: LogoOrbitProps) {
   // We'll limit to 8 brands for the orbit as per the design reference
   const orbitBrands = brands.slice(0, 8)
-  const [radius, setRadius] = useState(380)
-  const [containerSize, setContainerSize] = useState(850)
+  const [radius, setRadius] = useState(360)
+  const [containerSize, setContainerSize] = useState(820)
 
   useEffect(() => {
     const updateRadius = () => {
@@ -31,8 +31,8 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
         setRadius(280)
         setContainerSize(650)
       } else {
-        setRadius(380)
-        setContainerSize(850)
+        setRadius(360)
+        setContainerSize(820)
       }
     }
 
@@ -57,18 +57,18 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: 'spring', damping: 15, stiffness: 100 }}
-        className='relative z-20 size-28 sm:size-48 lg:size-80 flex items-center justify-center'
+        className='relative z-20 size-28 sm:size-48 lg:size-68 flex items-center justify-center'
       >
         <div className='relative size-full flex flex-col items-center justify-center gap-1 sm:gap-2'>
           <NextImage
-            src='/bukkyflower2.png'
+            src='/logo6.png'
             alt='Bukky Group Logo'
             width={300}
             height={300}
             className='w-12 sm:w-24 lg:w-55 object-contain'
           />
           <div className='text-center space-y-1 sm:space-y-2 font-cinzel'>
-            <span className='block text-lg sm:text-3xl lg:text-6xl uppercase font-extrabold tracking-extra text-white leading-tight'>
+            <span className='block text-lg sm:text-3xl lg:text-5xl uppercase font-extrabold tracking-extra text-white leading-tight'>
               Bukky Group
             </span>
             <span className='block text-[8px] sm:text-sm lg:text-base uppercase tracking-[0.4em] text-white/80 font-medium'>
@@ -116,7 +116,7 @@ export function LogoOrbit({ brands }: LogoOrbitProps) {
                     {brand.name}
                   </span>
                   {/* Shiny Gold Hover State */}
-                  <span className='absolute inset-0 flex items-center justify-center font-cinzel text-[10px] sm:text-lg lg:text-2xl font-black uppercase tracking-extra text-shine-gold opacity-0 transition-opacity duration-500 group-hover:opacity-100 drop-shadow-[0_4px_8px_rgba(0,0,0,0.4)]'>
+                  <span className='absolute inset-0 flex items-center justify-center font-cinzel text-[10px] sm:text-lg lg:text-2xl font-black uppercase tracking-extra text-shine-gold opacity-0 transition-opacity group-hover:opacity-100 drop-shadow-[0_4px_8px_rgba(0,0,0,0.4)]'>
                     {brand.name}
                   </span>
                 </div>

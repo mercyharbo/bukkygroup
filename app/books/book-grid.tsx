@@ -6,32 +6,25 @@ import Link from 'next/link'
 
 const allBooks = [
   {
-    title: "There's Something About Mira",
+    title: 'The Flags',
     category: 'New Release',
     image: '/books.jpeg',
-    slug: 'something-about-mira',
+    slug: 'the-flag',
   },
   {
-    title: 'The Vibrant Years',
+    title: 'Slave Boss',
+    category: 'Novel',
+    image: '/book1.jpeg',
+    slug: 'slave-boss',
+  },
+  {
+    title: 'Bond Blood',
     category: 'Novel',
     image:
-      'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1974&auto=format&fit=crop',
-    slug: 'vibrant-years',
-  },
-  {
-    title: 'The Wedding Setup',
-    category: 'Short Story',
-    image:
-      'https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1948&auto=format&fit=crop',
+      '/bond-blood.jpeg',
     slug: 'wedding-setup',
   },
-  {
-    title: 'The Emma Project',
-    category: 'Novel',
-    image:
-      'https://images.unsplash.com/photo-1476275466078-4007374efbbe?q=80&w=1929&auto=format&fit=crop',
-    slug: 'emma-project',
-  },
+
 ]
 
 export const BookGrid = () => {
@@ -53,7 +46,7 @@ export const BookGrid = () => {
           </div>
         </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto gap-12'>
           {allBooks.map((book, idx) => (
             <motion.div
               key={idx}

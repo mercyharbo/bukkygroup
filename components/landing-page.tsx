@@ -85,7 +85,7 @@ export default function Home() {
   return (
     <main className='relative min-h-screen overflow-hidden selection:bg-primary/30 selection:text-primary flex flex-col gap-12'>
       {/* Hero Section */}
-      <section className='container relative mx-auto flex h-[60vh] lg:min-h-screen items-center justify-center pt-30 lg:pt-55 pb-0 lg:pb-20'>
+      <section className='container relative mx-auto flex min-h-[50vh] lg:min-h-screen items-center justify-center pt-40 lg:pt-40 pb-0 lg:pb-20'>
         {/* Hero Visual - Logo Orbit */}
         <div className='relative flex w-full items-center justify-center'>
           <LogoOrbit brands={flagshipBrands} />
@@ -93,11 +93,11 @@ export default function Home() {
       </section>
 
       {/* Bio Section */}
-      <section className='relative overflow-hidden py-0 md:py-32' id='about'>
+      <section className='relative overflow-hidden py-5 md:py-22' id='about'>
         <div className='pointer-events-none absolute -right-24 top-0 size-128 rounded-full bg-primary/5 blur-3xl' />
         <div className='pointer-events-none absolute -left-24 bottom-0 size-128 rounded-full bg-brand-silver/5 blur-3xl' />
 
-        <div className='container relative mx-auto px-6'>
+        <div className='container relative mx-auto px-5 lg:px-10'>
           <div className='flex flex-col items-center gap-16 lg:flex-row'>
             <div className='relative w-full lg:flex-1'>
               <motion.div
@@ -116,9 +116,7 @@ export default function Home() {
                   <h4 className='text-xs font-semibold uppercase tracking-widest '>
                     The Visionary
                   </h4>
-                  <h2 className='text-2xl font-bold text-white'>
-                    Bukky Anny
-                  </h2>
+                  <h2 className='text-2xl font-bold text-white'>Bukky Anny</h2>
                 </div>
               </motion.div>
             </div>
@@ -191,8 +189,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='relative overflow-hidden py-14 md:py-32' id='brands'>
-        <div className='container relative mx-auto px-6'>
+      <section className='relative overflow-hidden py-14 md:py-22' id='brands'>
+        <div className='container relative mx-auto px-5 lg:px-10'>
           <div className='flex flex-col gap-16'>
             <div className='flex flex-col items-center gap-4 text-center'>
               <motion.h2
@@ -257,9 +255,9 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className='relative overflow-hidden px-5 py-14 md:py-24'>
-        <div className='container relative mx-auto px-6'>
-          <div className='flex flex-col gap-16'>
+      <section className='relative overflow-hidden px-5 py-14 md:py-22'>
+        <div className='container relative mx-auto px-5 lg:px-10'>
+          <div className='flex flex-col gap-8'>
             <div className='flex flex-col items-center gap-4 text-center'>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}

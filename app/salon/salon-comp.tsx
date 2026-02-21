@@ -102,8 +102,8 @@ export default function SalonPage() {
         {/* Background Landscape Image */}
         <div className='absolute inset-0 z-0'>
           <NextImage
-            src='https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074&auto=format&fit=crop'
-            alt='Luxury Salon Background'
+            src='/bbw/bukky-beauty-world.jpeg'
+            alt='Bukky Beauty World'
             fill
             className='object-cover'
             priority

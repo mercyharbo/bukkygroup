@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const AuthorStory = () => {
   return (
@@ -18,10 +19,10 @@ export const AuthorStory = () => {
             className='space-y-8 md:space-y-12'
           >
             <div className='space-y-6'>
-              <h2 className='font-cinzel text-xs uppercase tracking-[0.4em] text-gray-400 font-bold'>
+              <h2 className='text-xs uppercase tracking-author-sub text-gray-300 font-bold'>
                 About the Author
               </h2>
-              <h3 className='font-cinzel text-4xl md:text-5xl font-black text-white leading-tight'>
+              <h3 className='text-4xl md:text-5xl font-black text-white leading-tight'>
                 BUKKY ANNY: STORIES OF <br />
                 <span className='italic font-serif font-normal text-primary'>
                   LOVE, LAUGHTER, AND LEGACY.
@@ -30,12 +31,12 @@ export const AuthorStory = () => {
             </div>
 
             <div className='space-y-6 max-w-xl'>
-              <p className='text-gray-400 text-lg leading-relaxed'>
+              <p className='text-gray-300 text-lg leading-relaxed'>
                 Bukky Anny is the creative force and visionary leader of the
                 Bukky Group—a multi-faceted empire dedicated to prestige,
                 education, and community empowerment.
               </p>
-              <p className='text-gray-400 text-lg leading-relaxed'>
+              <p className='text-gray-300 text-lg leading-relaxed'>
                 Her journey began with a mission to bridge the gap between
                 traditional African heritage and the global stage of luxury.
                 Through 3S Books, she explores the intersection of modern
@@ -43,12 +44,14 @@ export const AuthorStory = () => {
               </p>
             </div>
 
-            <Button
-              variant='outline'
-              className='rounded-none px-12 py-6 bg-transparent border-white text-white hover:bg-white hover:text-black transition-all text-xs uppercase tracking-widest'
-            >
-              Full Story
-            </Button>
+            <Link href='/about'>
+              <Button
+                variant='outline'
+                className='rounded-none px-12 py-6 bg-transparent border-white text-white hover:bg-white hover:text-black transition-all text-xs uppercase tracking-widest pointer-events-auto'
+              >
+                Full Story
+              </Button>
+            </Link>
           </motion.div>
 
           {/* Image Side */}
@@ -59,10 +62,10 @@ export const AuthorStory = () => {
             transition={{ duration: 0.8 }}
             className='relative'
           >
-            <div className='relative aspect-[4/5] w-full overflow-hidden shadow-2xl'>
+            <div className='relative aspect-4/5 w-full'>
               <Image
-                src='/bukky-pic1.png'
-                alt='Sonali Dev Portrait'
+                src='/books/preview2.png'
+                alt='Bukky Anny'
                 fill
                 className='object-cover'
               />

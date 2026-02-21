@@ -52,7 +52,7 @@ export const ImpactSection = () => {
               className='relative aspect-video rounded-3xl overflow-hidden shadow-2xl'
             >
               <Image
-                src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=2070&auto=format&fit=crop'
+                src='/getbusy/getbusy1.jpeg'
                 alt='Empowerment'
                 fill
                 className='object-cover'

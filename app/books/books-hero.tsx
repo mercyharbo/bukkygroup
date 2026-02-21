@@ -8,11 +8,11 @@ import { RiInstagramFill } from 'react-icons/ri'
 
 export const BooksHero = () => {
   return (
-    <section className='relative w-full h-[80vh] md:h-screen min-h-[700px] flex items-center justify-center bg-white overflow-hidden'>
+    <section className='relative w-full h-[80vh] md:h-screen min-h-[700px] flex items-center justify-center bg-white overflow-hidden pt-32 md:pt-40'>
       {/* Background Subtle Elements */}
       <div className='absolute inset-0 z-0 pointer-events-none'>
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] select-none'>
-          <p className='text-[30vh] font-serif italic text-black whitespace-nowrap leading-none'>
+        <div className='absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] select-none'>
+          <p className='text-hero-giant font-serif italic text-black whitespace-nowrap leading-none'>
             Bukky Anny Bukky Anny Bukky Anny
           </p>
         </div>
@@ -28,10 +28,7 @@ export const BooksHero = () => {
               transition={{ duration: 0.6 }}
               className='space-y-4'
             >
-              <span className='text-sm uppercase tracking-[0.3em] text-gray-500 font-semibold'>
-                New Release
-              </span>
-              <h1 className='font-cinzel text-5xl md:text-7xl lg:text-8xl font-black text-black leading-[0.9]'>
+              <h1 className='font-cinzel text-5xl md:text-7xl lg:text-8xl font-black text-black leading-hero'>
                 NEW <br />
                 RELEASES
               </h1>
@@ -41,20 +38,20 @@ export const BooksHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className='max-w-md space-y-6'
+              className='max-w-2xl space-y-6'
             >
               <div className='space-y-2'>
                 <p className='text-xl md:text-2xl font-serif italic text-primary'>
-                  VISIONARY LEADER & AUTHOR
+                  The Flag
                 </p>
               </div>
-              <p className='text-gray-500 text-base md:text-lg leading-relaxed text-pretty'>
+              <p className='text-gray-600 text-base md:text-lg leading-relaxed text-pretty'>
                 The creative force behind the Bukky Group, embarking on a
                 literary journey to empower the next generation of modern
                 royalty through stories of excellence and legacy.
               </p>
 
-              <div className='flex flex-col items-center lg:items-start gap-8'>
+              <div className='flex flex-col lg:flex-row items-center lg:items-center gap-8'>
                 <Button
                   variant='outline'
                   className='rounded-none px-12 py-6 bg-transparent border-black text-black hover:bg-black hover:text-white transition-all text-xs uppercase tracking-widest'
@@ -82,13 +79,13 @@ export const BooksHero = () => {
             initial={{ opacity: 0, scale: 0.9, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className='relative aspect-3/4 w-full max-w-[450px] mx-auto order-1 lg:order-2 group'
+            className='relative aspect-3/4 w-full max-w-book-hero mx-auto order-1 lg:order-2 group'
           >
-            <div className='absolute inset-0 bg-primary/5 -rotate-6 transition-transform group-hover:rotate-0 duration-700' />
-            <div className='absolute inset-0 bg-black/5 rotate-3 transition-transform group-hover:rotate-0 duration-700' />
-            <div className='relative w-full h-full shadow-2xl overflow-hidden'>
+            {/* <div className='absolute inset-0 bg-primary/5 -rotate-6 transition-transform group-hover:rotate-0 duration-700' />
+            <div className='absolute inset-0 bg-black/5 rotate-3 transition-transform group-hover:rotate-0 duration-700' /> */}
+            <div className='relative w-full h-full '>
               <Image
-                src='/books.jpeg'
+                src='/books/preview11.png'
                 alt='There is something about Mira'
                 fill
                 className='object-cover'
@@ -97,7 +94,7 @@ export const BooksHero = () => {
             </div>
             {/* Signature Accent */}
             <div className='absolute -bottom-10 -right-10 hidden md:block'>
-              <p className='font-serif italic text-4xl text-primary opacity-60 rotate-[-15deg]'>
+              <p className='font-serif italic text-4xl text-primary opacity-60 rotate-signature'>
                 Bukky Anny
               </p>
             </div>
