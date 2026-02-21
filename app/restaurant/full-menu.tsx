@@ -664,7 +664,7 @@ export const FullMenu = () => {
           <h2 className='font-cinzel text-4xl md:text-6xl font-bold text-black leading-tight uppercase'>
             THE ROYAL <br /> MENU
           </h2>
-          <div className='w-16 h-1 bg-primary mx-auto' />
+          <div className='w-16 h-1 bg-black mx-auto' />
         </div>
 
         <div className='max-w-5xl mx-auto flex flex-col gap-6'>
@@ -680,7 +680,7 @@ export const FullMenu = () => {
                 transition={{ delay: sectionIdx * 0.05 }}
                 className={`group border rounded-sm transition-all duration-500 overflow-hidden ${
                   isOpen
-                    ? 'border-primary/30 ring-1 ring-primary/10 shadow-xl'
+                    ? 'border-black/30 ring-1 ring-black/10 shadow-xl'
                     : 'border-gray-300 hover:border-black'
                 }`}
               >
@@ -692,12 +692,12 @@ export const FullMenu = () => {
                   <div className='space-y-1 relative z-10'>
                     <h3
                       className={`text-2xl md:text-3xl font-bold uppercase tracking-widest transition-colors ${
-                        isOpen ? 'text-yellow-500' : 'text-black'
+                        isOpen ? 'text-black' : 'text-black'
                       }`}
                     >
                       {section.category}
                     </h3>
-                    <p className='text-sm text-gray-500 font-medium'>
+                    <p className='text-sm text-gray-600 font-medium'>
                       {section.items.length} Legendary Selections
                     </p>
                   </div>
@@ -705,7 +705,7 @@ export const FullMenu = () => {
                   <div
                     className={`p-3 rounded-full border transition-all duration-500 ${
                       isOpen
-                        ? 'bg-yellow-500 border-yellow-500 text-white rotate-180'
+                        ? 'bg-black border-black text-white rotate-180'
                         : 'bg-transparent border-gray-300 text-zinc-400'
                     }`}
                   >
@@ -716,7 +716,7 @@ export const FullMenu = () => {
                   {isOpen && (
                     <motion.div
                       layoutId='active-accent'
-                      className='absolute left-0 top-0 w-1 h-full bg-yellow-500'
+                      className='absolute left-0 top-0 w-1 h-full bg-black'
                     />
                   )}
                 </button>
@@ -734,7 +734,7 @@ export const FullMenu = () => {
                       }}
                     >
                       <div className='p-6 md:p-10 pt-0 bg-white'>
-                        <div className='max-h-[500px] overflow-y-auto pr-4 scrollbar-thin scrollbar-track-zinc-100 scrollbar-thumb-primary/20 hover:scrollbar-thumb-primary/40 -mr-4'>
+                        <div className='max-h-[500px] overflow-y-auto pr-4 scrollbar-thin scrollbar-track-zinc-100 scrollbar-thumb-black/20 hover:scrollbar-thumb-black/40 -mr-4'>
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10'>
                             {section.items.map((item, itemIdx) => (
                               <div
@@ -743,15 +743,15 @@ export const FullMenu = () => {
                               >
                                 <div className='flex items-start gap-4'>
                                   <div className='shrink-0 pt-1'>
-                                    <HiCheckCircle className='size-5 text-yellow-500 group-hover/item:opacity-100 transition-opacity' />
+                                    <HiCheckCircle className='size-5 text-black group-hover/item:opacity-100 transition-opacity' />
                                   </div>
                                   <div className='grow space-y-2'>
                                     <div className='flex items-end justify-between gap-4'>
-                                      <h4 className='text-sm font-bold text-black uppercase group-hover/item:text-yellow-500 transition-colors leading-tight'>
+                                      <h4 className='text-sm font-semibold text-black uppercase group-hover/item:text-black transition-colors leading-tight'>
                                         {item.name}
                                       </h4>
                                       <div className='grow mb-1 min-w-[20px] border-b border-dotted border-gray-400' />
-                                      <span className='font-bold text-black text-sm'>
+                                      <span className='font-semibold text-black text-sm'>
                                         {item.price}
                                       </span>
                                     </div>

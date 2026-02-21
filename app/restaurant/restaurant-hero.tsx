@@ -27,7 +27,7 @@ export const RestaurantHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className='text-gray-300 text-lg md:text-xl font-serif italic max-w-2xl mx-auto'
+            className='text-white text-lg md:text-xl italic max-w-2xl mx-auto'
           >
             Experience the pinnacle of culinary excellence where legend meets
             luxury on every plate.
@@ -48,7 +48,7 @@ export const RestaurantHero = () => {
                 <Link href='#menu'>View Menu</Link>
               </Button>
               <Button
-                className='rounded-none px-12 py-7 bg-primary text-black hover:bg-primary/90 transition-all text-xs uppercase tracking-widest font-black'
+                className='rounded-none px-12 py-7 bg-white text-black hover:bg-white/90 transition-all text-xs uppercase tracking-widest'
                 asChild
               >
                 <Link href='#booking'>Book Experience</Link>
@@ -59,10 +59,10 @@ export const RestaurantHero = () => {
               href='https://www.instagram.com/3srestuarant/'
               target='_blank'
               rel='noopener noreferrer'
-              className='flex items-center gap-3 text-white hover:text-primary transition-colors group'
+              className='flex items-center gap-3 text-white hover:text-gray-300 transition-colors group'
             >
               <RiInstagramFill className='size-6 translate-y-[-1px]' />
-              <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-primary transition-all'>
+              <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-white transition-all'>
                 @3srestuarant
               </span>
             </Link>
@@ -77,8 +77,8 @@ export const RestaurantHero = () => {
         transition={{ delay: 1, duration: 1 }}
         className='absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4'
       >
-        <div className='w-px h-12 bg-linear-to-b from-primary to-transparent' />
-        <span className='text-[10px] uppercase tracking-widest text-primary font-bold'>
+        <div className='w-px h-12 bg-linear-to-b from-white to-transparent' />
+        <span className='text-[10px] uppercase tracking-widest text-white font-bold'>
           The Journey
         </span>
       </motion.div>

@@ -58,7 +58,7 @@ export const DeliveryPartners = () => {
               target='_blank'
               rel='noopener noreferrer'
               whileHover={{ scale: 1.05 }}
-              className='flex items-center gap-5 text-primary bg-black px-8 py-5 rounded-sm shadow-2xl relative overflow-hidden group cursor-pointer'
+              className='flex items-center gap-5 text-white bg-black px-8 py-5 rounded-sm shadow-2xl relative overflow-hidden group cursor-pointer'
             >
               <HiOutlinePhone className='size-8 z-10 transition-transform group-hover:rotate-12' />
               <div className='flex flex-col z-10'>
@@ -67,7 +67,7 @@ export const DeliveryPartners = () => {
                 </span>
                 <span className='font-bold text-lg'>+27 71 035 4040</span>
               </div>
-              <div className='absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity' />
+              <div className='absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity' />
             </motion.a>
           </div>
         </div>

@@ -12,7 +12,7 @@ export const BookingSection = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center'>
           <div className='space-y-12'>
             <div className='space-y-4'>
-              <span className='text-xs uppercase tracking-widest text-yellow-500 font-black'>
+              <span className='text-xs uppercase tracking-widest text-gray-500 font-semibold'>
                 Reservations
               </span>
               <h2 className='text-5xl md:text-7xl font-bold text-black leading-tight uppercase tracking-tight'>
@@ -60,7 +60,7 @@ export const BookingSection = () => {
                     href='https://wa.me/27710354040'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='block text-black font-bold text-lg hover:text-yellow-500 transition-colors'
+                    className='block text-black font-bold text-lg hover:text-white transition-colors'
                   >
                     +27 71 035 4040
                   </Link>
@@ -114,7 +114,7 @@ export const BookingSection = () => {
               </div>
             </div>
 
-            <Button className='w-full rounded-md py-8 bg-black text-white hover:bg-primary hover:text-white transition-all text-xs uppercase tracking-widest font-bold shadow-xl'>
+            <Button className='w-full rounded-md py-8 bg-black text-white hover:bg-black/90 hover:text-white transition-all text-xs uppercase tracking-widest font-bold shadow-xl'>
               Secure Reservation
             </Button>
           </motion.div>
