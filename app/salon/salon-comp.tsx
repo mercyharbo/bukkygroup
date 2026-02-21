@@ -6,46 +6,8 @@ import NextImage from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
-import { HiArrowRight } from 'react-icons/hi2'
 import { RiStarFill } from 'react-icons/ri'
-
-const services = [
-  {
-    title: 'Haircuts',
-    image: '/gallery (21).jpg',
-    bgColor: '#a33833', // Deep red
-  },
-  {
-    title: 'Hairstyles',
-    image: '/gallery (12).jpg',
-    bgColor: '#e3d5ca', // Light beige
-  },
-  {
-    title: 'Coloring',
-    image: '/gallery (15).jpg',
-    bgColor: '#d4a373', // Muted brown/gold
-  },
-  {
-    title: 'Nailcare',
-    image: '/gallery (2).webp',
-    bgColor: '#7c6a0a', // Deep gold/brown
-  },
-  {
-    title: 'Makeup',
-    image: '/gallery (13).jpg',
-    bgColor: '#b7b7a4', // Sage
-  },
-  {
-    title: 'Brows & Lashes',
-    image: '/gallery (10).jpg',
-    bgColor: '#cb997e', // Terra Cotta
-  },
-  {
-    title: 'Massage & Beauty',
-    image: '/gallery (1).webp',
-    bgColor: '#14b8a6', // Teal
-  },
-]
+import { SalonServices } from './salon-services'
 
 const testimonials = [
   {
@@ -159,7 +121,7 @@ export default function SalonPage() {
                   <Button
                     asChild
                     size='lg'
-                    className='h-14 rounded-full bg-white px-10 text-lg font-semibold text-brand-foundation hover:bg-white/90 transition-all active:scale-95'
+                    className='h-14 rounded-full bg-white px-10 text-lg font-semibold text-black hover:bg-white/90 transition-all active:scale-95'
                   >
                     <Link href='/bookings'>Book appointment</Link>
                   </Button>
@@ -180,63 +142,6 @@ export default function SalonPage() {
                       <span>WhatsApp</span>
                     </Link>
                   </Button>
-                </motion.div>
-              </div>
-
-              {/* Bottom Cards Widget */}
-              <div className='flex flex-wrap items-center gap-4 mt-8'>
-                {/* Style Gallery Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className='group relative flex aspect-[1.3/1] w-56 flex-col items-center justify-center overflow-hidden rounded-3xl bg-white shadow-2xl'
-                >
-                  <NextImage
-                    src='/bbw/gallery (1).jpg'
-                    alt='Salon Style'
-                    fill
-                    className='object-cover transition-transform duration-500 group-hover:scale-110'
-                  />
-                  {/* Hover Overlay */}
-                  <div className='absolute inset-0 flex items-center justify-center bg-brand-foundation/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100'>
-                    <span className='rounded-lg bg-white/20 px-4 py-2 text-lg font-bold text-white backdrop-blur-md border border-white/20'>
-                      Braiding Artistry
-                    </span>
-                  </div>
-                  {/* Permanent Icon */}
-                  <div className='absolute bottom-5 right-5 z-10'>
-                    <div className='flex size-10 items-center justify-center rounded-full bg-white text-brand-foundation shadow-lg transition-transform group-hover:scale-110'>
-                      <HiArrowRight className='size-5' />
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Couture Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className='group relative flex aspect-[1.3/1] w-56 flex-col items-center justify-center overflow-hidden rounded-3xl bg-white/10 shadow-2xl backdrop-blur-md border border-white/20'
-                >
-                  <NextImage
-                    src='/bbw/gallery (23).jpg'
-                    alt='Nail Couture'
-                    fill
-                    className='object-cover transition-transform duration-500 group-hover:scale-110'
-                  />
-                  {/* Hover Overlay */}
-                  <div className='absolute inset-0 flex items-center justify-center bg-brand-foundation/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100'>
-                    <span className='rounded-lg bg-white/20 px-4 py-2 text-lg font-bold text-white backdrop-blur-md border border-white/20'>
-                      Bridal Glam
-                    </span>
-                  </div>
-                  {/* Permanent Icon */}
-                  <div className='absolute bottom-5 right-5 z-10'>
-                    <div className='flex size-10 items-center justify-center rounded-full bg-white text-brand-foundation shadow-lg transition-transform group-hover:scale-110'>
-                      <HiArrowRight className='size-5' />
-                    </div>
-                  </div>
                 </motion.div>
               </div>
             </div>
@@ -282,7 +187,7 @@ export default function SalonPage() {
                           onClick={() => setCurrentIndex(index)}
                           className={`group relative size-14 md:size-16 overflow-hidden rounded-full transition-all duration-300 ${
                             isActive
-                              ? 'ring-4 ring-brand-foundation ring-offset-2 ring-offset-white/10 z-10'
+                              ? 'ring-4 ring-gray-300 ring-offset-2 ring-offset-white/10 z-10'
                               : 'border-0 hover:z-10'
                           } bg-gray-200`}
                         >
@@ -381,80 +286,8 @@ export default function SalonPage() {
         </div>
       </section>
 
-      {/* Signature Services Section - Redesigned to match attachment */}
-      <section
-        id='services'
-        className='relative overflow-hidden py-10 lg:py-22'
-      >
-        <div className='container relative mx-auto px-5 lg:px-10 '>
-          <div className='flex flex-col lg:flex-row items-center gap-16 lg:gap-24'>
-            {/* Left Content */}
-            <div className='flex flex-col gap-6 max-w-sm lg:shrink-0'>
-              <motion.h2
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className='font-serif text-5xl md:text-6xl font-medium tracking-tight text-white'
-              >
-                Our Services
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className='text-base leading-relaxed text-zinc-300'
-              >
-                We offer a wide range of luxury beauty services, including
-                expert braids, wigs, and hairstyling, professional nail artistry
-                and manicures, flawless bridal glam and editorial makeup, as
-                well as premium lash, brow, and massage treatments. All services
-                are delivered by trained professionals using premium products
-                for long-lasting and elegant results. At Bukky Beauty World,
-                beauty is an experience — not just a service.
-              </motion.p>
-            </div>
-
-            {/* Right Cards Grid */}
-            <div className='grid grid-cols-1 gap-6 md:grid-cols-3 w-full'>
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className={`group relative w-full overflow-hidden rounded-card-xl shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl ${
-                    index === services.length - 1
-                      ? 'aspect-square md:aspect-3/1 md:col-span-3'
-                      : 'aspect-square md:aspect-[0.85/1]'
-                  }`}
-                  style={{ backgroundColor: service.bgColor }}
-                >
-                  {/* Floating Label */}
-                  <div className='absolute top-6 left-6 z-20'>
-                    <span className='inline-flex rounded-full bg-white px-6 py-2.5 text-sm font-bold tracking-wide text-gray-900 shadow-lg'>
-                      {service.title}
-                    </span>
-                  </div>
-
-                  {/* Service Image */}
-                  <div className='relative h-full w-full'>
-                    <NextImage
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className='object-cover object-center transition-transform duration-700 group-hover:scale-110'
-                    />
-                    {/* Subtle mask to integrate image better if needed */}
-                    <div className='absolute inset-0 bg-black/5 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity' />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Salon Services & Pricing Section */}
+      <SalonServices />
 
       {/* Booking Section - Precise Match to Attachment */}
       <section
@@ -495,7 +328,7 @@ export default function SalonPage() {
                 className='relative aspect-4/3 overflow-hidden rounded-card-large bg-black/10'
               >
                 <NextImage
-                  src='/gallery (21).jpg'
+                  src='/bbw/gallery (1).jpg'
                   alt='Booking Experience'
                   fill
                   className='object-cover opacity-90'
@@ -853,7 +686,7 @@ export default function SalonPage() {
                 <Button
                   asChild
                   size='lg'
-                  className='h-16 rounded-full bg-black px-12 text-lg text-white hover:scale-105 active:scale-95 transition-all'
+                  className='h-16 rounded-full bg-black hover:bg-black/80 px-12 text-lg text-white hover:scale-105 active:scale-95 transition-all'
                 >
                   <Link href='/bookings'>Book an appointment</Link>
                 </Button>
