@@ -76,7 +76,7 @@ export const MenuHighlights = () => {
                       <h4 className='font-cinzel text-lg font-bold text-black group-hover:text-primary transition-colors uppercase'>
                         {item.name}
                       </h4>
-                      <div className='flex-grow mx-4 mb-1 border-b border-dotted border-gray-300' />
+                      <div className='grow mx-4 mb-1 border-b border-dotted border-gray-300' />
                       <span className='font-cinzel font-bold text-black'>
                         {item.price}
                       </span>

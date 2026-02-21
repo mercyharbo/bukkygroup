@@ -34,7 +34,7 @@ export const AmbianceSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className='group relative aspect-[4/5] overflow-hidden bg-zinc-100 shadow-xl'
+              className='group relative aspect-4/5 overflow-hidden bg-zinc-100 shadow-xl'
             >
               <Image
                 src={image.src}

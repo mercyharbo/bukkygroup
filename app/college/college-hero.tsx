@@ -40,9 +40,10 @@ export const CollegeHero = () => {
                   Welcome to 3S College
                 </h1>
                 <p className='max-w-xl mx-auto text-zinc-600 text-sm md:text-base font-normal leading-relaxed text-pretty'>
-                  We are committed to nurturing the next generation of creative
-                  entrepreneurs. Our world-class vocational programs bridge the
-                  gap between passion and professional mastery.
+                  3S College is a premier Beauty and Fashion College founded
+                  under Bukky Group, created to raise a new generation of
+                  confident, skilled, and creative professionals in the beauty
+                  and fashion industry.
                 </p>
               </div>
 

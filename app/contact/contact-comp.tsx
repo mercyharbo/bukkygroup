@@ -36,7 +36,7 @@ export default function ContactComp() {
       } else {
         toast.error(result.error)
       }
-    } catch (_error) {
+    } catch {
       toast.error('Something went wrong. Please try again.')
     } finally {
       setLoading(false)
@@ -138,7 +138,7 @@ export default function ContactComp() {
 
                 <Button
                   disabled={loading}
-                  className='h-14 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-[0.2em] text-sm rounded-none w-full md:w-max px-12 transition-all active:scale-95 disabled:opacity-70'
+                  className='h-14 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-extra text-sm rounded-none w-full md:w-max px-12 transition-all active:scale-95 disabled:opacity-70'
                 >
                   {loading ? 'Sending...' : 'Send Message'}
                 </Button>

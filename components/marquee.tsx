@@ -24,7 +24,7 @@ export const Marquee: React.FC<MarqueeProps> = ({
 }) => {
   const controls = useAnimation()
 
-  const startAnimation = () => {
+  const startAnimation = React.useCallback(() => {
     controls.start({
       x: direction === 'left' ? [0, '-50%'] : ['-50%', 0],
       transition: {
@@ -33,11 +33,11 @@ export const Marquee: React.FC<MarqueeProps> = ({
         ease: 'linear',
       },
     })
-  }
+  }, [speed, direction, controls])
 
   useEffect(() => {
     startAnimation()
-  }, [speed, direction, controls])
+  }, [speed, direction, controls, startAnimation])
 
   return (
     <div
