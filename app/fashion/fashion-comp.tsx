@@ -166,10 +166,10 @@ export default function FashionComp() {
               href='https://www.instagram.com/bukkybeautyworld/'
               target='_blank'
               rel='noopener noreferrer'
-              className='flex items-center gap-2 text-[10px] font-bold tracking-widest text-zinc-400 hover:text-primary transition-colors group'
+              className='flex items-center gap-2 text-[10px] font-bold tracking-widest text-gray-400 hover:text-white transition-colors group'
             >
               <RiInstagramFill className='size-4' />
-              <span className='border-b border-transparent group-hover:border-primary transition-all uppercase'>
+              <span className='border-b border-transparent group-hover:border-white transition-all uppercase'>
                 @bukkybeautyworld
               </span>
             </Link>
@@ -190,7 +190,7 @@ export default function FashionComp() {
             <h2 className='text-sm sm:text-base font-bold tracking-extra uppercase text-white'>
               Featured Collections
             </h2>
-            <p className='text-[10px] font-bold tracking-widest uppercase text-zinc-400'>
+            <p className='text-[10px] font-bold tracking-widest uppercase text-gray-400'>
               {currentIndex + 1} — {collections.length}
             </p>
           </div>
@@ -198,7 +198,7 @@ export default function FashionComp() {
             <Button
               variant='outline'
               size='icon'
-              className='size-12 rounded-full border-white/10 hover:text-white hover:bg-white/5 transition-all active:scale-95 text-white'
+              className='size-12 rounded-full border-white/10 hover:bg-white hover:text-black transition-all active:scale-95 text-white'
               onClick={prevSlide}
             >
               <HiArrowLeft className='size-5' />
@@ -206,7 +206,7 @@ export default function FashionComp() {
             <Button
               variant='outline'
               size='icon'
-              className='size-12 rounded-full border-white/10 hover:text-white hover:bg-white/5 transition-all active:scale-95 text-white'
+              className='size-12 rounded-full border-white/10 hover:bg-white hover:text-black transition-all active:scale-95 text-white'
               onClick={nextSlide}
             >
               <HiArrowRight className='size-5' />
@@ -256,7 +256,7 @@ export default function FashionComp() {
                     <h2 className='text-sm sm:text-base font-bold tracking-extra uppercase text-white'>
                       {item.title}
                     </h2>
-                    <p className='text-[10px] leading-relaxed font-bold tracking-widest uppercase text-zinc-400 max-w-[200px]'>
+                    <p className='text-[10px] leading-relaxed font-bold tracking-widest uppercase text-gray-400 max-w-[200px]'>
                       {item.description}
                     </p>
                   </div>
@@ -272,7 +272,7 @@ export default function FashionComp() {
         <div className='container mx-auto px-6'>
           <div className='flex flex-col gap-12 lg:gap-20'>
             <div className='flex flex-col gap-4 text-center lg:text-left'>
-              <span className='text-xs font-medium tracking-[0.4em] uppercase text-primary'>
+              <span className='text-xs font-medium tracking-[0.4em] uppercase text-gray-300'>
                 Signature Services
               </span>
               <h2 className='font-serif text-5xl lg:text-8xl font-light tracking-tighter text-white'>
@@ -297,7 +297,7 @@ export default function FashionComp() {
                   className='group flex flex-col lg:flex-row lg:items-center justify-between py-12 lg:py-16 border-b border-white/10 transition-colors hover:bg-white/5'
                 >
                   <div className='flex flex-col gap-3'>
-                    <span className='font-serif text-sm italic text-primary'>
+                    <span className='font-serif text-sm italic text-gray-300'>
                       0{index + 1}
                     </span>
                     <h3 className='font-serif text-4xl lg:text-7xl font-light tracking-tight text-white'>
@@ -305,11 +305,11 @@ export default function FashionComp() {
                     </h3>
                   </div>
                   <div className='flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12'>
-                    <p className='font-serif text-base lg:text-lg text-zinc-400 max-w-xs leading-relaxed'>
+                    <p className='font-serif text-base lg:text-lg text-gray-300 max-w-xs leading-relaxed'>
                       {service.description}
                     </p>
-                    <div className='hidden lg:flex size-14 rounded-full border border-white/10 items-center justify-center transition-transform group-hover:rotate-45'>
-                      <HiArrowUpRight className='size-6 text-zinc-500' />
+                    <div className='hidden lg:flex size-14 rounded-full border border-border items-center justify-center transition-transform group-hover:rotate-45'>
+                      <HiArrowUpRight className='size-6 text-gray-300' />
                     </div>
                   </div>
                 </motion.div>
@@ -350,10 +350,10 @@ export default function FashionComp() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className='absolute -bottom-12 -right-12 z-30 hidden lg:block bg-primary p-10 rounded-sm shadow-2xl'
+                  className='absolute -bottom-12 -right-12 z-30 hidden lg:block bg-white p-10 rounded-sm shadow-2xl'
                 >
-                  <p className='text-3xl font-black tracking-widest uppercase text-white'>
-                    SA
+                  <p className='text-3xl font-black tracking-widest uppercase text-black'>
+                    ba
                   </p>
                 </motion.div>
               </div>
@@ -365,7 +365,7 @@ export default function FashionComp() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className='text-xs font-bold tracking-[0.4em] uppercase text-primary'
+                    className='text-xs font-bold tracking-[0.4em] uppercase text-gray-300'
                   >
                     Our Atelier
                   </motion.span>
@@ -386,16 +386,14 @@ export default function FashionComp() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className='flex flex-col gap-8 text-zinc-400 text-lg leading-relaxed max-w-xl'
+                  className='flex flex-col gap-8 text-gray-400 text-lg leading-relaxed max-w-xl'
                 >
                   <p>
                     What began as{' '}
                     <span className='text-white font-medium'>WearsByBukky</span>
                     —a humble pursuit of celebration and cultural expression—has
                     ascended into{' '}
-                    <span className='text-primary font-medium'>
-                      Lumina Vogue
-                    </span>
+                    <span className='text-white font-medium'>Lumina Vogue</span>
                     : Centurion’s premier destination for modern royalty.
                   </p>
                   <p>
@@ -405,7 +403,7 @@ export default function FashionComp() {
                     suits to the ethereal movement of our signature gowns, every
                     piece is a deliberate collision of art and identity.
                   </p>
-                  <p className='text-zinc-300 italic'>
+                  <p className='text-gray-300 italic'>
                     Whether you are commanding a red carpet or celebrating
                     life&apos;s greatest milestones, we dress your boldest
                     dreams.
@@ -421,9 +419,7 @@ export default function FashionComp() {
                 >
                   <p className='text-sm font-bold tracking-widest uppercase text-white'>
                     At Lumina Vogue, we don’t just design clothes. <br />
-                    <span className='text-primary'>
-                      We illuminate the soul.
-                    </span>
+                    <span className='text-white'>We illuminate the soul.</span>
                   </p>
                 </motion.div>
               </div>
@@ -436,7 +432,7 @@ export default function FashionComp() {
           <div className='container mx-auto px-6'>
             <div className='flex flex-col gap-16'>
               <div className='flex flex-col items-center text-center gap-4'>
-                <span className='text-xs font-medium tracking-[0.4em] uppercase text-primary'>
+                <span className='text-xs font-medium tracking-[0.4em] uppercase text-gray-300'>
                   Social Proof
                 </span>
                 <h2 className='font-serif text-5xl lg:text-7xl font-light tracking-tight text-white'>
@@ -458,10 +454,10 @@ export default function FashionComp() {
                       &quot;{testi.quote}&quot;
                     </p>
                     <div className='flex flex-col gap-1'>
-                      <span className='text-base text-primary'>
+                      <span className='text-base text-black font-medium'>
                         {testi.author}
                       </span>
-                      <span className='text-sm text-zinc-600'>
+                      <span className='text-sm text-gray-600'>
                         {testi.role}
                       </span>
                     </div>
@@ -475,10 +471,10 @@ export default function FashionComp() {
         {/* FAQ & CTA Sections Wrapper */}
         <div className='flex flex-col gap-8 lg:gap-10 pb-32'>
           {/* FAQ Section */}
-          <section className='container mx-auto px-6'>
+          <section className='container mx-auto px-5 lg:px-10'>
             <div className='max-w-3xl mx-auto flex flex-col gap-16'>
               <div className='flex flex-col gap-4 text-center'>
-                <span className='text-xs font-medium tracking-[0.4em] uppercase text-primary'>
+                <span className='text-xs font-medium tracking-[0.4em] uppercase text-gray-300'>
                   Inquiries
                 </span>
                 <h2 className='font-serif text-4xl lg:text-6xl font-light tracking-tight text-white'>
@@ -495,11 +491,11 @@ export default function FashionComp() {
                       }
                       className='w-full py-8 flex items-center justify-between text-left group'
                     >
-                      <span className='font-serif text-xl lg:text-2xl text-white transition-colors group-hover:text-primary'>
+                      <span className='font-serif text-xl lg:text-2xl text-white transition-colors group-hover:text-gray-300'>
                         {faq.question}
                       </span>
                       <HiChevronDown
-                        className={`size-5 text-zinc-500 transition-transform duration-300 ${
+                        className={`size-5 text-gray-300 transition-transform duration-300 ${
                           openFaq === index ? 'rotate-180' : ''
                         }`}
                       />
@@ -513,7 +509,7 @@ export default function FashionComp() {
                           transition={{ duration: 0.3 }}
                           className='overflow-hidden'
                         >
-                          <p className='pb-8 font-serif text-lg text-zinc-400 leading-relaxed'>
+                          <p className='pb-8 font-serif text-lg text-gray-300 leading-relaxed'>
                             {faq.answer}
                           </p>
                         </motion.div>
@@ -526,17 +522,17 @@ export default function FashionComp() {
           </section>
 
           {/* CTA Section */}
-          <section className='container mx-auto px-6'>
-            <div className='relative py-24 lg:py-40 rounded-sm overflow-hidden border border-white/5 bg-white/2 flex flex-col items-center text-center gap-12'>
+          <section className='container mx-auto px-5 lg:px-10'>
+            <div className='relative py-14 lg:py-20 rounded-sm overflow-hidden border border-white/5 bg-white/2 flex flex-col items-center text-center gap-12'>
               <div className='relative z-10 flex flex-col gap-6 max-w-2xl'>
-                <span className='text-xs font-medium tracking-[0.6em] uppercase text-primary'>
+                <span className='text-xs font-medium tracking-[0.6em] uppercase text-gray-300'>
                   Your Transformation Awaits
                 </span>
                 <h2 className='font-serif text-5xl lg:text-8xl font-light tracking-tighter text-white leading-tight'>
                   Reserve Your <br />
                   <span className='italic'>Private Session</span>
                 </h2>
-                <p className='font-serif text-lg lg:text-xl text-zinc-400 max-w-lg mx-auto leading-relaxed'>
+                <p className='font-serif text-lg lg:text-xl text-gray-400 max-w-lg mx-auto leading-relaxed'>
                   Step into the world of bespoke luxury. Whether for a wedding,
                   red carpet, or signature suit, your journey begins here.
                 </p>
@@ -545,7 +541,7 @@ export default function FashionComp() {
               <div className='relative z-10 flex flex-col sm:flex-row items-center gap-6'>
                 <Button
                   asChild
-                  className='h-16 px-10 rounded-full bg-primary text-white hover:bg-primary/90 transition-all text-sm tracking-extra uppercase font-medium group'
+                  className='h-16 px-10 rounded-full bg-white text-black hover:bg-white/90 transition-all text-sm tracking-extra uppercase font-medium group'
                 >
                   <Link href='/bookings'>
                     Book Appointment
@@ -562,7 +558,7 @@ export default function FashionComp() {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <FaWhatsapp className='size-5 text-zinc-400' />
+                    <FaWhatsapp className='size-5 text-gray-300' />
                     WhatsApp Us
                   </Link>
                 </Button>
@@ -573,10 +569,10 @@ export default function FashionComp() {
                   href='https://www.instagram.com/bukkybeautyworld/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center justify-center gap-3 text-zinc-400 hover:text-primary transition-colors group'
+                  className='flex items-center justify-center gap-3 text-gray-400 hover:text-white transition-colors group'
                 >
                   <RiInstagramFill className='size-6' />
-                  <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-primary transition-all'>
+                  <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-white transition-all'>
                     @bukkybeautyworld
                   </span>
                 </Link>
