@@ -70,7 +70,7 @@ export const Testimonials = () => {
               >
                 <FaQuoteLeft className='text-muted size-8' />
                 <p className='text-gray-600 text-base leading-relaxed italic'>
-                  "{item.content}"
+                  &quot;{item.content}&quot;
                 </p>
                 <div className='space-y-1'>
                   <p className='text-black font-bold uppercase tracking-wider text-sm'>

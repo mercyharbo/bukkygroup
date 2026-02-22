@@ -629,7 +629,7 @@ export default function SalonPage() {
                     <span className='text-4xl font-bold tracking-tight text-white md:text-5xl'>
                       {outcome.value}
                     </span>
-                    <span className='text-xs font-bold tracking-[0.2em] text-gray-300 uppercase'>
+                    <span className='text-xs font-bold tracking-extra text-gray-300 uppercase'>
                       {outcome.label}
                     </span>
                   </motion.div>

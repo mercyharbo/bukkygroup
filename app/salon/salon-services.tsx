@@ -460,7 +460,7 @@ export const SalonServices = () => {
                       <div className='p-6 md:p-10 pt-0 bg-zinc-950'>
                         <div className='max-h-[500px] overflow-y-auto pr-4 scrollbar-thin scrollbar-track-zinc-900 scrollbar-thumb-white/10 hover:scrollbar-thumb-white/20 -mr-4'>
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 py-6'>
-                            {section.items.map((item, itemIdx) => (
+                            {section.items.map((item) => (
                               <div
                                 key={item.name}
                                 className='group/item flex flex-col gap-4'
