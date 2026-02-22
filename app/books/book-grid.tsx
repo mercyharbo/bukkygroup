@@ -68,7 +68,7 @@ export const BookGrid = () => {
                 />
               </Link>
               <div className='space-y-2 text-center'>
-                <p className='text-[10px] uppercase tracking-widest text-gray-400 font-bold'>
+                <p className='text-xs uppercase tracking-widest text-gray-400 font-bold'>
                   {book.category}
                 </p>
                 <h3 className='text-base md:text-lg font-cinzel font-bold text-black group-hover:text-primary transition-colors line-clamp-2'>

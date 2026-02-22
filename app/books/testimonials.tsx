@@ -45,15 +45,15 @@ const reviewImages = [
 
 export const Testimonials = () => {
   return (
-    <section className='w-full py-24 bg-soft-sand'>
+    <section className='w-full py-24 bg-black '>
       <div className='container mx-auto px-5 lg:px-10 space-y-24'>
         {/* Text Testimonials */}
         <div className='flex flex-col items-center text-center space-y-16'>
           <div className='space-y-4'>
-            <span className='text-xs uppercase tracking-widest text-primary font-bold'>
+            <span className='text-xs uppercase tracking-widest text-gray-500 font-bold'>
               Reader Praise
             </span>
-            <h2 className='font-cinzel text-4xl md:text-5xl font-black text-black uppercase'>
+            <h2 className='font-cinzel text-4xl md:text-5xl font-bold text-white uppercase'>
               Voices from the Shelf
             </h2>
           </div>
@@ -68,7 +68,7 @@ export const Testimonials = () => {
                 transition={{ delay: idx * 0.1 }}
                 className='relative p-10 bg-white shadow-xl hover:shadow-2xl transition-shadow duration-500 flex flex-col items-center text-center space-y-6'
               >
-                <FaQuoteLeft className='text-primary opacity-20 size-8' />
+                <FaQuoteLeft className='text-muted size-8' />
                 <p className='text-gray-600 text-base leading-relaxed italic'>
                   "{item.content}"
                 </p>
@@ -76,7 +76,7 @@ export const Testimonials = () => {
                   <p className='text-black font-bold uppercase tracking-wider text-sm'>
                     {item.author}
                   </p>
-                  <p className='text-primary text-xs uppercase tracking-widest font-semibold'>
+                  <p className='text-gray-600 text-xs uppercase tracking-widest font-semibold'>
                     {item.role}
                   </p>
                 </div>
@@ -88,10 +88,10 @@ export const Testimonials = () => {
         {/* Visual Social Proof */}
         <div className='space-y-16'>
           <div className='text-center space-y-4'>
-            <span className='text-xs uppercase tracking-widest text-primary font-bold'>
+            <span className='text-xs uppercase tracking-widest text-gray-600 font-bold'>
               Social Impact
             </span>
-            <h2 className='font-cinzel text-3xl md:text-4xl font-black text-black uppercase'>
+            <h2 className='font-cinzel text-3xl md:text-4xl font-black text-white uppercase'>
               Reader Moments
             </h2>
           </div>

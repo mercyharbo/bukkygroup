@@ -13,20 +13,20 @@ const usps = [
 
 export const GlamUSP = () => {
   return (
-    <section className='w-full py-24 bg-white overflow-hidden'>
+    <section className='w-full py-24 bg-black overflow-hidden'>
       <div className='container mx-auto px-6'>
         <div className='flex flex-col lg:flex-row items-center gap-16 lg:gap-24'>
           {/* Text Side */}
           <div className='w-full lg:w-1/2 space-y-10'>
             <div className='space-y-4'>
-              <span className='text-sm font-medium tracking-widest text-orange-500 uppercase'>
+              <span className='text-sm font-medium tracking-widest text-gray-400 uppercase'>
                 The Faceglam Advantage
               </span>
-              <h2 className='text-4xl md:text-5xl lg:text-6xl font-medium text-black tracking-tight leading-tight'>
+              <h2 className='text-4xl md:text-5xl lg:text-6xl font-medium text-white tracking-tight leading-tight'>
                 Why Customers Love <br />
-                <span className='italic text-orange-500'>Working with Us.</span>
+                <span className='italic text-gray-400'>Working with Us.</span>
               </h2>
-              <p className='text-gray-500 text-lg leading-relaxed'>
+              <p className='text-gray-400 text-lg leading-relaxed'>
                 We combine industry-leading techniques with a client-first
                 approach to ensure you not only look beautiful but feel
                 empowered.
@@ -41,9 +41,9 @@ export const GlamUSP = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className='flex items-center gap-4 text-black font-medium text-lg'
+                  className='flex items-center gap-4 text-white font-medium text-lg'
                 >
-                  <div className='size-6 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500'>
+                  <div className='size-6 rounded-full bg-white/10 flex items-center justify-center text-white'>
                     <RiCheckFill className='size-4' />
                   </div>
                   {usp}
@@ -67,7 +67,7 @@ export const GlamUSP = () => {
                 className='object-cover'
               />
               {/* Decorative Circle from reference */}
-              <div className='absolute bottom-12 -right-8 size-24 border-2 border-orange-500/20 rounded-full' />
+              <div className='absolute bottom-12 -right-8 size-24 border-2 border-white/20 rounded-full' />
             </motion.div>
           </div>
         </div>

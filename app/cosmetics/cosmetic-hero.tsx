@@ -31,13 +31,13 @@ export const CosmeticHero = () => {
           transition={{ duration: 0.8 }}
           className='space-y-4'
         >
-          <span className='text-sm font-medium tracking-widest text-purple-400'>
+          <span className='text-sm font-medium tracking-widest text-gray-400'>
             Botanical excellence
           </span>
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-medium text-white tracking-tight leading-none'>
             Elevate your <br /> beauty journey
           </h1>
-          <p className='max-w-2xl mx-auto text-gray-300 text-base md:text-lg lg:text-xl font-normal leading-relaxed text-pretty pt-4'>
+          <p className='max-w-2xl mx-auto text-gray-100 text-base md:text-lg lg:text-xl font-semibold leading-relaxed text-pretty pt-4'>
             Discover the power of nature through our meticulously crafted
             skincare. Pure ingredients for a radiant, healthy glow that starts
             from within.
@@ -53,13 +53,13 @@ export const CosmeticHero = () => {
           <Button
             size='xl'
             asChild
-            className='bg-white text-black hover:bg-purple-400 hover:text-white transition-all px-10 h-16 rounded-full font-medium'
+            className='bg-white text-black hover:bg-white/80 hover:text-black transition-all px-10 h-16 rounded-full font-medium'
           >
             <Link href='#products'>Start browsing</Link>
           </Button>
           <Link
             href='/about'
-            className='text-sm font-medium text-white hover:text-purple-400 transition-colors flex items-center gap-2'
+            className='text-sm font-medium text-white hover:text-gray-400 transition-colors flex items-center gap-2'
           >
             Our story <span>→</span>
           </Link>
@@ -74,7 +74,7 @@ export const CosmeticHero = () => {
         <span className='text-sm font-medium text-gray-400 tracking-widest'>
           Scroll
         </span>
-        <div className='w-px h-12 bg-linear-to-b from-purple-400 to-transparent' />
+        <div className='w-px h-12 bg-linear-to-b from-gray-400 to-transparent' />
       </motion.div>
     </section>
   )

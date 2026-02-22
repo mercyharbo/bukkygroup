@@ -12,13 +12,13 @@ export const GlamContact = () => {
   return (
     <section className='w-full py-24 bg-black text-white relative overflow-hidden'>
       {/* Background Decorative Gradient */}
-      <div className='absolute bottom-0 right-0 w-full max-w-4xl aspect-square bg-orange-500/5 blur-[120px] rounded-full pointer-events-none' />
+      <div className='absolute bottom-0 right-0 w-full max-w-4xl aspect-square bg-white/5 blur-[120px] rounded-full pointer-events-none' />
 
       <div className='container mx-auto px-6 text-center space-y-16 relative z-10'>
         <div className='max-w-3xl mx-auto space-y-8'>
           <h2 className='text-3xl md:text-6xl lg:text-6xl font-medium tracking-tighter leading-tight'>
             Ready to define <br /> your{' '}
-            <span className='text-orange-500'>signature glow?</span>
+            <span className='text-white'>signature glow?</span>
           </h2>
           <p className='text-gray-400 text-lg md:text-xl font-normal leading-relaxed text-pretty'>
             Available for mobile bookings across the region. Connect via
@@ -31,7 +31,7 @@ export const GlamContact = () => {
           <Button
             size='xl'
             asChild
-            className='h-16 px-12 rounded-full bg-orange-500 text-white hover:bg-white hover:text-black transition-all font-medium text-base'
+            className='h-16 px-12 rounded-full bg-white text-black hover:bg-white/90 transition-all font-medium text-base'
           >
             <Link href='/glam/bookings'>Book your slot</Link>
           </Button>
@@ -48,7 +48,7 @@ export const GlamContact = () => {
               rel='noopener noreferrer'
               className='flex items-center gap-3'
             >
-              <FaWhatsapp className='size-5 text-orange-500 group-hover:scale-110 transition-transform' />
+              <FaWhatsapp className='size-5 text-white group-hover:scale-110 transition-transform' />
               WhatsApp us
             </Link>
           </Button>
@@ -79,16 +79,12 @@ export const GlamContact = () => {
               </span>
               <Link
                 href='https://www.instagram.com/3sfaceglam/'
-                className='text-sm font-medium hover:text-orange-500 transition-colors underline decoration-orange-500/30 underline-offset-4'
+                className='text-sm font-medium hover:text-white transition-colors underline decoration-white/30 underline-offset-4'
               >
                 @3sfaceglam
               </Link>
             </div>
           </div>
-
-          <p className='text-sm text-gray-700 font-medium'>
-            © 2026 3S Faceglam. A Bukky Group Creative Agency.
-          </p>
         </div>
       </div>
     </section>

@@ -38,7 +38,7 @@ const brandPillars = [
 
 export default function AboutComp() {
   return (
-    <main className='relative min-h-screen pt-50 pb-32 overflow-hidden selection:bg-primary/20'>
+    <main className='relative min-h-screen pt-50 pb-32 overflow-hidden '>
       <div className='container mx-auto flex flex-col gap-32 lg:gap-20'>
         {/* Hero Section */}
         <section className='flex flex-col gap-16 px-5 lg:px-10'>
@@ -106,14 +106,14 @@ export default function AboutComp() {
             </p>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 text-sm uppercase tracking-widest font-bold text-white'>
               <div className='flex flex-col gap-4 border-t border-white/10 pt-8'>
-                <span className='text-primary'>Excellence</span>
+                <span className='text-gray-300'>Excellence</span>
                 <p className='text-sm text-gray-200 font-medium leading-loose'>
                   Uncompromising quality across all brand touchpoints, from
                   bespoke tailoring to culinary arts.
                 </p>
               </div>
               <div className='flex flex-col gap-4 border-t border-white/10 pt-8'>
-                <span className='text-primary'>Innovation</span>
+                <span className='text-gray-300'>Innovation</span>
                 <p className='text-sm text-gray-200 font-medium leading-loose'>
                   Constantly redefining the standards of luxury through modern
                   technology and timeless craftsmanship.

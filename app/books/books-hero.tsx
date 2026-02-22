@@ -41,7 +41,7 @@ export const BooksHero = () => {
               className='max-w-2xl space-y-6'
             >
               <div className='space-y-2'>
-                <p className='text-xl md:text-2xl font-serif italic text-primary'>
+                <p className='text-xl md:text-2xl font-serif italic text-gray-500'>
                   The Flag
                 </p>
               </div>
@@ -63,10 +63,10 @@ export const BooksHero = () => {
                   href='https://www.instagram.com/3sbooks/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center gap-3 text-black hover:text-primary transition-colors group'
+                  className='flex items-center gap-3 text-black hover:text-gray-500 transition-colors group'
                 >
                   <RiInstagramFill className='size-6 translate-y-[-1px]' />
-                  <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-primary transition-all'>
+                  <span className='text-xs uppercase tracking-widest font-bold border-b border-transparent group-hover:border-gray-500 transition-all'>
                     @3sbooks
                   </span>
                 </Link>
@@ -91,12 +91,6 @@ export const BooksHero = () => {
                 className='object-cover'
                 priority
               />
-            </div>
-            {/* Signature Accent */}
-            <div className='absolute -bottom-10 -right-10 hidden md:block'>
-              <p className='font-serif italic text-4xl text-primary opacity-60 rotate-signature'>
-                Bukky Anny
-              </p>
             </div>
           </motion.div>
         </div>

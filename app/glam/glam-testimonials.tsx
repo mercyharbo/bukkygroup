@@ -26,17 +26,15 @@ const testimonials = [
 
 export const GlamTestimonials = () => {
   return (
-    <section className='w-full py-24 bg-white'>
+    <section className='w-full py-24 bg-black'>
       <div className='container mx-auto px-6 space-y-16'>
         <div className='text-center space-y-4'>
-          <span className='text-sm font-medium tracking-widest text-orange-500 uppercase'>
+          <span className='text-sm font-medium tracking-widest text-gray-400 uppercase'>
             What Clients Are Saying
           </span>
-          <h2 className='text-4xl md:text-5xl font-medium text-black tracking-tight'>
+          <h2 className='text-4xl md:text-5xl font-medium text-white tracking-tight'>
             Real Beauty,{' '}
-            <span className='italic text-orange-500'>
-              Real Transformations.
-            </span>
+            <span className='italic text-gray-400'>Real Transformations.</span>
           </h2>
         </div>
 
@@ -48,21 +46,21 @@ export const GlamTestimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className='p-10 bg-zinc-50 rounded-3xl space-y-6 flex flex-col items-center text-center'
+              className='p-10 bg-white/5 border border-white/10 rounded-3xl space-y-6 flex flex-col items-center text-center'
             >
               <div className='flex gap-1'>
                 {[...Array(t.rating)].map((_, i) => (
-                  <RiStarFill key={i} className='text-orange-500 size-5' />
+                  <RiStarFill key={i} className='text-white size-5' />
                 ))}
               </div>
-              <p className='text-gray-600 text-lg leading-relaxed italic'>
+              <p className='text-gray-300 text-lg leading-relaxed italic'>
                 &quot;{t.text}&quot;
               </p>
               <div>
-                <span className='block text-black font-medium text-lg'>
+                <span className='block text-white font-medium text-lg'>
                   {t.name}
                 </span>
-                <span className='block text-gray-500 text-sm uppercase tracking-widest'>
+                <span className='block text-gray-400 text-sm uppercase tracking-widest'>
                   {t.role}
                 </span>
               </div>

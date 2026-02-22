@@ -11,12 +11,9 @@ import { FaWhatsapp } from 'react-icons/fa'
 export const CosmeticContact = () => {
   return (
     <section className='w-full py-24 bg-black text-white relative overflow-hidden'>
-      {/* Background Glow */}
-      <div className='absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl aspect-square bg-purple-400/5 blur-[150px] rounded-full pointer-events-none' />
-
       <div className='container mx-auto px-6 text-center space-y-16 relative z-10'>
         <div className='max-w-3xl mx-auto space-y-6'>
-          <span className='text-sm font-medium tracking-widest text-purple-400'>
+          <span className='text-sm font-medium tracking-widest text-gray-400'>
             Your skin transformation
           </span>
           <h2 className='text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter leading-tight'>
@@ -32,7 +29,7 @@ export const CosmeticContact = () => {
           <Button
             size='xl'
             asChild
-            className='h-16 px-12 rounded-full bg-purple-400 text-white hover:bg-white hover:text-black transition-all font-medium text-base'
+            className='h-16 px-12 rounded-full bg-white text-black hover:bg-white/80 hover:text-black transition-all font-medium text-base'
           >
             <Link href='/bookings'>Reserve session</Link>
           </Button>
@@ -49,7 +46,7 @@ export const CosmeticContact = () => {
               rel='noopener noreferrer'
               className='flex items-center gap-3'
             >
-              <FaWhatsapp className='size-5 text-purple-400  group-hover:scale-110 transition-transform' />
+              <FaWhatsapp className='size-5 text-gray-400  group-hover:scale-110 transition-transform' />
               WhatsApp us
             </Link>
           </Button>
@@ -78,7 +75,7 @@ export const CosmeticContact = () => {
               </span>
               <Link
                 href='https://www.instagram.com/3scosmetic/'
-                className='text-sm font-medium hover:text-purple-400 transition-colors'
+                className='text-sm font-medium hover:text-gray-400 transition-colors'
               >
                 @3scosmetic
               </Link>

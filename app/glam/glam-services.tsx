@@ -55,17 +55,17 @@ const services = [
  */
 export const GlamServices = () => {
   return (
-    <section id='services' className='w-full py-24 bg-zinc-50'>
+    <section id='services' className='w-full py-24 bg-black'>
       <div className='container mx-auto px-6 space-y-20'>
         <div className='flex flex-col items-center text-center space-y-4 max-w-3xl mx-auto'>
-          <span className='text-sm font-medium tracking-widest text-orange-500 uppercase'>
+          <span className='text-sm font-medium tracking-widest text-gray-500 uppercase'>
             Our Signature Services
           </span>
-          <h2 className='text-4xl lg:text-6xl font-medium tracking-tight text-black'>
+          <h2 className='text-4xl lg:text-6xl font-medium tracking-tight text-white'>
             Professional Artistry <br />
-            <span className='italic text-orange-500'>for every face.</span>
+            <span className='italic text-black'>for every face.</span>
           </h2>
-          <p className='text-gray-500 text-lg leading-relaxed'>
+          <p className='text-gray-400 text-lg leading-relaxed'>
             We list all our core specializations here to ensure you find exactly
             what fits your upcoming event or daily glow.
           </p>
@@ -80,7 +80,7 @@ export const GlamServices = () => {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
             >
-              <Card className='bg-white py-0 gap-0 border group shadow-none transition-all duration-500 rounded-3xl'>
+              <Card className='bg-white/5 py-0 gap-0 border border-white/10 group shadow-none transition-all duration-500 rounded-3xl'>
                 <div className='relative aspect-3/2 overflow-hidden'>
                   <Image
                     src={service.image}
@@ -90,10 +90,10 @@ export const GlamServices = () => {
                   />
                 </div>
                 <CardContent className='p-3 space-y-2'>
-                  <h3 className='text-2xl font-medium text-black group-hover:text-orange-500 transition-colors'>
+                  <h3 className='text-2xl font-medium text-white group-hover:text-gray-400 transition-colors'>
                     {service.title}
                   </h3>
-                  <p className='text-gray-500 text-sm leading-relaxed'>
+                  <p className='text-gray-400 text-sm leading-relaxed'>
                     {service.description}
                   </p>
                 </CardContent>

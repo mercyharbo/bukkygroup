@@ -63,7 +63,7 @@ export const ProductShowcase = () => {
     <section id='products' className='w-full py-24 bg-black text-white'>
       <div className='container mx-auto px-6 space-y-20'>
         <div className='flex flex-col items-center text-center space-y-4'>
-          <span className='text-sm font-medium tracking-widest text-purple-400'>
+          <span className='text-sm font-medium tracking-widest text-gray-400'>
             Our collections
           </span>
           <h2 className='text-4xl lg:text-5xl font-medium tracking-tight'>

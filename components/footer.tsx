@@ -42,11 +42,11 @@ export default function Footer() {
   }
 
   return (
-    <footer className='border-t border-gray-100 bg-white py-16 text-black'>
+    <footer className='bg-black py-16 text-white border-t border-white/10'>
       <div className='container mx-auto px-5 lg:px-10'>
         <div className='flex flex-col items-center gap-8'>
           {/* Newsletter Section */}
-          <div className='w-full max-w-lg rounded-3xl border border-gray-100 bg-black p-8 md:p-10 shadow-2xl'>
+          <div className='w-full max-w-lg rounded-3xl border border-white/10 bg-zinc-900 p-8 md:p-10 shadow-2xl'>
             <div className='flex flex-col items-center gap-6 text-center'>
               <div className='flex flex-col gap-2'>
                 <h3 className='text-2xl font-bold text-white'>Stay Informed</h3>
@@ -117,7 +117,7 @@ export default function Footer() {
               <Link
                 key={item.name}
                 href={item.href}
-                className='text-sm text-gray-600 transition-all hover:text-black'
+                className='text-sm text-gray-400 transition-all hover:text-white'
               >
                 {item.name}
               </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className='group flex size-12 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 transition-all hover:border-black hover:bg-muted/10 hover:text-black'
+                  className='group flex size-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all hover:border-white hover:bg-white hover:text-black'
                   aria-label={item.name}
                 >
                   <item.icon className='size-5 transition-transform group-hover:scale-110' />

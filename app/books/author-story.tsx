@@ -24,7 +24,7 @@ export const AuthorStory = () => {
               </h2>
               <h3 className='text-4xl md:text-5xl font-black text-white leading-tight'>
                 BUKKY ANNY: STORIES OF <br />
-                <span className='italic font-serif font-normal text-primary'>
+                <span className='italic font-serif font-normal text-white'>
                   LOVE, LAUGHTER, AND LEGACY.
                 </span>
               </h3>
@@ -64,10 +64,10 @@ export const AuthorStory = () => {
           >
             <div className='relative aspect-4/5 w-full'>
               <Image
-                src='/books/preview2.png'
+                src='/bukky4.jpeg'
                 alt='Bukky Anny'
                 fill
-                className='object-cover'
+                className='object-cover rounded-2xl'
               />
             </div>
             {/* Minimalist Border Accent */}

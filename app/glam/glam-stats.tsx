@@ -11,7 +11,7 @@ const stats = [
 
 export const GlamStats = () => {
   return (
-    <section className='w-full py-16 bg-white border-y border-gray-100'>
+    <section className='w-full py-16 bg-black border-y border-white/10'>
       <div className='container mx-auto px-6'>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
           {stats.map((stat, idx) => (
@@ -23,10 +23,10 @@ export const GlamStats = () => {
               transition={{ delay: idx * 0.1 }}
               className='text-center space-y-1'
             >
-              <div className='text-4xl md:text-5xl font-medium text-orange-500 tracking-tighter'>
+              <div className='text-4xl md:text-5xl font-medium text-white tracking-tighter'>
                 {stat.value}
               </div>
-              <div className='text-sm font-medium text-gray-500 uppercase tracking-widest'>
+              <div className='text-sm font-medium text-gray-400 uppercase tracking-widest'>
                 {stat.label}
               </div>
             </motion.div>

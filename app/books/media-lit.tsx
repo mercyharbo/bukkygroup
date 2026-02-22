@@ -59,10 +59,10 @@ export const LitMedia = () => {
                 />
               </div>
               <div className='space-y-3'>
-                <p className='text-xs uppercase tracking-widest text-primary font-bold'>
+                <p className='text-xs uppercase tracking-widest text-gray-500 font-bold'>
                   {item.category}
                 </p>
-                <h3 className='text-lg font-cinzel font-bold text-black group-hover:text-primary transition-colors leading-tight'>
+                <h3 className='text-lg font-cinzel font-bold text-black group-hover:text-gray-500 transition-colors leading-tight'>
                   {item.title}
                 </h3>
                 <p className='text-gray-500 text-sm leading-relaxed line-clamp-2'>

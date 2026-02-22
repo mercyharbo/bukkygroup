@@ -14,7 +14,7 @@ export const GlamHero = () => {
   return (
     <section className='relative w-full min-h-screen py-20 pt-38 flex items-center bg-black overflow-hidden'>
       {/* Decorative Background Glow */}
-      <div className='absolute top-0 right-0 w-1/2 h-full bg-orange-500/5 blur-[120px] rounded-full pointer-events-none' />
+      <div className='absolute top-0 right-0 w-1/2 h-full bg-white/5 blur-[120px] rounded-full pointer-events-none' />
 
       <div className='container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10'>
         {/* Left Side: Content */}
@@ -25,12 +25,12 @@ export const GlamHero = () => {
           className='space-y-10'
         >
           <div className='space-y-4'>
-            <span className='text-sm font-medium tracking-[0.4em] text-orange-500 uppercase'>
+            <span className='text-sm font-medium tracking-[0.4em] text-gray-500 uppercase'>
               3S Faceglam
             </span>
             <h1 className='text-5xl md:text-6xl lg:text-6xl font-medium text-white tracking-tighter leading-tight'>
               Unleash <span className='italic'>Inner Glow</span> with <br />
-              <span className='text-orange-500'>Faceglam Artistry.</span>
+              <span className='text-white'>Faceglam Artistry.</span>
             </h1>
             <p className='max-w-xl text-gray-400 text-base font-normal leading-relaxed text-pretty'>
               Professional makeup artistry designed to bring out your natural
@@ -43,7 +43,7 @@ export const GlamHero = () => {
             <Button
               size='xl'
               asChild
-              className='bg-orange-500 text-white hover:bg-white hover:text-black transition-all px-12 h-16 rounded-full font-medium'
+              className='bg-white text-black hover:bg-white/90 transition-all px-12 h-16 rounded-full font-medium'
             >
               <Link href='/glam/bookings'>Book your look</Link>
             </Button>
@@ -80,7 +80,7 @@ export const GlamHero = () => {
             className='relative'
           >
             {/* Main Image Frame (Arched/Circular) */}
-            <div className='relative w-[300px] h-[450px] md:w-[450px] md:h-[600px] rounded-t-full overflow-hidden border-8 border-orange-500/10'>
+            <div className='relative w-[300px] h-[450px] md:w-[450px] md:h-[600px] rounded-t-full overflow-hidden border-8 border-white/10'>
               <Image
                 src='https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2087&auto=format&fit=crop'
                 alt='Professional makeup portrait'
@@ -95,7 +95,7 @@ export const GlamHero = () => {
             <motion.div
               animate={{ y: [0, -15, 0], rotate: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-              className='absolute -top-6 -left-12 size-24 bg-gray-900/50 backdrop-blur-xl border border-orange-500/20 rounded-2xl flex items-center justify-center text-orange-500 shadow-2xl'
+              className='absolute -top-6 -left-12 size-24 bg-gray-900/50 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center text-white shadow-2xl'
             >
               <RiPaletteFill className='size-10' />
             </motion.div>
@@ -103,13 +103,13 @@ export const GlamHero = () => {
             <motion.div
               animate={{ y: [0, 15, 0], rotate: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
-              className='absolute bottom-24 -right-8 size-20 bg-gray-900/50 backdrop-blur-xl border border-orange-500/20 rounded-full flex items-center justify-center text-orange-500 shadow-2xl'
+              className='absolute bottom-24 -right-8 size-20 bg-gray-900/50 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white shadow-2xl'
             >
               <RiStarFill className='size-8' />
             </motion.div>
 
             {/* Accent Shapes */}
-            <div className='absolute -z-10 -bottom-8 -left-8 size-32 border-2 border-orange-500/20 rounded-full' />
+            <div className='absolute -z-10 -bottom-8 -left-8 size-32 border-2 border-white/10 rounded-full' />
             <div className='absolute -z-10 top-12 -right-12 size-64 border-2 border-white/5 rounded-full' />
           </motion.div>
         </div>

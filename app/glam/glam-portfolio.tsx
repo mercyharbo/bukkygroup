@@ -38,14 +38,14 @@ export const GlamPortfolio = () => {
   return (
     <section className='w-full py-24 bg-black overflow-hidden'>
       <div className='container mx-auto px-6 space-y-16'>
-        <div className='flex flex-col md:flex-row items-end justify-between gap-8'>
+        <div className='flex flex-col md:flex-row items-start justify-between gap-8'>
           <div className='space-y-4'>
-            <span className='text-sm font-medium tracking-widest text-orange-500 uppercase'>
+            <span className='text-sm font-medium tracking-widest text-gray-400 uppercase'>
               The Portfolio
             </span>
             <h2 className='text-4xl lg:text-5xl font-medium text-white tracking-tight'>
               Visual proof of <br />
-              <span className='italic text-orange-500'>transformation.</span>
+              <span className='italic text-gray-300'>transformation.</span>
             </h2>
           </div>
           <p className='text-gray-400 text-base max-w-sm leading-relaxed'>
@@ -54,7 +54,7 @@ export const GlamPortfolio = () => {
           </p>
         </div>
 
-        <div className='columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6'>
+        <div className='columns-1 md:columns-2 lg:columns-3 gap-6'>
           {portfolio.map((item, idx) => (
             <motion.div
               key={idx}
@@ -62,16 +62,16 @@ export const GlamPortfolio = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className='relative break-inside-avoid overflow-hidden rounded-sm group'
+              className='relative break-inside-avoid mb-6 overflow-hidden rounded-3xl group'
             >
               <Image
                 src={item.src}
                 alt={item.alt}
                 width={800}
                 height={1200}
-                className='w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100'
+                className='w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-100'
               />
-              <div className='absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none' />
+              <div className='absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none' />
             </motion.div>
           ))}
         </div>

@@ -9,7 +9,7 @@ import Image from 'next/image'
  */
 export const NaturalEssence = () => {
   return (
-    <section className='w-full py-24 bg-purple-400 text-black overflow-hidden relative'>
+    <section className='w-full py-24  text-black overflow-hidden relative'>
       <div className='container mx-auto px-6 relative z-10'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
           <div className='space-y-12'>
@@ -68,7 +68,7 @@ export const NaturalEssence = () => {
                 skincare. Our role is simply to translate it for your
                 glow.&quot;
               </p>
-              <p className='text-sm font-medium tracking-widest text-purple-400'>
+              <p className='text-sm font-medium tracking-widest text-gray-400'>
                 3S Cosmetic Philosophy
               </p>
             </div>
